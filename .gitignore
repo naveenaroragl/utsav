@@ -29,3 +29,6 @@ platform
 ext-print
 ext-supportability
 ext-template
+testclasses
+classes
+gensrc
