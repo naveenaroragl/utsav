@@ -28,6 +28,6 @@
 	<extension name="glutsavacceleratorfulfilmentprocess"/>
 	<extension name="glutsavacceleratorinitialdata"/>
 	<extension name="glutsavacceleratorcockpits"/>
-	
+	<extension name="glutsavvendor"/>
   </extensions>
 </hybrisconfig>
