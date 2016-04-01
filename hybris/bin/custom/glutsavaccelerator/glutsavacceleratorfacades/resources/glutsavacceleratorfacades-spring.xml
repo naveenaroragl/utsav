@@ -186,4 +186,11 @@
 	</bean>
 
 	<bean id="genderData" class="gl.utsav.accelerator.facades.product.data.GenderData" scope="prototype"/>
+	
+	<alias name="defaultGoogleLoginFacade" alias="googleLoginFacade" />
+	<bean id="defaultGoogleLoginFacade" class="gl.utsav.accelerator.facade.login.impl.DefaultGoogleLoginFacade">		
+       		<property name="googleLoginService" ref ="googleLoginService"/>
+	</bean>
+	
+	
 </beans>
