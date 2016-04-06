@@ -1,0 +1,44 @@
+.home-search-cntr{
+	background: $secondry-color;
+	min-height:300px;
+	//background-color:rgba(0, 0, 0, 0.5);
+	text-align:center;
+	background: url("../images/search-bg.png") repeat-x;  
+	
+	@include breakpoint(small){  
+		min-height:215px;
+	}
+	
+	.search-cntr-inner{
+		display:inline-block;
+		margin:0 auto;
+		margin-top:118px;
+		padding:20px;
+		border-radius:5px;
+		background-color:rgba(0, 0, 0, 0.5);
+		color:#fff;
+		
+		@include breakpoint(small){  
+			display:block;
+			margin:0;
+			
+			
+		}
+		
+		form{
+			display:inline;
+		}
+	}
+	
+	.search-label{
+		font-size:20px;
+	}
+	
+	
+
+}		
+
+
+   
+
+

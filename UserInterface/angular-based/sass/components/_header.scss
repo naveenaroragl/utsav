@@ -1,0 +1,42 @@
+@import "_search";
+@import "_nav";
+.container header{
+	
+		margin-bottom:20px;
+		margin-top:10px;
+	}
+	
+	.logo{
+		@include breakpoint(small){   
+			padding:10px 0;
+		}
+	}
+
+     .cart{
+         background: url("../images/cart-icon.png") no-repeat; 
+         width: 32px; 
+         height: 32px; 
+		 
+		   @include breakpoint(small){   
+				position:absolute;
+				top:-75px;
+				right:10px;
+			}			
+    }
+	
+	.top-header-links{
+		list-style:none;
+		font-size:12px;
+		@include breakpoint(small){   
+			margin-bottom:10px;
+		}
+		
+		li{
+			display:inline-block;
+			margin-left:10px;
+		}
+	}
+    
+
+
+

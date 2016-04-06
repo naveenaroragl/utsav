@@ -1,0 +1,74 @@
+$max-width-large: 960px;
+$pad: 20px;
+$pad-small: 10px;
+$sans-serif: sans-serif;
+
+// $small-breakpoint: 767px;
+// $notsmall-breakpoint: 768px;
+// $medium-breakpoint: 959px;
+// $large-breakpoint: 960px;
+// $wide-breakpoint: 1200px;
+
+// $medium-breakpoint: 768px;
+// $large-breakpoint: 1024px;
+// $wide-breakpoint: 1280px;
+
+$medium-breakpoint: 768px;
+$large-breakpoint: 960px;
+$wide-breakpoint: 1280px;
+$xsmall-breakpoint: 400px;
+$xlarge-breakpoint:1500px;
+
+
+
+// Includes IE8 support - http://jakearchibald.github.io/sass-ie/
+$fix-mqs: false !default;
+
+@mixin breakpoint($point) {
+	@if $fix-mqs {
+		@each $pt in $fix-mqs {
+			@if $pt == $point {
+				@content;
+			}
+		}
+	}
+
+	@else {
+		@if $point == wide {
+			@media only screen and (min-width: $wide-breakpoint + 1) { @content; }
+		}
+		@else if $point == xlarge {
+			@media only screen and (min-width: $xlarge-breakpoint) { @content; }
+		}
+		@else if $point == large {
+			// @media (min-width: $large-breakpoint + 1) and (max-width: $wide-breakpoint) { @content; }
+			@media only screen and (min-width: $large-breakpoint) { @content; }
+		}
+		@else if $point == large_and_wider {
+			@media only screen and (min-width: $large-breakpoint) { @content; }
+		}
+		@else if $point == medium_and_smaller {
+			@media only screen and (max-width: $large-breakpoint - 1) { @content; }
+		}
+		@else if $point == medium {
+			@media only screen and (min-width: $medium-breakpoint) and (max-width: $large-breakpoint - 1) { @content; }
+		}
+		@else if $point == xmedium {
+			@media only screen and (min-width: $medium-breakpoint) and (max-width: $large-breakpoint - 1) { @content; }
+		}
+		@else if $point == small {
+			@media only screen and (max-width: $medium-breakpoint - 1)  { @content; }
+		}
+		@else if $point == xsmall {
+			@media only screen and (max-width: $xsmall-breakpoint)  { @content; }
+		}
+		@else if $point == notsmall {
+			@media only screen and (min-width: $medium-breakpoint)  { @content; }
+		}
+		@else {
+			@media only screen and ($point) { @content; }
+		}
+	}
+}
+
+

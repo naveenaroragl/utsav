@@ -1,0 +1,41 @@
+footer {
+    section{
+        padding: 10px 0;
+    }
+    background: $secondry-color;
+    display: block;
+    ul{
+        text-align: center;
+      @include breakpoint(notsmall){          
+         margin: 0px auto;
+          max-width: 600px;
+          text-align: center;
+      }
+        li{
+            text-decoration: none;                
+            color: #fff;
+            font-size: 11px;
+            display: inline;           
+            @include breakpoint(notsmall){ 
+                 border-right: 1px solid #fff;
+            }
+            a{
+                color:#fff;     
+                @include breakpoint(notsmall){ 
+                 font-size: 13px;
+                 padding: 10px;
+            }
+            }
+            a:hover{
+                color:$primary-color;
+            }
+        } 
+        li:last-child{
+            @include breakpoint(notsmall){ 
+            border:none;
+            }
+        }
+    }
+}
+
+    

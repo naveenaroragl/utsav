@@ -1,0 +1,157 @@
+.modal-dialog-login{
+	width:400px;
+	@include breakpoint(small){   
+		width:auto;
+	}
+	.input-group{
+		margin-bottom:10px;
+	}
+	
+	.input-group-addon{
+		position:relative;
+		top:0;
+	}
+	
+	.modal-header {
+		border-bottom: 0;
+		padding: 15px 15px 0 0;
+	}
+}
+
+
+.login-txt-center{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 14px;
+}
+.login-form{
+	margin:0 auto 0;
+	max-width:380px;
+}
+
+.form-header,.form-footer{
+  	border: 1px solid rgba(0,0,0,0.1);
+}
+
+.form-signin{
+	padding: 20px 35px 15px;
+  	background-color: #fff;
+  	border: 1px solid rgba(0,0,0,0.1);  
+  	border-bottom: 0px; 
+  	border-top: 0px;  
+}
+
+.form-header{
+	text-align: center;
+	padding: 8px 40px;
+	border-radius: 10px 10px 0 0;
+}
+
+.form-header i{font-size:60px;}
+
+.form-footer {
+	padding: 5px 15px;	
+	a {
+	  color: #23527c;
+ 
+	}
+}
+
+.bt-login{
+	background-color: #eb2349;
+    color: #ffffff;
+    padding-bottom: 10px;
+    padding-top: 10px;
+	
+	 &:hover{
+		background:#f64264;
+		color: #ffffff;
+	  }
+    
+}
+
+
+.form-signin .form-control, .form-register .form-control{
+  position: relative;
+  height: auto;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.form-signin .form-control:focus, .form-register .form-control:focus {
+  z-index: 2;
+}
+
+
+
+
+
+
+.has-error{color:#ff0000 !important;}
+.has-success{color:#78b310 !important;}
+.has-error input{border:1px solid red !important;}
+.has-success input{border:1px solid #78b310 !important;}
+
+.message_success{background-color: #78b310; color:#fff;padding: 5px;}
+.message_error{background-color: #e74c3c; color:#fff;padding: 5px;}
+
+
+
+
+.google,.twitter,.facebook{
+	padding: 10px 23%;
+	margin-bottom:10px;
+	width:100%;
+	
+	@include breakpoint(small){ 
+		padding: 10px 14%;
+	}
+}
+
+.google {
+    background-color: #dd4b39;
+    color: #fff;
+	 &:hover{
+		background:#fa7160;
+		color: #ffffff;
+	  }
+     
+}
+
+.facebook {
+    background-color: #3b5999;
+    color: #fff;
+	 &:hover{
+		background:#6482c2;
+		color: #ffffff;
+	  }
+	
+}
+.modal-icons{
+	 margin-left: -5px;
+     margin-right: 20px;
+}
+
+
+
+
+.signup-form{
+	input{
+		margin-bottom:10px;
+	}
+	
+	.form-footer{
+		border-top:0;
+	}
+}
+
+.forgot-password-form{
+	input{
+			margin-bottom:10px;
+		}
+
+	.form-footer{
+		border-top:0;
+	}
+}
+

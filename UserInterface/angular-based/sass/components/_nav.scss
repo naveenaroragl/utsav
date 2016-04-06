@@ -1,0 +1,88 @@
+.container nav{   
+     background:#fafafa;
+    .topnav{                
+        position: absolute;
+        display:block;
+        top:0;
+        width:80%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;  
+        left:-1000px;
+        background:#fafafa;
+  @include breakpoint(notsmall){
+     top:0;
+      position: relative;     
+      width:100%;
+      padding: 8px 0;
+       left:0px;
+    }   
+  
+    li{    
+        border-bottom: 1px solid #ededed; 
+        width: 100%;
+        text-align: left;
+        padding: 5px 0;     
+    @include breakpoint(notsmall){
+        width: 15.3333333333%;
+        border-bottom:none;
+        text-align: center;   
+        position: relative;
+         display:inline-block;
+    }
+
+
+    a{
+        padding:10px; 
+        color:#040706;
+        text-decoration: none;
+    }
+    a:hover{
+       padding:10px;
+       color:$secondry-color;
+       text-decoration: none;
+    }
+        ul.sub-category{
+            display: none;
+            @include breakpoint(notsmall){
+            display: none;
+            position: absolute;            
+            left:0;
+            background: #ededed;
+            width: 300px;
+            list-style-type: none;
+            
+			  li{
+              @include breakpoint(notsmall){                  
+                  border-bottom: 1px solid #fff;
+                  width: 100%;
+                  text-align: left;
+                  
+                }  
+            }
+			
+			}
+			
+			
+             
+        } 
+    } 
+        li:hover ul.sub-category{
+            @include breakpoint(notsmall){
+                display: block;
+            }
+          
+        }
+}
+
+#menu-btn{
+    width:32px; 
+    height: 32px;
+    position: relative;
+    left:0;
+    top:-37px;
+@include breakpoint(notsmall){
+        display: none;
+ }
+}
+}

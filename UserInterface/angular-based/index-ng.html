@@ -1,0 +1,420 @@
+<!doctype html>
+
+<head>
+	<title>Ecart</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">   
+	<script src="js/vendors/jquery-1.11.3.min.js"></script>
+	<script src="js/vendors/bootstrap.min.js"></script>
+	<script src="js/vendors/bootstrap-select.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular-route.min.js"></script>
+	
+	<script src="js/app.js"></script>
+	<script src="js/routes.js"></script>
+
+	
+</head>
+<body ng-app="MainApp">
+	<div class="container">
+        <header id="header" role="header">
+			<div class="row">
+				<div class="col-md-6 col-sm-6 col-xs-12">  <img src="images/logo.png" class="logo" alt="Ecart" />       </div>
+				<div class="col-md-6 col-sm-6 col-xs-12 text-right text-xs-left"> 
+					<ul class="top-header-links">
+						<li><a href="" class="icon-user" data-toggle="modal" data-target="#myModalLogin" class="login-top-link">Login</a></li>
+						<li><a href="#" title="About Us">About Us</a></li>
+						<li><a href="#" title="Contact Us">Contact Us</a></li>
+						<li><a href="#" title="Help">Help</a></li>           
+						<li><a href="#" title="Privacy Policy">Privacy Policy</a></li>
+					</ul>  
+				</div>
+				<!--<div class="col-md-1 col-sm-1 col-xs-12 text-right"> <div class="cart "></div>   </div>-->
+			</div>
+		</header>
+		
+		
+<section class="home-search-cntr row">
+	<div class="search-cntr-inner row">
+		  <span class="search-label">I am looking for</span>			
+		  <form class="navbar-form" role="search" method="get">
+			<div class="form-group">
+			  <select name="selectVal" class="selectpicker selectpicker1" multiple data-live-search="true" data-live-search-placeholder="Search" data-actions-box="true">
+				<optgroup label="filter1">
+				  <option>option1</option>
+				  <option>option2</option>
+				  <option>option3</option>
+				  <option>option4</option>
+				</optgroup>
+				<optgroup label="filter2">
+				  <option>option1</option>
+				  <option>option2</option>
+				  <option>option3</option>
+				  <option>option4</option>
+				</optgroup>
+				<optgroup label="filter3">
+				  <option>option1</option>
+				  <option>option2</option>
+				  <option>option3</option>
+				  <option>option4</option>
+				</optgroup>
+			  </select>
+			</div>
+			<span class="search-label">In</span>
+			<div class="form-group">
+			  <select name="selectVal" class="selectpicker selectpicker2" multiple data-live-search="true" data-live-search-placeholder="Search" data-actions-box="true">
+				<optgroup label="filter1">
+				  <option>option1</option>
+				  <option>option2</option>
+				  <option>option3</option>
+				  <option>option4</option>
+				</optgroup>
+				<optgroup label="filter2">
+				  <option>option1</option>
+				  <option>option2</option>
+				  <option>option3</option>
+				  <option>option4</option>
+				</optgroup>
+				<optgroup label="filter3">
+				  <option>option1</option>
+				  <option>option2</option>
+				  <option>option3</option>
+				  <option>option4</option>
+				</optgroup>
+			  </select>
+			</div>
+			
+			<div class="input-group">
+			 
+
+			  <div class="input-group-btn">
+				<button class="btn btn-default search-btn-main" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+			  </div>
+			</div>
+			
+		  </form>
+	</div> 
+</section>
+		
+	
+			
+			<!-- Static navbar -->
+     <!-- <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+               <li class="dropdown">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+               <li class="dropdown">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>-->
+
+	  
+	  
+	  
+          <div ng-view></div>
+		 
+	
+      
+          
+        <footer>
+        <section id="countries" class="rows">
+        <ul class="span-12">            
+            <li class="col span-2"><a href="#" title="India">India</a></li>
+            <li class="col span-2"><a href="#" title="United States">United States</a></li>
+            <li class="col span-2"><a href="#" title="France">France</a></li>
+            <li class="col span-2"><a href="#" title="Germany">Germany</a></li>
+            <li class="col span-2"><a href="#" title="Holland">Holland</a></li>            
+        </ul>
+        </section>
+        <section id="socialIcons" class="rows">
+        <ul class="span-12">            
+            <li class="col span-2"><a href="#" title="Follow Us">Follow Us</a></li>
+            <li class="col span-2"><a href="#" title="Find Us">Find Us</a></li>
+            <li class="col span-2"><a href="#" title="Subscribe">Subscribe</a></li> 
+        </ul>
+        </section>
+        <section id="bottomNav" class="rows">
+        <ul class="span-12">
+            <li class="col span-2"><a href="#" title="About Us">About Us</a></li>
+            <li class="col span-2"><a href="#" title="Contact Us">Contact Us</a></li>
+            <li class="col span-2"><a href="#" title="FAQs">FAQs</a></li>
+            <li class="col span-2"><a href="#" title="Help">Help</a></li>           
+            <li class="col span-2"><a href="#" title="Privacy Policy">Privacy Policy</a></li>
+        </ul>
+        </section>
+       
+        </footer>
+        
+    </div>
+	
+	
+	
+	
+	
+<!-- Login Modal -->
+<div class="modal fade" id="myModalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-dialog-login" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+       
+	<!-- Login Part -->
+	   <div class="login-form popup-form-cntr">
+			<div class="form-header">
+				<i class="icon-user"></i>
+			</div>
+		
+			<form id="login-form" method="post" class="form-signin" role="form" action="#">
+				<div class="input-group"> 
+					<span id="basic-addon1" class="input-group-addon icon-user"></span>
+					<input type="text"  id="username" required placeholder="Username" class="form-control"/>
+				</div>
+				<div class="input-group">
+					<span id="basic-addon1" class="input-group-addon icon-lock"></span>
+					<input type="password"  id="password" required placeholder="password" class="form-control"/>
+				</div>
+								
+				<button class="btn btn-block bt-login" type="submit"><i class="modal-icons icon-login"></i>Sign in</button>
+				
+				<h4 class="text-center login-txt-center">Alternatively, you can log in using:</h4>
+				
+				<a class="btn  facebook" href="#"> <i class="modal-icons icon-facebook"></i> Signin with Facebook </a>  
+				<a class="btn  google" href="#"> <i class="modal-icons icon-google"></i> Signin with Google </a>  
+			</form>
+			
+			<div class="form-footer">
+				<div class="row">
+					<div class="col-xs-6 col-sm-6 col-md-6">
+						<a href="" class="forgotPassword"> Forgot password? </a>
+					</div>
+					
+					<div class="col-xs-6 col-sm-6 col-md-6">
+						<!--<a href="#" data-dismiss="modal" data-toggle="modal" class="signupUser" data-target="#myModalSignup" > Sign Up</a>-->
+						<a href="" class="signupUser" > Sign Up</a>
+						
+						
+					</div>
+				</div>
+			</div>
+		</div><!-- end of Login Part -->
+		
+		
+		<!-- Sign Up Part -->
+		 <div class="signup-form hidden popup-form-cntr">
+			<div class="form-header">
+				<i class="icon-edit"></i>
+			</div>
+			<form id="signup-form" method="post" class="form-signin" role="form" action="#">
+			<p class="text-secondary-color">All fields are mendatory</p>
+				<input type="text"  id="firstname" required placeholder="First Name" class="form-control"/>
+				<input type="text"  id="lastname" required placeholder="Last Name" class="form-control"/>
+				<input type="email"  id="Email" required placeholder="Email Address" class="form-control"/>
+				<input type="text"  id="phone" required placeholder="Phone Number" class="form-control"/>
+				<input type="password"  id="password" required placeholder="Password" class="form-control"/>
+				<button class="btn btn-block bt-login" type="submit"><i class="modal-icons icon-login"></i>Sign Up</button>
+			</form>
+			
+			<div class="form-footer">
+	
+			</div>
+		</div><!-- end of Sign Up Part -->
+		
+		
+		
+		<!-- Forgot Password Part -->
+		 <div class="forgot-password-form hidden popup-form-cntr">
+			<div class="form-header">
+				<i class="icon-at"></i>
+			</div>
+			<form id="forgot-password-form" method="post" class="form-signin" role="form" action="#">
+			<p class="text-secondary-color">Enter your E-Mail address below to reset your password.</p>
+				
+				<input type="email"  id="Email" required placeholder="Email Address" class="form-control"/>
+
+				<button class="btn btn-block bt-login" type="submit"><i class="modal-icons icon-login"></i>Send Email</button>
+			</form>
+			
+			<div class="form-footer">
+	
+			</div>
+		</div><!-- end of Forgot Password  Part -->
+		
+		
+      </div>
+    </div>
+  </div>
+</div><!-- end of Login Modal -->
+
+
+
+
+<!-- verticals-popup -->
+<div class="modal fade verticals-popup" id="verticalsPopup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-dialog-verticals-popup" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<h2>Please choose the products and services </h2>
+      </div>
+		  <form method="post" id="vericals-form">
+			  <div class="modal-body">
+				<div class="main-checkboxes-cntr">
+					<div class="chkbox-label-cntr">
+						<input id="catering" data="catering" type="checkbox" />
+						<label for="catering" class="icon-food">Catering</label>
+					</div>
+
+					<div class="chkbox-label-cntr">
+						<input id="hospitality" data="hospitality" type="checkbox" />
+						<label for="hospitality" class="icon-commerical-building">Hospitality</label>
+					</div>
+
+					<div class="chkbox-label-cntr">
+						<input id="fashion" data="fashion" type="checkbox" />
+						<label for="fashion" class="icon-women">Fashion</label>
+					</div>
+
+					<div class="chkbox-label-cntr">
+						<input id="music"  data="music" type="checkbox" />
+						<label for="music" class="icon-music">Music</label>
+					</div>
+
+					<div class="chkbox-label-cntr">
+						<input id="grooming" data="grooming" type="checkbox" />
+						<label for="grooming" class="icon-beauty">Grooming</label>
+					</div>
+
+					<div class="chkbox-label-cntr">
+						<input id="gifts"  data="gifts" type="checkbox" />
+						<label for="gifts" class="icon-gift">Gifts</label>
+					</div>
+
+					<div class="chkbox-label-cntr">
+						<input id="photography"  data="photography" type="checkbox" />
+						<label for="photography" class="icon-camera">Photography</label>
+					</div>
+
+					<div class="chkbox-label-cntr">
+						<input id="travel" data="travel" type="checkbox" />
+						<label for="travel" class="icon-flight">Travel</label>
+					</div>
+
+					<div class="chkbox-label-cntr">
+						<input id="jewellery" data="jewellery" type="checkbox" />
+						<label for="jewellery" class="icon-luxury">Jewellery</label>
+					</div>
+
+					<div class="chkbox-label-cntr">
+						<input id="customs" data="customs" type="checkbox" />
+						<label for="customs" class="icon-nature-3">Customs</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-footer">
+					<a href="#/Products" class="btn btn-block btn-continue btn-continue-vericals-home"> Continue</a>
+				
+			</div>
+		</form>
+	</div>
+	</div>
+</div><!-- end of verticals-popup -->
+
+	
+	
+<!-- singup Modal
+<div class="modal fade" id="myModalSignup" tabindex="-1" role="dialog" aria-labelledby="myModalSignup">SIGNUP
+  <div class="modal-dialog modal-dialog-login" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <div class="signup-form">
+			<div class="form-header">
+				<i class="icon-edit"></i>
+			</div>
+			
+			
+			<form id="signup-form" method="post" class="form-signin" role="form" action="#">
+			<p class="text-secondary-color">All fields are mendatory</p>
+				<input type="text"  id="firstname" required placeholder="First Name" class="form-control"/>
+				<input type="text"  id="lastname" required placeholder="Last Name" class="form-control"/>
+				<input type="email"  id="Email" required placeholder="Email Address" class="form-control"/>
+				<input type="text"  id="phone" required placeholder="Phone Number" class="form-control"/>
+				<input type="password"  id="password" required placeholder="Password" class="form-control"/>
+				<button class="btn btn-block bt-login" type="submit"><i class="modal-icons icon-login"></i>Sign Up</button>
+			</form>
+			
+			<div class="form-footer">
+			
+			</div>
+		</div>
+      </div>
+    </div>
+  </div>
+</div><!-- end of signup Modal -->
+	
+  
+</body>
+</html>
+

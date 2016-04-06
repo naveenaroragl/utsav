@@ -1,0 +1,63 @@
+html,
+body,
+ul,
+ol {
+   margin: 0;
+   padding: 0;
+}
+
+a{
+    color: $primary-color;
+    text-decoration:none;
+}
+a:hover{
+    color: $secondry-color;
+     text-decoration:underline;
+}
+
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+.text-justify { text-align: justify; }
+
+
+ @include breakpoint(small){   
+.text-xs-left { text-align: left; }
+.text-xs-right { text-align: right; }
+.text-xs-center { text-align: center; }
+.text-xs-justify { text-align: justify; }
+}
+
+
+@include breakpoint(medium){  
+.text-sm-left { text-align: left; }
+.text-sm-right { text-align: right; }
+.text-sm-center { text-align: center; }
+.text-sm-justify { text-align: justify; }
+}
+
+@include breakpoint(large){   
+.text-md-left { text-align: left; }
+.text-md-right { text-align: right; }
+.text-md-center { text-align: center; }
+.text-md-justify { text-align: justify; }
+}
+
+
+@mixin heading-divider($width) {
+	border-bottom:1px solid #ccc;
+	width: $width+px;
+	margin:0 auto;
+}
+
+body, body.modal {
+    padding-right: 0 !important;
+}
+
+body.modal {
+    overflow-y: hidden !important;
+}
+
+.text-secondary-color{
+	color:$secondry-color;
+}

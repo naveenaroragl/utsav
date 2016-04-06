@@ -1,0 +1,32 @@
+.modal-services-options,
+.modal-product-options{
+	width:75%;
+	@include breakpoint(small){   
+		width:100%;
+	}
+	@include breakpoint(medium){   
+		width:100%;
+	}
+	
+	.btn-continue{
+		background-color: #eb2349;
+		color: #ffffff;
+		padding-bottom: 10px;
+		padding-top: 10px;
+		width:30%;	
+		margin:0 auto;
+	 &:hover{
+		background:#f64264;
+		color: #ffffff;
+	  }
+	}
+	
+	h3{
+		font-size:18px;
+		color:#000;
+	}
+
+}
+
+	
+	

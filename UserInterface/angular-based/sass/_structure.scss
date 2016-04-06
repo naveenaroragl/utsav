@@ -1,0 +1,24 @@
+body{
+        font: normal 14px/20px $font-family;
+        color:$primary-color;
+        background:#fff;
+        padding: 0;
+        margin: 0;
+.right{
+        float:right;
+    }
+}
+
+header, footer, section, article, nav{
+	margin:0;
+}
+
+.container{
+	width:100%;
+	padding:0;
+}
+
+.btn{
+	transition: all 0.3s ease 0s;
+}
+
