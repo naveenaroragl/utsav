@@ -29,5 +29,6 @@
 	<extension name="glutsavacceleratorinitialdata"/>
 	<extension name="glutsavacceleratorcockpits"/>
 	<extension name="glutsavvendor"/>
+	<extension name="glutsavbackoffice"/>
   </extensions>
 </hybrisconfig>
