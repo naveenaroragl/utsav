@@ -15,6 +15,11 @@
            http://www.springframework.org/schema/context
            http://www.springframework.org/schema/context/spring-context.xsd">
 
+           
+           
+	<context:component-scan base-package="gl.utsav.vendor"/>           
+
+
 
 
 	<!-- The hybris platform provides one single Spring application context 
