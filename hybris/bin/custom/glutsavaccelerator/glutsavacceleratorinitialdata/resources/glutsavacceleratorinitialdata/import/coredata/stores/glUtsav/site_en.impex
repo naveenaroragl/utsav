@@ -2,8 +2,11 @@
 # Import the CMS Site configuration for the store
 #
 
+$siteUid=glUtsav
+
 # Language
 $lang=en
 
 # Create CMS Site
 UPDATE CMSSite;uid[unique=true];name[lang=$lang];locale[lang=$lang]
+;$siteUid;GL Utsav;

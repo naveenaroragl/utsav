@@ -1,15 +1,38 @@
 # ImpEx for Importing Categories
 
 # Macros / Replacement Parameter definitions
-$productCatalog=__PRODUCT_CATALOG_NAME__
-$productCatalogName=__PRODUCT_CATALOG_FULL_NAME__
+$productCatalog=glUtsavProductCatalog
+$productCatalogName=GL Utsav Product Catalog
 
 $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
 $supercategories=source(code, $catalogVersion)[unique=true]
 $categories=target(code, $catalogVersion)[unique=true]
 
 # Insert Categories
-INSERT_UPDATE Category;code[unique=true];allowedPrincipals(uid)[default='customergroup'];$catalogVersion
+INSERT_UPDATE Category;code[unique=true];$catalogVersion;supercategories(code,$catalogVersion);allowedPrincipals(uid)[default='customergroup']
+;categories;;
+;clothes;;categories
+;934;;
+;Jewellery;;categories
+;Ring;;Jewellery
+;Nose Pin & Nose Ring;;Jewellery
+;Necklace;;Jewellery
+;Bangles & Bracelets;;Jewellery
+;Chain;;Jewellery
+;Teeka;;Jewellery
+;Waistbelt;;Jewellery
+;Toe Ring;;Jewellery
+;Anklet;;Jewellery
+;Earing;;Jewellery
+;Gold Coin;;Jewellery
+;Silver Coin;;Jewellery
+;Ginni;;Jewellery
+;Lakshmi Ganesh Ji;;Jewellery
+;Hathphool;;Jewellery
+;Bajooband;;Jewellery
+;metalJewellery;;
+;diamondJewellery;;
+;gemstoneJewellery;;
 
 # Insert Category Structure
 INSERT_UPDATE CategoryCategoryRelation;$categories;$supercategories

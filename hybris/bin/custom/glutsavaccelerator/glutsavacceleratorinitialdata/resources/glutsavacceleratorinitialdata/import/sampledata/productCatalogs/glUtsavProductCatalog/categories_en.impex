@@ -1,8 +1,8 @@
 # ImpEx for Importing Categories
 
 # Macros / Replacement Parameter definitions
-$productCatalog=__PRODUCT_CATALOG_NAME__
-$productCatalogName=__PRODUCT_CATALOG_FULL_NAME__
+$productCatalog=glUtsavProductCatalog
+$productCatalogName=GL Utsav Product Catalog
 
 $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
 
@@ -11,3 +11,22 @@ $lang=en
 
 # Create Categories
 UPDATE Category;code[unique=true];$catalogVersion;name[lang=$lang]
+ ;934;;Laundry Service;
+ ;clothes;;Clothing Services;
+ ;Jewellery;;Jewellery
+;Ring;;Rings
+;Nose Pin & Ring;;Nose Pins & Rings
+;Necklace;;Necklaces
+;Bangles & Bracelets;;Bangles & Bracelets
+;Chain;;Chains
+;Teeka;;Teekas
+;Waistbelt;;Waistbelt
+;Toe Ring;;Toe Ring
+;Anklet;;Anklets
+;Earing;;Earings
+;Gold Coin;;Gold Coins
+;Silver Coin;;Silver Coins
+;Ginni;;Ginnis
+;Lakshmi Ganesh Ji;;Lakshmi Ganesh Ji
+;Hathphool;;Hathphools
+;Bajooband;;Bajoobands

@@ -1,9 +1,9 @@
 # ImpEx for Importing Category Classifications
 
 # Macros / Replacement Parameter definitions
-$productCatalog=__PRODUCT_CATALOG_NAME__
-$productCatalogName=__PRODUCT_CATALOG_FULL_NAME__
-$classificationCatalog=__CLASSIFICATION_CATALOG_NAME__
+$productCatalog=glUtsavProductCatalog
+$productCatalogName=GL Utsav Product Catalog
+$classificationCatalog=glUtsavClassificationCatalog
 
 $classCatalogVersion=catalogversion(catalog(id[default='$classificationCatalog']),version[default='1.0'])[unique=true,default='$classificationCatalog:1.0']
 $classSystemVersion=systemVersion(catalog(id[default='$classificationCatalog']),version[default='1.0'])[unique=true]
@@ -13,6 +13,26 @@ $lang=en
 
 # Insert Classifications
 UPDATE ClassificationClass;code[unique=true];$classCatalogVersion;name[lang=$lang]
+ ;2436;;Connectivity;
+ ;metalJewelleryClass;;Metal Details;
+ ;diamondJewelleryClass;;Diamond details;
+ ;gemstoneJewelleryClass;;Gem Stone details;
 
 # Insert Classification Attributes
 UPDATE ClassificationAttribute;code[unique=true];$classSystemVersion;name[lang=$lang]
+ ;Connector s , 1496;;Connector(s);
+ ;Metal , 1001;;Metal;
+ ;Purity , 1002;;Carat(ct);
+ ;No 0f Diamonds , 1003;;No of Diamonds;
+ ;Color , 1004;;Color;
+ ;Brand , 1005;;Brand;
+ ;Wt of Diamond , 1006;;Weight of Diamond;
+ ;Diamond Quality , 1007;;Diamond Quality;
+ ;Setting Type , 1008;;Setting Type;
+ ;Shape , 1009;;Shape;
+ ;Stone Type , 1010;; Stone Type;
+ ;Stone Wt , 1011;;Stone Wt;
+ ;Stone Color , 1012;;Stone Color;
+ ;Stone size , 1013;;Stone Size;
+ ;Stone shape , 1014;;Stone Shape;
+ ;No of Stones , 1015;;No of Stones;

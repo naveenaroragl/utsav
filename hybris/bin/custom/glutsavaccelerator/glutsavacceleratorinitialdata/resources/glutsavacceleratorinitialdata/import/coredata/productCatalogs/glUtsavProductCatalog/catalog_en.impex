@@ -2,8 +2,11 @@
 # Import the Product Catalog and Classification Catalog
 #
 
+$productCatalog=glUtsavProductCatalog
+
 # Language
 $lang=en
 
 # Create Catalog
 UPDATE Catalog;id[unique=true];name[lang=$lang]
+;$productCatalog;GL Utsav Product Catalog
