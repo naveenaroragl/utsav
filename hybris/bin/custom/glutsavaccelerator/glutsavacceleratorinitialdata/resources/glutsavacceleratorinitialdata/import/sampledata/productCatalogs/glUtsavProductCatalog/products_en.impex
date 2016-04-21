@@ -1,0 +1,21 @@
+# ImpEx for Importing Product Localisations
+ 
+# Macros / Replacement Parameter definitions
+$productCatalog=glUtsavProductCatalog
+$productCatalogName=GL Utsav Product Catalog
+
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
+
+# Language
+$lang=en
+
+# Update allProducts with localisations
+
+UPDATE Product;code[unique=true];$catalogVersion;name[lang=$lang];summary[lang=$lang];description[lang=$lang]
+;BT1000001;;Cap Blue Tomato BT Snow Trucker Cap black;<p>Show your love for snow and Blue Tomato! With the BT Snow Trucker Cap with Mesh on the back and print on the front.</p>
+;J1000001;;Hand carved Choker;<p>Beautiful Choker with intricate hand carved design.</p>;Diamond & Gemstone Ring in 14KT Yellow Gold with JK-SI diamond;
+
+UPDATE ServiceProduct;code[unique=true];$catalogVersion;name[lang=$lang];summary[lang=$lang];description[lang=$lang]
+;SBT1000001;;All kinds Laundry Service;<p>Show your love for your clothes! With the People Laundry give your clothes new skin.</p>
+
+

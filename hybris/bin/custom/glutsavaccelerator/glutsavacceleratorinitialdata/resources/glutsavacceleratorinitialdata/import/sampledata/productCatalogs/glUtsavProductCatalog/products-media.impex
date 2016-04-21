@@ -1,0 +1,50 @@
+# ImPex for Importing Product Media
+
+# Macros / Replacement Parameter definitions
+$productCatalog=glUtsavProductCatalog
+
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog]
+$media=@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator]
+$thumbnail=thumbnail(code, $catalogVersion)
+$picture=picture(code, $catalogVersion)
+$thumbnails=thumbnails(code, $catalogVersion)
+$detail=detail(code, $catalogVersion)
+$normal=normal(code, $catalogVersion)
+$others=others(code, $catalogVersion)
+$data_sheet=data_sheet(code, $catalogVersion)
+$medias=medias(code, $catalogVersion)
+$galleryImages=galleryImages(qualifier, $catalogVersion)
+$siteResource=jar:gl.utsav.accelerator.initialdata.setup.InitialDataSystemSetup&/glutsavacceleratorinitialdata/import/sampledata/productCatalogs/$productCatalog
+
+
+
+
+
+#INSERT_UPDATE Media;mediaFormat(qualifier);;code[unique=true];$media;mime[default='image/jpeg'];$catalogVersion;folder(qualifier)
+#;515Wx515H;;/515Wx515H/138966_4.jpg;$siteResource/images/515Wx515H/138966_4.jpg;;;images
+#;300Wx300H;;/300Wx300H/138966_4.jpg;$siteResource/images/300Wx300H/138966_4.jpg;;;images
+#;96Wx96H;;/96Wx96H/138966_4.jpg;$siteResource/images/96Wx96H/138966_4.jpg;;;images
+#;65Wx65H;;/65Wx65H/138966_4.jpg;$siteResource/images/65Wx65H/138966_4.jpg;;;images
+#;30Wx30H;;/30Wx30H/138966_4.jpg;$siteResource/images/30Wx30H/138966_4.jpg;;;images
+
+#INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$catalogVersion
+#;138966_4;/515Wx515H/138966_4.jpg,/300Wx300H/138966_4.jpg,/96Wx96H/138966_4.jpg,/65Wx65H/138966_4.jpg,/30Wx30H/138966_4.jpg;
+
+#UPDATE Product;code[unique=true];$picture;$thumbnail;$others;$normal;$thumbnails;$catalogVersion;$galleryImages
+#;138966_true_black;/300Wx300H/138966_4.jpg;/96Wx96H/138966_4.jpg;/515Wx515H/138966_4.jpg,/300Wx300H/138966_4.jpg,/96Wx96H/138966_4.jpg,/65Wx65H/138966_4.jpg,/30Wx30H/138966_4.jpg;/300Wx300H/138966_4.jpg;/96Wx96H/138966_4.jpg;;138966_4,138966_5
+
+
+
+
+
+INSERT_UPDATE Media;mediaFormat(qualifier);;code[unique=true];$media;mime[default='image/jpeg'];$catalogVersion;folder(qualifier)
+;515Wx515H;;/515Wx515H/J1000001_4.jpg;$siteResource/images/515Wx515H/J1000001_4.jpg;;;images
+;96Wx96H;;/96Wx96H/J1000001_4.jpg;$siteResource/images/96Wx96H/J1000001_4.jpg;;;images
+
+INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$catalogVersion
+;J1000001_4;/515Wx515H/J1000001_4.jpg, /96Wx96H/J1000001_4.jpg;
+
+UPDATE Product;code[unique=true];$picture;$thumbnail;$others;$normal;$thumbnails;$catalogVersion;$galleryImages
+;J1000001;/515Wx515H/J1000001_4.jpg;/96Wx96H/J1000001_4.jpg;/96Wx96H/J1000001_4.jpg,/515Wx515H/J1000001_4.jpg;/515Wx515H/J1000001_4.jpg;/96Wx96H/J1000001_4.jpg;;J1000001_4
+
+

@@ -1,0 +1,12 @@
+#
+# Import the Content Catalog
+#
+
+$contentCatalog=glUtsavContentCatalog
+
+# Language
+$lang=en
+
+# Create Content Catalog
+UPDATE ContentCatalog;id[unique=true];name[lang=$lang]
+;$contentCatalog;GL Utsav Content Catalog

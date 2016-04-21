@@ -1,0 +1,74 @@
+# ImpEx for Importing Category Classifications
+
+# Macros / Replacement Parameter definitions
+$productCatalog=glUtsavProductCatalog
+$productCatalogName=GL Utsav Product Catalog
+$classificationCatalog=glUtsavClassificationCatalog
+
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
+$classCatalogVersion=catalogversion(catalog(id[default='$classificationCatalog']),version[default='1.0'])[unique=true,default='$classificationCatalog:1.0']
+$classSystemVersion=systemVersion(catalog(id[default='$classificationCatalog']),version[default='1.0'])[unique=true]
+$class=classificationClass(ClassificationClass.code,$classCatalogVersion)[unique=true]
+$supercategories=source(code, $classCatalogVersion)[unique=true]
+$categories=target(code, $catalogVersion)[unique=true]
+$attribute=classificationAttribute(code,$classSystemVersion)[unique=true]
+$unit=unit(code,$classSystemVersion)
+
+# Insert Classifications
+INSERT_UPDATE ClassificationClass;$classCatalogVersion;code[unique=true];allowedPrincipals(uid)[default='customergroup']
+;;2436
+;;metalJewelleryClass
+;;diamondJewelleryClass
+;;gemstoneJewelleryClass
+
+
+# Insert Classification Attributes
+INSERT_UPDATE ClassificationAttribute;$classSystemVersion;code[unique=true]
+;;Connector s , 1496
+;;Metal , 1001
+;;Purity , 1002
+;;No 0f Diamonds , 1003
+;;Color , 1004
+;;Brand , 1005
+;;Wt of Diamond , 1006
+;;Diamond Quality , 1007
+;;Setting Type , 1008
+;;Shape , 1009
+;;Stone Type , 1010
+;;Stone Wt , 1011
+;;Stone Color , 1012
+;;Stone size , 1013
+;;Stone shape , 1014
+;;No of Stones , 1015
+
+# Links ClassificationClasses to Categories
+INSERT_UPDATE CategoryCategoryRelation;$categories;$supercategories
+;934;2436
+;metalJewellery;metalJewelleryClass
+;diamondJewellery;diamondJewelleryClass
+;gemstoneJewellery;gemstoneJewelleryClass
+
+INSERT_UPDATE ClassAttributeAssignment;$class;$attribute;position;$unit;attributeType(code[default=string]);multiValued[default=false];range[default=false];localized[default=true]
+ ;2436;Connector s , 1496;0;300;
+ ;metalJewelleryClass;Metal , 1001;;300;;true;
+ ;metalJewelleryClass;Purity , 1002;;3;;true;
+ ;diamondJewelleryClass;No 0f Diamonds , 1003;;300;
+ ;diamondJewelleryClass;Color , 1004;;300;
+ ;diamondJewelleryClass;Brand , 1005;;300;
+ ;diamondJewelleryClass;Wt of Diamond , 1006;;1;
+ ;diamondJewelleryClass;Diamond Quality , 1007;;300;
+ ;diamondJewelleryClass;Setting Type , 1008;;300;
+ ;diamondJewelleryClass;Shape , 1009;;300;
+ ;gemstoneJewelleryClass;Stone Type , 1010;;300;
+ ;gemstoneJewelleryClass;Stone Wt , 1011;;1;
+ ;gemstoneJewelleryClass;Stone Color , 1012;;300;
+ ;gemstoneJewelleryClass;Stone size , 1013;;300;
+ ;gemstoneJewelleryClass;Stone shape , 1014;;300;
+ ;gemstoneJewelleryClass;No of Stones , 1015;;300;
+ 
+ 
+ 
+ 
+ 
+ 
+ 

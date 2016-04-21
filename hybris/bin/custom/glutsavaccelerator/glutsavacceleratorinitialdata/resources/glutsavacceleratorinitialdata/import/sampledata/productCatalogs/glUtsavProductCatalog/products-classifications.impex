@@ -1,0 +1,45 @@
+# ImpEx for Importing Product Classifications
+
+#% impex.setLocale(Locale.ENGLISH);
+
+# Macros / Replacement Parameter definitions
+$productCatalog=glUtsavProductCatalog
+$productCatalogName=GL Utsav Product Catalog
+$classificationCatalog=glUtsavClassificationCatalog
+
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
+$clAttrModifiers=system='$classificationCatalog',version='1.0',translator=de.hybris.platform.catalog.jalo.classification.impex.ClassificationAttributeTranslator,lang=en
+
+# Insert Product Classifications
+
+# Classification: Metal Diamonds details
+$feature1=@Metal , 1001[$clAttrModifiers];  
+$feature2=@Purity , 1002[$clAttrModifiers];  
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$catalogVersion;
+ ;J1000001;Gold;23;;
+
+# Classification: Jewellery Diamonds details
+$feature1=@No 0f Diamonds , 1003[$clAttrModifiers];  
+$feature2=@Color , 1004[$clAttrModifiers];  
+$feature3=@Brand , 1005[$clAttrModifiers];  
+$feature4=@Wt of Diamond , 1006[$clAttrModifiers];  
+$feature5=@Diamond Quality , 1007[$clAttrModifiers];  
+$feature6=@Setting Type , 1008[$clAttrModifiers];  
+$feature7=@Shape , 1009[$clAttrModifiers];  
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$catalogVersion;
+ ;J1000001;25;very light yellow;P&J;.5;VS1;Prong;Princess;;
+ 
+ 
+
+# Classification: Jewellery GemStone details
+$feature1=@Stone Type , 1010[$clAttrModifiers];  
+$feature2=@Stone Wt , 1011[$clAttrModifiers];  
+$feature3=@Stone Color , 1012[$clAttrModifiers];  
+$feature4=@Stone size , 1013[$clAttrModifiers];  
+$feature5=@Stone shape , 1014[$clAttrModifiers];  
+$feature6=@No of Stones , 1015[$clAttrModifiers];  
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$catalogVersion;
+ ;J1000001;Ruby;2.50;Red;.5;Round;2;;
+ 
+ 
+ 
