@@ -17,6 +17,11 @@
 	</c:otherwise>
 </c:choose>
 
+<link rel="stylesheet" href="/glutsavacceleratorstorefront/_ui/desktop/theme-blue/css/style.css"> 
+
+
+
+
 
 <%-- <link rel="stylesheet" href="${commonResourcePath}/blueprint/print.css" type="text/css" media="print" /> --%>
 <style type="text/css" media="print">
