@@ -4,12 +4,21 @@
 package gl.utsav.vendor.services.impl;
 
 import de.hybris.platform.commercefacades.user.data.AddressData;
+import de.hybris.platform.core.Registry;
 import de.hybris.platform.core.model.user.AddressModel;
+import de.hybris.platform.core.model.user.UserModel;
+import de.hybris.platform.jalo.JaloConnection;
+import de.hybris.platform.jalo.JaloSession;
+import de.hybris.platform.jalo.security.JaloSecurityException;
+import de.hybris.platform.persistence.security.PasswordEncoder;
+import de.hybris.platform.persistence.security.PasswordEncoderFactory;
 import de.hybris.platform.servicelayer.i18n.CommonI18NService;
 import de.hybris.platform.servicelayer.model.ModelService;
 import de.hybris.platform.servicelayer.search.FlexibleSearchService;
 import de.hybris.platform.servicelayer.user.UserService;
 
+import java.math.BigInteger;
+import java.security.SecureRandom;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -49,7 +58,6 @@ public class VendorRegistrationServiceImpl implements VendorRegistrationService
 	@Autowired
 	private UserService userService;
 
-	private static final String VENDOR_COMPANY_UID = "VendorGroup";
 
 	/*
 	 * (non-Javadoc)
@@ -62,9 +70,10 @@ public class VendorRegistrationServiceImpl implements VendorRegistrationService
 	public GLUVendorCompanyModel createVendorCompany(final VendorCompanyData data)
 	{
 		//TODO validate input
-
+		final SecureRandom random = new SecureRandom();
 		final GLUVendorCompanyModel company = modelService.create(GLUVendorCompanyModel.class);
-		company.setUid(VENDOR_COMPANY_UID);
+		final String vendorId = "VendorGroup" + new BigInteger(130, random).toString(32);
+		company.setUid(vendorId);
 		company.setName(data.getCompanyName());
 		company.setDescription(data.getDescription());
 
@@ -128,9 +137,9 @@ public class VendorRegistrationServiceImpl implements VendorRegistrationService
 		um.setUid(data.getEmail());
 		um.setSessionLanguage(commonI18NService.getCurrentLanguage());
 		um.setSessionCurrency(commonI18NService.getCurrentCurrency());
-		userService.setPassword(um, data.getPassword(), "md5");
-
-
+		final PasswordEncoderFactory passwordEncoderFactory = Registry.getApplicationContext().getBean(
+				"core.passwordEncoderFactory", PasswordEncoderFactory.class);
+		final PasswordEncoder deprecatedEncoder = passwordEncoderFactory.getEncoder("md5");
 		if (vendor.getCompany() != null)
 		{
 			final Set set = new HashSet();
@@ -140,13 +149,14 @@ public class VendorRegistrationServiceImpl implements VendorRegistrationService
 		}
 
 		modelService.save(um);
+		userService.setPassword(data.getEmail(), deprecatedEncoder.encode(data.getEmail(), data.getPassword()));
 		return um;
 	}
 
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * gl.utsav.vendor.services.GLUVendorRegistrationService#setVendorCompanyContact(gl.utsav.vendor.model.GLUVendorModel
 	 * , gl.utsav.vendor.model.GLUVendorUserModel)
@@ -159,5 +169,41 @@ public class VendorRegistrationServiceImpl implements VendorRegistrationService
 
 	}
 
-
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see gl.utsav.vendor.services.VendorRegistrationService#validateAndCreateSession(java.lang.String,
+	 * java.lang.String)
+	 */
+	@Override
+	public boolean validateAndCreateSession(final String userName, final String password) throws JaloSecurityException
+	{
+		final PasswordEncoderFactory passwordEncoderFactory = Registry.getApplicationContext().getBean(
+				"core.passwordEncoderFactory", PasswordEncoderFactory.class);
+		final PasswordEncoder deprecatedEncoder = passwordEncoderFactory.getEncoder("md5");
+		UserModel userModel = null;
+		//userService.setPassword(userName, password, "md5");
+		try
+		{
+			userModel = userService.getUserForUID(userName);
+		}
+		catch (final Exception e)
+		{
+			//No user found
+			//TODO log the no user found message
+			return false;
+		}
+		final String p2 = deprecatedEncoder.encode(userName, password);
+		System.out.println("----------------------" + userModel.getEncodedPassword());
+		System.out.println("----------------------" + p2);
+		if (p2.equals(userModel.getEncodedPassword()))
+		{
+			final JaloSession jSession = JaloConnection.getInstance().createSession(userName, p2);
+			jSession.activate();
+			System.out.println("Session ID: " + jSession.getSessionID());
+			System.out.println("User: " + jSession.getUser());
+			return true;
+		}
+		return false;
+	}
 }

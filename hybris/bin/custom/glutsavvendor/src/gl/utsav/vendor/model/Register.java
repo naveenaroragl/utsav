@@ -3,7 +3,10 @@
  */
 package gl.utsav.vendor.model;
 
-import javax.validation.constraints.NotNull;
+import java.util.List;
+
+import gl.utsav.vendor.dto.VendorUserData;
+import gl.utsav.vendor.enums.GLUVendorType;
 
 
 /**
@@ -12,79 +15,42 @@ import javax.validation.constraints.NotNull;
  */
 public class Register
 {
-	private String userName;
-	private String email;
+	private VendorUserData data;
+	private List<GLUVendorType> gluVendorTypes;
 
 	/**
-	 * @return the userCategory
+	 * @return the gluVendorTypes
 	 */
-	public UserCategory getUserCategory()
+	public List<GLUVendorType> getGluVendorTypes()
 	{
-		return userCategory;
+		return gluVendorTypes;
 	}
 
 	/**
-	 * @param userCategory
-	 *           the userCategory to set
+	 * @param gluVendorTypes
+	 *           the gluVendorTypes to set
 	 */
-	public void setUserCategory(final UserCategory userCategory)
+	public void setGluVendorTypes(final List<GLUVendorType> gluVendorTypes)
 	{
-		this.userCategory = userCategory;
-	}
-
-	private String password;
-	@NotNull
-	private UserCategory userCategory;
-
-	/**
-	 * @return the email
-	 */
-	public String getEmail()
-	{
-		return email;
+		this.gluVendorTypes = gluVendorTypes;
 	}
 
 	/**
-	 * @param email
-	 *           the email to set
+	 * @return the data
 	 */
-	public void setEmail(final String email)
+	public VendorUserData getData()
 	{
-		this.email = email;
+		return data;
 	}
 
 	/**
-	 * @return the password
+	 * @param data
+	 *           the data to set
 	 */
-	public String getPassword()
+	public void setData(final VendorUserData data)
 	{
-		return password;
+		this.data = data;
 	}
 
-	/**
-	 * @param password
-	 *           the password to set
-	 */
-	public void setPassword(final String password)
-	{
-		this.password = password;
-	}
-
-	/**
-	 * @return the name
-	 */
-	public String getUserName()
-	{
-		return userName;
-	}
-
-	/**
-	 * @param name
-	 *           the name to set
-	 */
-	public void setUserName(final String name)
-	{
-		this.userName = name;
-	}
 
 }

@@ -20,7 +20,7 @@ public class VendorCompanyData implements Serializable
 
 	private String description;
 
-	private AddressData Address;
+	private AddressData address;
 
 
 	/**
@@ -81,7 +81,7 @@ public class VendorCompanyData implements Serializable
 	 */
 	public AddressData getAddress()
 	{
-		return Address;
+		return address;
 	}
 
 	/**
@@ -90,7 +90,7 @@ public class VendorCompanyData implements Serializable
 	 */
 	public void setAddress(final AddressData address)
 	{
-		Address = address;
+		this.address = address;
 	}
 
 

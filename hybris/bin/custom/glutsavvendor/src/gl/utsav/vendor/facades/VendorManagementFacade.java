@@ -3,6 +3,8 @@
  */
 package gl.utsav.vendor.facades;
 
+import de.hybris.platform.jalo.security.JaloSecurityException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -38,6 +40,18 @@ public class VendorManagementFacade
 		data.getUserData().setUserId(userModel.getUid());
 
 		gluVendorRegistrationService.setVendorCompanyContact(companyModel, userModel);
+		System.out.println(userModel.getUid() + vendorModel.getPk().toString() + companyModel.getPk().toString());
 		return data;
+	}
+
+
+	/**
+	 * @throws JaloSecurityException
+	 *
+	 */
+	public boolean validateAndCreateSession(final String userName, final String password) throws JaloSecurityException
+	{
+		return gluVendorRegistrationService.validateAndCreateSession(userName, password);
+
 	}
 }

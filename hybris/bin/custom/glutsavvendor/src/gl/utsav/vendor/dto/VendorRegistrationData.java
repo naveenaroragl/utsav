@@ -4,6 +4,9 @@
 package gl.utsav.vendor.dto;
 
 import java.io.Serializable;
+import java.util.List;
+
+import gl.utsav.vendor.enums.GLUVendorType;
 
 
 /**
@@ -16,6 +19,8 @@ public class VendorRegistrationData implements Serializable
 	private VendorData vendorData;
 
 	private VendorUserData userData;
+
+	private List<GLUVendorType> gluVendorTypes;
 
 
 
@@ -68,6 +73,24 @@ public class VendorRegistrationData implements Serializable
 	public void setUserData(final VendorUserData userData)
 	{
 		this.userData = userData;
+	}
+
+
+	/**
+	 * @return the gluVendorTypes
+	 */
+	public List<GLUVendorType> getGluVendorTypes()
+	{
+		return gluVendorTypes;
+	}
+
+	/**
+	 * @param gluVendorTypes
+	 *           the gluVendorTypes to set
+	 */
+	public void setGluVendorTypes(final List<GLUVendorType> gluVendorTypes)
+	{
+		this.gluVendorTypes = gluVendorTypes;
 	}
 
 
