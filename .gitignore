@@ -36,4 +36,5 @@ hybris/config/solr/
 hybris/config/licence/installedSaplicenses.properties
 .project
 hybris/.project
-hybris/bin/custom/glutsavaccelerator/glutsavacceleratorcockpits/platformhome.properties
+platformhome.properties
+
