@@ -64,6 +64,11 @@
 					<cockpit code="Footer" />
 				</td>
 			</tr>
+			<tr>
+                <td class="structureViewSection">
+                    <cockpit code="CS_HomePage_CategoryOptionsModal" />
+                </td>
+            </tr>
 		</tbody>
 	</table>
 	<div style="width:100%; border-top: 2px solid #bbb" class="cmsContentEditor">
