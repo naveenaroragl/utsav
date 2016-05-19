@@ -14,6 +14,7 @@
 <%@ taglib prefix="htmlmeta" uri="http://hybris.com/tld/htmlmeta" %>
 <%@ taglib prefix="footer" tagdir="/WEB-INF/tags/desktop/common/footer"%>
 <%@ taglib prefix="header" tagdir="/WEB-INF/tags/desktop/common/header"%>
+<%@ taglib prefix="user" tagdir="/WEB-INF/tags/desktop/user" %>
 
 
 
@@ -136,101 +137,8 @@
        
     </div>
 
-<!-- Login Modal -->
-<div class="modal fade" id="myModalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog modal-dialog-login" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      </div>
-      <div class="modal-body">
-       
-	<!-- Login Part -->
-	   <div class="login-form popup-form-cntr">
-			<div class="form-header">
-				<i class="icon-user"></i>
-			</div>
-		
-			<form id="login-form" method="post" class="form-signin" role="form" action="#">
-				<div class="input-group"> 
-					<span id="basic-addon1" class="input-group-addon icon-user"></span>
-					<input type="text"  id="username" required placeholder="Username" class="form-control"/>
-				</div>
-				<div class="input-group">
-					<span id="basic-addon1" class="input-group-addon icon-lock"></span>
-					<input type="password"  id="password" required placeholder="password" class="form-control"/>
-				</div>
-								
-				<button class="btn btn-block bt-login" type="submit"><i class="modal-icons icon-login"></i>Sign in</button>
-				
-				<h4 class="text-center login-txt-center">Alternatively, you can log in using:</h4>
-				
-				<a class="btn  facebook" href="#"> <i class="modal-icons icon-facebook"></i> Signin with Facebook </a>  
-				<a class="btn  google" href="#"> <i class="modal-icons icon-google"></i> Signin with Google </a>  
-			</form>
-			
-			<div class="form-footer">
-				<div class="row">
-					<div class="col-xs-6 col-sm-6 col-md-6">
-						<a href="" class="forgotPassword"> Forgot password? </a>
-					</div>
-					
-					<div class="col-xs-6 col-sm-6 col-md-6">
-						<!--<a href="#" data-dismiss="modal" data-toggle="modal" class="signupUser" data-target="#myModalSignup" > Sign Up</a>-->
-						<a href="" class="signupUser" > Sign Up</a>
-						
-						
-					</div>
-				</div>
-			</div>
-		</div><!-- end of Login Part -->
-		
-		
-		<!-- Sign Up Part -->
-		 <div class="signup-form hidden popup-form-cntr">
-			<div class="form-header">
-				<i class="icon-edit"></i>
-			</div>
-			<form id="signup-form" method="post" class="form-signin" role="form" action="#">
-			<p class="text-secondary-color">All fields are mendatory</p>
-				<input type="text"  id="firstname" required placeholder="First Name" class="form-control"/>
-				<input type="text"  id="lastname" required placeholder="Last Name" class="form-control"/>
-				<input type="email"  id="Email" required placeholder="Email Address" class="form-control"/>
-				<input type="text"  id="phone" required placeholder="Phone Number" class="form-control"/>
-				<input type="password"  id="password" required placeholder="Password" class="form-control"/>
-				<button class="btn btn-block bt-login" type="submit"><i class="modal-icons icon-login"></i>Sign Up</button>
-			</form>
-			
-			<div class="form-footer">
-	
-			</div>
-		</div><!-- end of Sign Up Part -->
-		
-		
-		
-		<!-- Forgot Password Part -->
-		 <div class="forgot-password-form hidden popup-form-cntr">
-			<div class="form-header">
-				<i class="icon-at"></i>
-			</div>
-			<form id="forgot-password-form" method="post" class="form-signin" role="form" action="#">
-			<p class="text-secondary-color">Enter your E-Mail address below to reset your password.</p>
-				
-				<input type="email"  id="Email" required placeholder="Email Address" class="form-control"/>
-
-				<button class="btn btn-block bt-login" type="submit"><i class="modal-icons icon-login"></i>Send Email</button>
-			</form>
-			
-			<div class="form-footer">
-	
-			</div>
-		</div><!-- end of Forgot Password  Part -->
-		
-		
-      </div>
-    </div>
-  </div>
-</div><!-- end of Login Modal -->
+<c:url value="/j_spring_security_check" var="loginActionUrl" />
+<user:login actionNameKey="login.login" action="${loginActionUrl}"/>
 
 
 

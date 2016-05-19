@@ -192,4 +192,8 @@
 		
 	</bean>
 
+	<alias name="defaultGoogleLoginFacade" alias="googleLoginFacade" />
+	<bean id="defaultGoogleLoginFacade" class="gl.utsav.accelerator.facades.login.impl.DefaultGoogleLoginFacade">		
+       		<property name="googleLoginService" ref ="googleLoginService"/>
+	</bean>
 </beans>
