@@ -77,7 +77,7 @@ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents
 ;;SiteLogoSlot;SiteLogoComponent
 
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents(uid,$contentCV);;;
-;;CS_HomePage_CategorySlot;CategoryGridComponent;;;
+;;CS_HomePage_CategorySlot;CGComponent;;;
 
 ####################### copying the cms content of the DE site started from here #######################
 
