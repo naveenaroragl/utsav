@@ -22,22 +22,9 @@
 
 	<jsp:body>
 
-		<div id="page" data-currency-iso-code="${currentCurrency.isocode}">
-			<spring:theme code="text.skipToContent" var="skipToContent"/>
-			<a href="#skip-to-content" class="skiptocontent" data-role="none">${skipToContent}</a>
-			<spring:theme code="text.skipToNavigation" var="skipToNavigation"/>
-			<a href="#skiptonavigation" class="skiptonavigation" data-role="none">${skipToNavigation}</a>
 			<header:header hideHeaderLinks="${hideHeaderLinks}"/>
-			<a id="skiptonavigation"></a>
-			<nav:topNavigation/>
-			<header:bottomHeader />
-			<cart:cartRestoration />
-			<div id="content" class="clearfix">
-			<a id="skip-to-content"></a>
 				<jsp:doBody/>
-			</div>
 			<footer:footer/>
-		</div>
 
 	</jsp:body>
 	
