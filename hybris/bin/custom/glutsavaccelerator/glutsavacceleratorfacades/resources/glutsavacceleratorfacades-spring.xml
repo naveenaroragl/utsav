@@ -186,4 +186,10 @@
 	</bean>
 
 	<bean id="genderData" class="gl.utsav.accelerator.facades.product.data.GenderData" scope="prototype"/>
+	
+	<alias alias="glCategoryFacade" name="defaultGLCategoryFacade"/>
+	<bean id="defaultGLCategoryFacade" class="gl.utsav.accelerator.facades.category.impl.DefaultGLCategoryFacade" >
+		
+	</bean>
+
 </beans>

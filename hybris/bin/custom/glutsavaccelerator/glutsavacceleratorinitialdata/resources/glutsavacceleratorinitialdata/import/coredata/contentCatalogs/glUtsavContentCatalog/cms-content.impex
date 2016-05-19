@@ -34,6 +34,7 @@ INSERT_UPDATE ContentSlotName;name[unique=true];template(uid,$contentCV)[unique=
 ;Footer;;;footer
 ;TopHeaderSlot;;;wide
 ;BottomHeaderSlot;;;wide
+;CS_HomePage_Category;;;wide
 
 
 # Create Content Slots
@@ -45,6 +46,7 @@ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active
 ;;FooterSlot;Footer;true
 ;;TopHeaderSlot;Top Header;true
 ;;BottomHeaderSlot;Bottom Header;true
+;;CS_HomePage_CategorySlot;Category Image Link;true
 
 
 # Bind Content Slots to Page Templates
@@ -56,6 +58,7 @@ INSERT_UPDATE ContentSlotForTemplate;$contentCV[unique=true];uid[unique=true];po
 ;;Footer-GLUtsavHomePage;Footer;;FooterSlot;true
 ;;TopHeaderSlot-GLUtsavHomePage;TopHeaderSlot;;TopHeaderSlot;true
 ;;BottomHeaderSlot-GLUtsavHomePage;BottomHeaderSlot;;BottomHeaderSlot;true
+;;CS_HomePage_Category-GLUtsavHomePage;CS_HomePage_Category;;CS_HomePage_CategorySlot;true
 
 # Create Content Pages
 
@@ -72,6 +75,9 @@ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents
 ;;MiniCartSlot;MiniCart
 ;;NavigationBarSlot;NavBarComponent,breadcrumbComponent
 ;;SiteLogoSlot;SiteLogoComponent
+
+INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents(uid,$contentCV);;;
+;;CS_HomePage_CategorySlot;CategoryGridComponent;;;
 
 ####################### copying the cms content of the DE site started from here #######################
 
