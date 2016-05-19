@@ -16,7 +16,35 @@
 				<div class="col-md-6 col-sm-6 col-xs-12">  <img src="/glutsavacceleratorstorefront/_ui/desktop/theme-blue/images/logo.png" class="logo" alt="Ecart" />       </div>
 				<div class="col-md-6 col-sm-6 col-xs-12 text-right text-xs-left"> 
 					<ul class="top-header-links">
-						<li><a href="" class="icon-user" data-toggle="modal" data-target="#myModalLogin" class="login-top-link">Login</a></li>
+						<sec:authorize ifNotGranted="ROLE_ANONYMOUS">
+								<c:set var="maxNumberChars" value="25" />
+								<c:if test="${fn:length(user.firstName) gt maxNumberChars}">
+									<c:set target="${user}" property="firstName"
+										value="${fn:substring(user.firstName, 0, maxNumberChars)}..." />
+								</c:if>
+
+								<li class="liOffcanvas ">
+									<ycommerce:testId code="header_LoggedUser">
+										<spring:theme code="header.welcome" arguments="${user.firstName},${user.lastName}" htmlEscape="true" />
+									</ycommerce:testId>
+								</li>
+						</sec:authorize>
+						<sec:authorize ifAnyGranted="ROLE_ANONYMOUS">
+								<li class="liOffcanvas">
+									<ycommerce:testId code="header_Login_link">
+										<li><a href="" class="icon-user" data-toggle="modal" data-target="#myModalLogin" class="login-top-link">Login</a></li>
+									</ycommerce:testId>
+								</li>
+						</sec:authorize>
+
+						<sec:authorize ifNotGranted="ROLE_ANONYMOUS">
+							<li class="liOffcanvas">
+								<ycommerce:testId code="header_signOut">
+									<li><a href="<c:url value='/logout'/>" class="icon-user" class="login-top-link">Logout</a></li>
+								</ycommerce:testId>
+							</li>
+						</sec:authorize>
+						
 						<li><a href="#" title="About Us">About Us</a></li>
 						<li><a href="#" title="Contact Us">Contact Us</a></li>
 						<li><a href="#" title="Help">Help</a></li>           
