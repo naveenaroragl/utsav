@@ -20,4 +20,13 @@
 		<property name="code" type="String"/>
 		<property name="name" type="String"/>
 	</bean>
+	
+	<bean class="gl.utsav.accelerator.facades.user.data.GoogleData">
+		<property name="id" type="String"/>
+		<property name="email" type="String"/>
+		<property name="verified_email" type="String"/>
+		<property name="name" type="String"/>
+		<property name="given_name" type="String"/>
+		<property name="family_name" type="String"/>
+	</bean>
 </beans>
