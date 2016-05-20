@@ -6,17 +6,16 @@
 <%@ taglib prefix="product" tagdir="/WEB-INF/tags/desktop/product" %>
 <%@ taglib prefix="component" tagdir="/WEB-INF/tags/shared/component" %>
 
-<c:choose>
-	<c:when test="${not empty categoryData}">
-		<div class="scroller">
+
+		
 						<c:forEach items="${categoryData}" var="category">
 
-							<c:url value="/c/${category.code}" var="categoryUrl"/>
+							<c:url value="${category.url}" var="categoryUrl"/>
 							<li>
 								<a href="${categoryUrl}" class="popup scrollerProduct">
 									<div class="thumb">
 										<%-- <product:productPrimaryImage product="${product}" format="product"/> --%>
-										${category.image}
+										${category.image.url}
 									</div>
 									   
 									<div>
@@ -29,10 +28,5 @@
 								</a>
 							</li>
 						</c:forEach>
-		</div>
-	</c:when>
-
-	<c:otherwise>
-		<component:emptyComponent/>
-	</c:otherwise>
-</c:choose>
+		
+	
