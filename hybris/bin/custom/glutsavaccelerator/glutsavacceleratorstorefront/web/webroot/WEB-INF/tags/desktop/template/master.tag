@@ -138,7 +138,7 @@
     </div>
 
 <c:url value="/j_spring_security_check" var="loginActionUrl" />
-<user:login actionNameKey="login.login" action="${loginActionUrl}"/>
+<%-- <user:login actionNameKey="login.login" action="${loginActionUrl}"/> --%>
 
 
 
