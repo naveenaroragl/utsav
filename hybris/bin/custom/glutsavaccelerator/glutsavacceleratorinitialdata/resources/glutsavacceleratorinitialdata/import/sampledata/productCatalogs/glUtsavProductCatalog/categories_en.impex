@@ -11,11 +11,10 @@ $lang=en
 
 # Create Categories
 UPDATE Category;code[unique=true];$catalogVersion;name[lang=$lang]
- ;934;;Laundry Service;
- ;clothes;;Clothing Services;
+;934;;Laundry Service;
+;clothes;;Clothing Services;
  ;Jewellery;;Jewellery
 ;Ring;;Rings
-;Nose Pin & Ring;;Nose Pins & Rings
 ;Necklace;;Necklaces
 ;Bangles & Bracelets;;Bangles & Bracelets
 ;Chain;;Chains
@@ -30,3 +29,19 @@ UPDATE Category;code[unique=true];$catalogVersion;name[lang=$lang]
 ;Lakshmi Ganesh Ji;;Lakshmi Ganesh Ji
 ;Hathphool;;Hathphools
 ;Bajooband;;Bajoobands
+
+#Dj and Music Band 
+UPDATE Category;code[unique=true];$catalogVersion;name[lang=$lang]
+;DJs;;disc Jockey Services;
+;musicBands;;Music Band Services;
+;banquetHall;;Banquet Hall Servies;
+;caterers;;Caterer Services;
+;travelAndTransportation;;Travel and Transportation Services;
+;weddingCards;;Wedding Cards;
+;bags;;Bags;
+;shoes;;Shoes;
+;accessories;;Accessories;
+;BeautyAndGrooming;;Beauty And Grooming;
+;sunGlasses;;Sun Glasses;
+;hotels;;Hotels; 
+;grooming;;Grooming;

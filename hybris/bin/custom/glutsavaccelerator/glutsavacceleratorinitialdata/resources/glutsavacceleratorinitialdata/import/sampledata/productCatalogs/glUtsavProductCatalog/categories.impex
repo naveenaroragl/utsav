@@ -34,5 +34,23 @@ INSERT_UPDATE Category;code[unique=true];$catalogVersion;supercategories(code,$c
 ;diamondJewellery;;
 ;gemstoneJewellery;;
 
+#DJ , Music band, Bqnquet hall;
+INSERT_UPDATE Category;code[unique=true];$catalogVersion;supercategories(code,$catalogVersion);allowedPrincipals(uid)[default='customergroup']
+;DJs;;categories
+;DJs;;
+;musicBands;;
+;banquetHall;;
+;caterers;;
+;travelAndTransportation;;
+;weddingCards;;
+;bags;;
+;shoes;;
+;accessories;;
+;BeautyAndGrooming;;
+;sunGlasses;;
+;hotels;;
+;grooming;;
+
+
 # Insert Category Structure
 INSERT_UPDATE CategoryCategoryRelation;$categories;$supercategories

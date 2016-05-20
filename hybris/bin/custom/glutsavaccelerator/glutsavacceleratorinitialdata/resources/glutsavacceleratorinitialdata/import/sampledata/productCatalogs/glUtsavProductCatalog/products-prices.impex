@@ -14,3 +14,21 @@ UPDATE Product;code[unique=true];$prices;$approved;$catalogVersion;Europe1PriceF
 INSERT_UPDATE PriceRow;productId[unique=true];unit(code[unique=true,default=pieces]);currency(isocode)[unique=true];price;minqtd;unitFactor;net
 ;SBT1000001;pieces;USD;35,68;1;1;false
 ;J1000001;pieces;USD;35,68;1;1;false
+
+#All Categories Prices
+INSERT_UPDATE PriceRow;productId[unique=true];unit(code[unique=true,default=pieces]);currency(isocode)[unique=true];price;minqtd;unitFactor;net
+;DJ100001;pieces;USD;200;1;1;false
+;MU100001;pieces;USD;200;1;1;false
+;BA100001;pieces;USD;1000;1;1;false
+;CA100001;pieces;USD;1200;1;1;false
+;TR100001;pieces;USD;5000;1;1;false
+;WE100001;pieces;USD;150;1;1;false
+;BG100001;pieces;USD;400;1;1;false
+;SH100001;pieces;USD;300;1;1;false
+;AC100001;pieces;USD;142;1;1;false
+;BE100001;pieces;USD;300;1;1;false
+;SG100001;pieces;USD;100;1;1;false
+;HT100001;pieces;USD;2500;1;1;false
+;GR100001;pieces;USD;230;1;1;false
+
+

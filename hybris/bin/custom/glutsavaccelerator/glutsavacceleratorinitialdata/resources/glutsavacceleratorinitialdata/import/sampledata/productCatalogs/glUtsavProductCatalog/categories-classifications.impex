@@ -21,6 +21,29 @@ INSERT_UPDATE ClassificationClass;$classCatalogVersion;code[unique=true];allowed
 ;;diamondJewelleryClass
 ;;gemstoneJewelleryClass
 
+#Classification Classes#
+;;DJ
+;;musicBand
+;;banquetHall
+;;caterer
+;;travelandTransportation
+;;weddingCards
+;;bags
+;;shoes
+;;accessories
+;;beautyAndGrooming
+;;sunglasses
+;;hotel
+;;grooming
+
+#SubClasses in Classfication 
+;;partyAreaAndCapacityClass
+;;notesClass
+;;aboutVenueClass
+;;foodDetailsClass
+;;notesClass
+;;otherHighlightClass
+
 
 # Insert Classification Attributes
 INSERT_UPDATE ClassificationAttribute;$classSystemVersion;code[unique=true]
@@ -40,6 +63,189 @@ INSERT_UPDATE ClassificationAttribute;$classSystemVersion;code[unique=true]
 ;;Stone size , 1013
 ;;Stone shape , 1014
 ;;No of Stones , 1015
+#;;Cancellations, 1016
+
+#DJ and Music CLass 
+;;Location , 1020
+;;Equipments Used , 1021
+;;Music Played , 1022
+;;Where all We can travel , 1023
+;;Booking Amount , 1024
+;;Facebook page , 1025
+;;Awards , 1026
+;;Experience , 1027
+
+#Banquet hall  
+;;Seating Capacity , 1028
+;;Floating Capacity , 1029
+;;Lawn Area , 1030
+;;Description , 1031
+;;Notes , 1032
+;;Is Meal provided , 1033
+;;Cuisine , 1034
+;;DJ Cost , 1035
+;;Decoration Notes , 1036
+;;Liqor Details , 1037
+;;Taxes F&B , 1038
+;;Additional Expenses , 1039
+;;Other Notes , 1040 
+;;Cancellation Policy , 1041
+;;Music Allowed Late , 1042
+;;Decor Provided by the Venue , 1043
+;;Halls are Air Conditioned , 1045
+;;Ample Parking , 1046
+;;Contact Details , 1047
+;;Timings , 1048
+;;Cuisines , 1049
+
+# Caterer#
+;;Name , 1050
+;;About , 1051 
+;;Cuisine , 1052
+;;Menu , 1053
+;;Prices ,1054
+;;Multiple , 1055
+;;Minimum ,1056
+;;People , 1057
+;;Location , 1058
+;;Contact Details , 1059
+
+# Hotel
+;;Name , 1060
+;;Location , 1061
+;;Contact Details , 1062
+;;Packages , 1063 
+;;Qualification , 1064
+;;Awards , 1065
+;;Total Rooms , 1066
+;;Capacity , 1067
+;;Prices , 1068
+;;Other Details , 1069
+
+#Grooming
+;;Name , 1070
+;;Location , 1071
+;;Contact Details , 1072
+;;Packages , 1073
+;;Qualification , 1074
+;;Awards , 1075
+
+#Travel and Transportion
+;;Location , 1076
+;;Desciption , 1077
+;;Booking Amount , 1078
+;;Cancellation Policy , 1079
+;;Other Details , 1080
+;;Confirmed Bookings , 1081
+;;Vehicles available , 1082
+;;Where all we can travel , 1083
+;;Profile views , 1084
+;;Need confirmation by latest , 1085 
+
+#Wedding Cards
+;;Weight , 1086
+;;Card Type , 1087
+;;Card Size , 1088
+;;Paper Type , 1089
+;;Constituents , 1090
+;;Folds , 1091
+;;Paper Description , 1092
+;;Color , 1093
+;;Themes , 1094
+;;Minimum order quantity , 1095
+;;Religion , 1096
+
+#Accessories
+;;Gender , 1097
+;;Brand , 1098
+;;Logo , 1099
+;;Model Name , 1100
+;;Price , 1101
+;;Color , 1102
+;;Size , 1103
+;;Product Info , 1104
+;;Material , 1105
+;;Type , 1106
+;;Other details , 1107
+;;Width , 1108
+
+#bags
+;;Brand , 1109
+;;Logo , 1110
+;;Model Name , 1111
+;;Price , 1112
+;;Color , 1113
+;;Size , 1114
+;;Product Info , 1115
+;;Material , 1116
+;;Product Dimensions , 1117
+;;SKU , 1118
+;;Model Stats , 1119
+;;Available colors , 1120
+;;Number of Compartments , 1121
+;;No. of Pockets , 1122
+;;Type of Closure , 1123
+;;Number of Card Slots , 1134
+
+
+#Shoes
+;;Gender , 1135
+;;Brand , 1136
+;;Logo , 1137
+;;Model Name , 1138
+;;Price , 1139
+;;Color , 1140
+;;Size , 1141
+;;Product Info , 1142
+;;Material , 1143
+;;Type , 1144
+;;Color , 1145
+;;Upper Material , 1146
+;;Sole Material , 1147
+;;ClosingLace , 1148
+;;Tip shape , 1149
+;;Product warranty , 1150
+;;SKU , 1151
+;;Ankle Height , 1152
+;;Shoe Weight , 1153
+;;Fit , 1154
+;;Inner Lining , 1155
+;;Heal height , 1156
+;;Boot Shaft Height , 1157
+;;other details , 1158
+
+
+# Beauty and Grooming 
+;;Name , 1159
+;;Location , 1160
+;;Contact Details , 1161
+;;Packages , 1162
+;;What all will be done , 1163
+;;Qualification , 1164
+;;Awards , 1165
+;;Services and their prices , 1166
+;;Total Exp , 1167
+;;Seating Capacity , 1168
+;;Approx time , 1169
+;;Sitting per service , 1170
+
+
+#SunGlasses
+;;Product Info , 1171
+;;Brand , 1172
+;;Brand Logo , 1173
+;;Price , 1174
+;;Type , 1175
+;;Frame Shape , 1175
+;;Rim Type , 1176
+;;Frame Color , 1177
+;;Frame material , 1178
+;;Lens Color , 1179
+;;Package Contents , 1080
+;;SKU , 1081
+;;Product Warranty , 1082
+
+
 
 # Links ClassificationClasses to Categories
 INSERT_UPDATE CategoryCategoryRelation;$categories;$supercategories
@@ -47,6 +253,7 @@ INSERT_UPDATE CategoryCategoryRelation;$categories;$supercategories
 ;metalJewellery;metalJewelleryClass
 ;diamondJewellery;diamondJewelleryClass
 ;gemstoneJewellery;gemstoneJewelleryClass
+
 
 INSERT_UPDATE ClassAttributeAssignment;$class;$attribute;position;$unit;attributeType(code[default=string]);multiValued[default=false];range[default=false];localized[default=true]
  ;2436;Connector s , 1496;0;300;
@@ -65,6 +272,199 @@ INSERT_UPDATE ClassAttributeAssignment;$class;$attribute;position;$unit;attribut
  ;gemstoneJewelleryClass;Stone size , 1013;;300;
  ;gemstoneJewelleryClass;Stone shape , 1014;;300;
  ;gemstoneJewelleryClass;No of Stones , 1015;;300;
+ #;DJClass;Cancellations, 1016;;300;
+ 
+ #DJclass Classification Attributes. 
+ ;DJ;Location , 1020;;300;
+ ;DJ;Equipments Used , 1021;;300;
+ ;DJ;Music Played , 1022;;300;
+ ;DJ;Where all We can travel , 1023;;300;
+ ;DJ;Booking Amount , 1024;;300;
+ ;DJ;Facebook page , 1025;;300;
+ ;DJ;Awards , 1026;;300;
+ ;DJ;Experience , 1027;;300;
+ 
+ #Music CLass 
+;musicBand;Location , 1020;;300;
+;musicBand;Equipments Used , 1021;;300;
+;musicBand;Music Played , 1022;;300;
+;musicBand;Where all We can travel , 1023;;300;
+;musicBand;Booking Amount , 1024;;300;
+;musicBand;Facebook page , 1025;;300;
+;musicBand;Awards , 1026;;300;
+;musicBand;Experience , 1027;;300;
+ 
+  #Musicband Classification Attributes. 
+ ;musicBand;Location , 1020;;300;
+ ;musicBand;Equipments Used , 1021;;300;
+ ;musicBand;Music Played , 1022;;300;
+ ;musicBand;Where all We can travel , 1023;;300;
+ ;musicBand;Booking Amount , 1024;;300;
+ ;musicBand;Facebook page , 1025;;300;
+ ;musicBand;Awards , 1026;;300;
+ ;musicBand;Experience , 1027;;300;
+  
+ #partyAreaAndCapacityClass is subclass of Banquet Hall
+ ;partyAreaAndCapacityClass;Seating Capacity , 1028;;300;
+ ;partyAreaAndCapacityClass;Floating Capacity , 1029;;300;
+ ;partyAreaAndCapacityClass;Lawn Area , 1030;;300;
+ ;foodDetailsClass;Is Meal provided , 1033;;300;
+ ;foodDetailsClass;Cuisine , 1034;;300;
+ ;notesClass;DJ Cost , 1035;;300;
+ ;notesClass;Decoration Notes , 1036;;300;
+ ;notesClass;Liqor Details , 1037;;300;
+ ;notesClass;Taxes F&B , 1038;;300;
+ ;notesClass;Additional Expenses , 1039;;300;
+ ;notesClass;Other Notes , 1040;;300;
+ ;notesClass;Cancellation Policy , 1041;;300;
+ ;otherHighlightClass;Music Allowed Late , 1042;;300;
+ ;otherHighlightClass;Decor Provided by the Venue , 1043;;300;
+ ;otherHighlightClass;Halls are Air Conditioned , 1045;;300;
+ ;otherHighlightClass;Ample Parking , 1046;;300;
+ ;otherHighlightClass;Contact Details , 1047;;300;
+ ;otherHighlightClass;Timings , 1048;;300;
+ ;otherHighlightClass;Cuisines , 1049;;300;
+ 
+# Caterer#
+;caterer;Name , 1050;;300;
+;caterer;About , 1051;;300; 
+;caterer;Cuisine , 1052;;300;
+;caterer;Menu , 1053;;300;
+;caterer;Prices ,1054;;300;
+;caterer;Multiple , 1055;;300;
+;caterer;Minimum ,1056;;300;
+;caterer;People , 1057;;300;
+;caterer;Location , 1058;;300;
+;caterer;Contact Details , 1059;;300;
+
+# Hotel
+;hotel;Name , 1060;;300;
+;hotel;Location , 1061;;300;
+;hotel;Contact Details , 1062;;300;
+;hotel;Packages , 1063;;300; 
+;hotel;Qualification , 1064;;300;
+;hotel;Awards , 1065;;300;
+;hotel;Total Rooms , 1066;;300;
+;hotel;Capacity , 1067;;300;
+;hotel;Prices , 1068;;300;
+;hotel;Other Details , 1069;;300;
+
+#Grooming
+;grooming;Name , 1070;;300;
+;grooming;Location , 1071;;300;
+;grooming;Contact Details , 1072;;300;
+;grooming;Packages , 1073;;300;
+;grooming;Qualification , 1074;;300;
+;grooming;Awards , 1075;;300;
+
+#Travel and transportation 
+;travelandTransportation;Location , 1076;;300;
+;travelandTransportation;Desciption , 1077;;300;
+;travelandTransportation;Booking Amount , 1078;;300;
+;travelandTransportation;Cancellation Policy , 1079;;300;
+;travelandTransportation;Other Details , 1080;;300;
+;travelandTransportation;Confirmed Bookings , 1081;;300;
+;travelandTransportation;Vehicles available , 1082;;300;
+;travelandTransportation;Where all we can travel , 1083;;300;
+;travelandTransportation;Profile views , 1084;;300;
+;travelandTransportation;Need confirmation by latest , 1085;;300;
+
+#Wedding Cards
+;weddingCards;Weight , 1086;;300;
+;weddingCards;Card Type , 1087;;300;
+;weddingCards;Card Size , 1088;;300;
+;weddingCards;Paper Type , 1089;;300;
+;weddingCards;Constituents , 1090;;300;
+;weddingCards;Folds , 1091;;300;
+;weddingCards;Paper Description , 1092;;300;
+;weddingCards;Color , 1093;;300;
+;weddingCards;Themes , 1094;;300;
+;weddingCards;Minimum order quantity , 1095;;300;
+;weddingCards;Religion , 1096;;300;
+
+#Accessories
+;accessories;Gender , 1097;;300;
+;accessories;Brand , 1098;;300;
+;accessories;Logo , 1099;;300;
+;accessories;Model Name , 1100;;300;
+;accessories;Price , 1101;;300;
+;accessories;Color , 1102;;300;
+;accessories;Size , 1103;;300;
+;accessories;Product Info , 1104;;300;
+;accessories;Material , 1105;;300;
+;accessories;Type , 1106;;300;
+;accessories;Other details , 1107;;300;
+;accessories;Width , 1108;;300;
+
+#Shoes
+;shoes;Gender , 1135;;300;
+;shoes;Brand , 1136;;300;
+;shoes;Logo , 1137;;300;
+;shoes;Model Name , 1138;;300;
+;shoes;Price , 1139;;300;
+;shoes;Color , 1140;;300;
+;shoes;Size , 1141;;300;
+;shoes;Product Info , 1142;;300;
+;shoes;Material , 1143;;300;
+;shoes;Type , 1144;;300;
+;shoes;Color , 1145;;300;
+;shoes;Upper Material , 1146;;300;
+;shoes;Sole Material , 1147;;300;
+;shoes;ClosingLace , 1148;;300;
+;shoes;Tip shape , 1149;;300;
+;shoes;Product warranty , 1150;;300;
+;shoes;SKU , 1151;;300;
+;shoes;Ankle Height , 1152;;300;
+;shoes;Shoe Weight , 1153;;300;
+;shoes;Fit , 1154;;300;
+;shoes;Inner Lining , 1155;;300;
+;shoes;Heal height , 1156;;300;
+;shoes;Boot Shaft Height , 1157;;300;
+;shoes;other details , 1158;;300;
+
+#SunGlasses
+;sunglasses;Product Info , 1171;;300;
+;sunglasses;Brand , 1172;;300;
+;sunglasses;Brand Logo , 1173;;300;
+;sunglasses;Price , 1174;;300;
+;sunglasses;Type , 1175;;300;
+;sunglasses;Frame Shape , 1175;;300;
+;sunglasses;Rim Type , 1176;;300;
+;sunglasses;Frame Color , 1177;;300;
+;sunglasses;Frame material , 1178;;300;
+;sunglasses;Lens Color , 1179;;300;
+;sunglasses;Package Contents , 1080;;300;
+;sunglasses;SKU , 1081;;300;
+;sunglasses;Product Warranty , 1082;;300;
+
+#bags
+;bags;Brand , 1109;;300;
+;bags;Logo , 1110;;300;
+;bags;Model Name , 1111;;300;
+;bags;Price , 1112;;300;
+;bags;Color , 1113;;300;
+;bags;Size , 1114;;300;
+;bags;Product Info , 1115;;300;
+;bags;Material , 1116;;300;
+;bags;Product Dimensions , 1117;;300;
+;bags;SKU , 1118;;300;
+;bags;Model Stats , 1119;;300;
+;bags;Available colors , 1120;;300;
+;bags;Number of Compartments , 1121;;300;
+;bags;No. of Pockets , 1122;;300;
+;bags;Type of Closure , 1123;;300;
+;bags;Number of Card Slots , 1134;;300;
+
+
+
+
+
+
+
+
+ 
+ 
+ 
  
  
  

@@ -14,6 +14,22 @@ INSERT_UPDATE Product;code[unique=true];$supercategories;manufacturerName;manufa
 ;BT1000001;934, clothes;Blue Tomato,caps;;;1022436212;;;;
 ;J1000001;gemstoneJewellery, diamondJewellery, metalJewellery, Necklace;J1000001;;;1000000001;;
 
+#for DJ
+INSERT_UPDATE Product;code[unique=true];$supercategories;manufacturerName;manufacturerAID;unit(code);ean;variantType(code);$catalogVersion;$approved
+					 ;DJ100001;DJs;;;;;;
+					 ;MU100001;musicBands;;;;;;
+					 ;BA100001;banquetHall;;;;;;
+					 ;CA100001;caterers;;;;;;
+					 ;TR100001;travelAndTransportation;;;;;;
+					 ;WE100001;weddingCards;;;;;;
+					 ;BG100001;bags;;;;;;
+					 ;SH100001;shoes;;;;;;
+					 ;AC100001;accessories;;;;;;
+					 ;BE100001;BeautyAndGrooming;;;;;;
+					 ;SG100001;sunGlasses;;;;;;
+					 ;HT100001;hotels;;;;;;
+					 ;GR100001;grooming;;;;;;
+					 
 
 INSERT_UPDATE ServiceProduct;code[unique=true];$supercategories;manufacturerName;manufacturerAID;unit(code);ean;variantType(code);$catalogVersion;$approved
 ;SBT1000001;934, clothes;PeopleLaundry;;;1022436211;;;;

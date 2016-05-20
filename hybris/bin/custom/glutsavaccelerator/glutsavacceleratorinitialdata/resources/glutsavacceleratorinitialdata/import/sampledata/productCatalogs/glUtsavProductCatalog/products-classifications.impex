@@ -18,6 +18,7 @@ $feature2=@Purity , 1002[$clAttrModifiers];
 INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$catalogVersion;
  ;J1000001;Gold;23;;
 
+
 # Classification: Jewellery Diamonds details
 $feature1=@No 0f Diamonds , 1003[$clAttrModifiers];  
 $feature2=@Color , 1004[$clAttrModifiers];  
@@ -30,7 +31,6 @@ INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;
  ;J1000001;25;very light yellow;P&J;.5;VS1;Prong;Princess;;
  
  
-
 # Classification: Jewellery GemStone details
 $feature1=@Stone Type , 1010[$clAttrModifiers];  
 $feature2=@Stone Wt , 1011[$clAttrModifiers];  
@@ -41,5 +41,212 @@ $feature6=@No of Stones , 1015[$clAttrModifiers];
 INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$catalogVersion;
  ;J1000001;Ruby;2.50;Red;.5;Round;2;;
  
- 
- 
+
+# Classification: DJ and Music details
+$feature1=@Location , 1020[$clAttrModifiers];  
+$feature2=@Equipments Used , 1021[$clAttrModifiers];  
+$feature3=@Music Played , 1022[$clAttrModifiers];  
+$feature4=@Where all We can travel , 1023[$clAttrModifiers];  
+$feature5=@Booking Amount , 1024[$clAttrModifiers];  
+$feature6=@Facebook page , 1025[$clAttrModifiers]; 
+$feature7=@Awards , 1026[$clAttrModifiers];  
+$feature8=@Experience , 1027[$clAttrModifiers]; 
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$catalogVersion;
+					 ;DJ100001;NCR		;WoodenBase			;Rock	 ;All over the India;5000;www.facebook.com;best Dj at Delhi;20
+					 ;MU100001;NCR		;All Type of Drum   ;Rock	 ;All over the India;5000;www.facebook.com;best Music band at Delhi;20
+
+# Classification: Banquet Hall
+$feature1=@Seating Capacity , 1028[$clAttrModifiers];  
+$feature2=@Floating Capacity , 1029[$clAttrModifiers];  
+$feature3=@Lawn Area , 1030[$clAttrModifiers];  
+$feature4=@Description , 1031[$clAttrModifiers];  
+$feature5=@Notes , 1032[$clAttrModifiers];  
+$feature6=@Is Meal provided , 1033[$clAttrModifiers]; 
+$feature7=@Cuisine , 1034[$clAttrModifiers];  
+$feature8=@DJ Cost , 1035[$clAttrModifiers]; 
+$feature9=@Decoration Notes , 1036[$clAttrModifiers];
+$feature10=@Liqor Details , 1037[$clAttrModifiers];
+$feature11=@Taxes F&B , 1038[$clAttrModifiers];
+$feature12=@Additional Expenses , 1039[$clAttrModifiers];
+$feature13=@Other Notes , 1040[$clAttrModifiers];
+$feature14=@Cancellation Policy , 1041[$clAttrModifiers];
+$feature15=@Music Allowed Late , 1042[$clAttrModifiers];
+$feature16=@Decor Provided by the Venue , 1043[$clAttrModifiers];
+$feature17=@Halls are Air Conditioned , 1045[$clAttrModifiers];
+$feature18=@Ample Parking , 1046[$clAttrModifiers];
+$feature19=@Contact Details , 1047[$clAttrModifiers];
+$feature20=@Timings , 1048[$clAttrModifiers];
+$feature21=@Cuisines , 1049[$clAttrModifiers];
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$feature11;$feature12;$feature13;$feature14;$feature15;$feature16;$feature17;$feature18;$feature19;$feature20;$feature21;$catalogVersion;
+				;BA100001;1000;200;200sq.ft.;Spacious and clean;;Yes;Veg,Non-veg;USD 200;;Wine,Whishky,Scotch;14%;;Non-Refundable;NO;YES;YES;YES;1122334455;6PM-11PM;XYZ;21
+						 
+						 
+# Classification: Caterer
+$feature1=@Name , 1050[$clAttrModifiers];  
+$feature2=@About , 1051[$clAttrModifiers];  
+$feature3=@Cuisine , 1052[$clAttrModifiers];  
+$feature4=@Menu , 1053[$clAttrModifiers];  
+$feature5=@Prices ,1054[$clAttrModifiers];  
+$feature6=@Multiple , 1055[$clAttrModifiers]; 
+$feature7=@Minimum ,1056[$clAttrModifiers];  
+$feature8=@People , 1057[$clAttrModifiers];
+$feature9=@Location , 1058[$clAttrModifiers];  
+$feature10=@Contact Details , 1059[$clAttrModifiers]; 
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$catalogVersion;
+;CA100001;Utsav Cateres,Small home parties catering services;Indian;1 Type of Cuisine including 1-2 starters, 3-4 main course dishes, 1 dessert, rice & breads;250/- per plate;YES;10000/-;500;NCR;1122334455;22
+						 
+# Classification: Hotel
+$feature1=@Name , 1060[$clAttrModifiers];  
+$feature2=@Location , 1061[$clAttrModifiers];  
+$feature3=@Contact Details , 1062[$clAttrModifiers];  
+$feature4=@Packages , 1063[$clAttrModifiers];  
+$feature5=@Qualification , 1064[$clAttrModifiers];  
+$feature6=@Awards , 1065[$clAttrModifiers]; 
+$feature7=@Total Rooms , 1066[$clAttrModifiers];  
+$feature8=@Capacity , 1067[$clAttrModifiers];
+$feature9=@Prices , 1068[$clAttrModifiers];  
+$feature10=@Other Details , 1069[$clAttrModifiers]; 
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$catalogVersion;
+						 ;HT100001;Hotel Radison;NCR;1122334455;NA;7 Star;;700;2000;Single Bed: 2000/- per night; Double Bed : 5000/- per night;;23
+						 
+# Classification: Grooming
+$feature1=@Name , 1070[$clAttrModifiers];  
+$feature2=@Location , 1071[$clAttrModifiers];  
+$feature3=@Contact Details , 1072[$clAttrModifiers];  
+$feature4=@Packages , 1073[$clAttrModifiers];  
+$feature5=@Qualification , 1074[$clAttrModifiers];  
+$feature6=@Awards , 1075[$clAttrModifiers]; 
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$catalogVersion;
+						 ;GR100001;VLCC Center;NCR;1122334455;NA;2 star;24
+						 
+						 
+# Classification: Travel and Transportion
+$feature1=@Location , 1076[$clAttrModifiers];  
+$feature2=@Desciption , 1077[$clAttrModifiers];  
+$feature3=@Booking Amount , 1078[$clAttrModifiers];  
+$feature4=@Cancellation Policy , 1079[$clAttrModifiers];  
+$feature5=@Other Details , 1080[$clAttrModifiers];  
+$feature6=@Confirmed Bookings , 1081[$clAttrModifiers];
+$feature7=@Vehicles available , 1082[$clAttrModifiers]; 
+$feature8=@Where all we can travel , 1083[$clAttrModifiers]; 
+$feature9=@Profile views , 1084[$clAttrModifiers]; 
+$feature10=@Need confirmation by latest , 1085[$clAttrModifiers];  
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$catalogVersion;
+						 ;TR100001;NCR;Good travel and transaportation;2000/-;NON-REFUNDABLE;;YES;YES;Anywhere in city;250084;YES;
+						 
+# Classification: Wedding Cards
+$feature1=@Weight , 1086[$clAttrModifiers];  
+$feature2=@Card Type , 1087[$clAttrModifiers];  
+$feature3=@Card Size , 1088[$clAttrModifiers];  
+$feature4=@Paper Type , 1089[$clAttrModifiers];  
+$feature5=@Constituents , 1090[$clAttrModifiers];  
+$feature6=@Folds , 1091[$clAttrModifiers];
+$feature7=@Paper Description , 1092[$clAttrModifiers]; 
+$feature8=@Color , 1093[$clAttrModifiers]; 
+$feature9=@Themes , 1094[$clAttrModifiers]; 
+$feature10=@Minimum order quantity , 1095[$clAttrModifiers];  
+$feature11=@Religion , 1096[$clAttrModifiers];  
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$feature11;$catalogVersion;
+						 ;WE100001;10 gm;Medium;210 * 95 mm flat;;2;Normal;White;Wedding, Birtdhay, Aniverssary;200;Hindu;26
+						 
+
+# Classification: Accessories
+$feature1=@Gender , 1097[$clAttrModifiers];  
+$feature2=@Brand , 1098[$clAttrModifiers];  
+$feature3=@Logo , 1099[$clAttrModifiers];  
+$feature4=@Model Name , 1100[$clAttrModifiers];  
+$feature5=@Price , 1101[$clAttrModifiers];  
+$feature6=@Color , 1102[$clAttrModifiers];
+$feature7=@Size , 1103[$clAttrModifiers]; 
+$feature8=@Product Info , 1104[$clAttrModifiers]; 
+$feature9=@Material , 1105[$clAttrModifiers]; 
+$feature10=@Type , 1106[$clAttrModifiers];  
+$feature11=@Other details , 1107[$clAttrModifiers]; 
+$feature12=@Width , 1108[$clAttrModifiers];   
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$feature11;$feature12;$catalogVersion;
+						 ;AC100001;Male;Archies;;MD334455;INR 300;Blue;23*20 cm;small occassion gift;Febric;;;20 cm;
+	
+
+# Classification: Bags
+$feature1=@Brand , 1109[$clAttrModifiers];  
+$feature2=@Logo , 1110[$clAttrModifiers];  
+$feature3=@Model Name , 1111[$clAttrModifiers];  
+$feature4=@Price , 1112[$clAttrModifiers];  
+$feature5=@Color , 1113[$clAttrModifiers];  
+$feature6=@Size , 1114[$clAttrModifiers];
+$feature7=@Product Info , 1115[$clAttrModifiers]; 
+$feature8=@Material , 1116[$clAttrModifiers]; 
+$feature9=@Product Dimensions , 1117[$clAttrModifiers]; 
+$feature10=@SKU , 1118[$clAttrModifiers];  
+$feature11=@Model Stats , 1119[$clAttrModifiers]; 
+$feature12=@Available colors , 1120[$clAttrModifiers];   
+$feature13=@Number of Compartments , 1121[$clAttrModifiers];   
+$feature14=@No. of Pockets , 1122[$clAttrModifiers];   
+$feature15=@Type of Closure , 1123[$clAttrModifiers];   
+$feature16=@Number of Card Slots , 1134[$clAttrModifiers];
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$feature11;$feature12;$feature13;$feature14;$feature15;$feature16;$catalogVersion;
+						 ;BG100001;WoodLand;;MD778866;INR 2500;Brown;8;Cool Product;Leather;;2;;Green;3;8;;6;
+						 
+	
+# Classification: Shoes
+$feature1=@Gender , 1135[$clAttrModifiers];  
+$feature2=@Brand , 1136[$clAttrModifiers];  
+$feature3=@Logo , 1137[$clAttrModifiers];  
+$feature4=@Model Name , 1138[$clAttrModifiers];  
+$feature5=@Price , 1139[$clAttrModifiers];  
+$feature6=@Color , 1140[$clAttrModifiers];
+$feature7=@Size , 1141[$clAttrModifiers]; 
+$feature8=@Product Info , 1142[$clAttrModifiers]; 
+$feature9=@Material , 1143[$clAttrModifiers]; 
+$feature10=@SType , 1144[$clAttrModifiers];  
+$feature11=@Color , 1145[$clAttrModifiers]; 
+$feature12=@Upper Material , 1146[$clAttrModifiers];   
+$feature13=@Sole Material , 1147[$clAttrModifiers];   
+$feature14=@ClosingLace , 1148[$clAttrModifiers];   
+$feature15=@Tip shape , 1149[$clAttrModifiers];   
+$feature16=@Product warranty , 1150[$clAttrModifiers];
+$feature17=@SKU , 1151[$clAttrModifiers];  
+$feature18=@Ankle Height , 1152[$clAttrModifiers]; 
+$feature19=@Shoe Weight , 1153[$clAttrModifiers];   
+$feature20=@Fit , 1154[$clAttrModifiers];   
+$feature21=@Inner Lining , 1155[$clAttrModifiers];   
+$feature22=@Heal height , 1156[$clAttrModifiers];   
+$feature23=@Boot Shaft Height , 1157[$clAttrModifiers];
+$feature24=@other details , 1158[$clAttrModifiers];
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$feature11;$feature12;$feature13;$feature14;$feature15;$feature16;$feature17;$feature18;$feature19;$feature20;$feature21;$feature22;$feature23;$feature24;$catalogVersion;
+						 ;SH100001;Male;Levis;;MD88773;INR 3500;Brown;8;Durable product;Leather;;Dark Brown;Leather;Leather;YES;Oval;5 Years;;20mm;450 gm;;NO;10mm;;;
+
+
+# Classification: Beauty and Grooming
+$feature1=@Name , 1159[$clAttrModifiers];  
+$feature2=@Location , 1160[$clAttrModifiers];  
+$feature3=@Contact Details , 1161[$clAttrModifiers];  
+$feature4=@Packages , 1162[$clAttrModifiers];  
+$feature5=@What all will be done , 1163[$clAttrModifiers];  
+$feature6=@Qualification , 1164[$clAttrModifiers];
+$feature7=@Awards , 1165[$clAttrModifiers]; 
+$feature8=@Services and their prices , 1166[$clAttrModifiers]; 
+$feature9=@Total Exp , 1167[$clAttrModifiers]; 
+$feature10=@Seating Capacity , 1168[$clAttrModifiers];  
+$feature11=@Approx time , 1169[$clAttrModifiers]; 
+$feature12=@Sitting per service , 1170[$clAttrModifiers];   
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$feature11;$feature12;$catalogVersion;
+						 ;BE100001;Perfect Beauty & Grooming;NCR;7766334455;NA;spa,massage,hair treatment;4 star;Gold INR 2000, Silver INR 1000;8 years;10;4-6 hrs;1-2 hr;30
+						 
+						 
+# Classification: SunGlasses
+$feature1=@Product Info , 1171[$clAttrModifiers];  
+$feature2=@Brand , 1172[$clAttrModifiers];  
+$feature3=@Brand Logo , 1173[$clAttrModifiers];  
+$feature4=@Price , 1174[$clAttrModifiers];  
+$feature5=@Type , 1175[$clAttrModifiers];  
+$feature6=@Rim Type , 1176[$clAttrModifiers];
+$feature7=@Frame Color , 1177[$clAttrModifiers]; 
+$feature8=@Frame material , 1178[$clAttrModifiers]; 
+$feature9=@Lens Color , 1179[$clAttrModifiers]; 
+$feature10=@Package Contents , 1080[$clAttrModifiers];  
+$feature11=@SKU , 1081[$clAttrModifiers]; 
+$feature12=@Product Warranty , 1082[$clAttrModifiers];   
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$feature11;$feature12;$catalogVersion;
+						 ;SG100001;save eyes;John Castle;;INR 1575;AVIATOR;;Black;Fiber;Brown Shades;NA;;8 years;
+

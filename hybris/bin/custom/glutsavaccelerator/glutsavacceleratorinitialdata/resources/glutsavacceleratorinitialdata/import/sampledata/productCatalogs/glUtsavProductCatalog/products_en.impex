@@ -14,8 +14,24 @@ $lang=en
 UPDATE Product;code[unique=true];$catalogVersion;name[lang=$lang];summary[lang=$lang];description[lang=$lang]
 ;BT1000001;;Cap Blue Tomato BT Snow Trucker Cap black;<p>Show your love for snow and Blue Tomato! With the BT Snow Trucker Cap with Mesh on the back and print on the front.</p>
 ;J1000001;;Hand carved Choker;<p>Beautiful Choker with intricate hand carved design.</p>;Diamond & Gemstone Ring in 14KT Yellow Gold with JK-SI diamond;
+#Dj Product
+;DJ100001;;Disc Jockey;<p>club & pop, indie, house, garage, RnB, dance music & more</p>;An experienced & professional DJ playing music that is determined solely by the people in attendance. Confidently covering the last 50 years of soul, funk, motown & rock through to 80s, 90s club & pop, indie, house, garage, RnB, dance music & more!
+;MU100001;;Music Band;<p>club & pop, indie, house, garage, RnB, dance music & more</p>;An experienced & professional Drum playing music that is determined solely by the people in attendance. Confidently covering the last 50 years of soul, funk, motown & rock through to 80s, 90s club & pop, indie, house, garage, RnB, dance music & more!
+;BA100001;;Banquet Hall;<p>Hall should accommodates 200-400 people and is a fine place to organise Weddings, Wedding functions, Wedding Anniversary, Birthday Party, Bachelor party, Corporate Party, Kitty Party and many more.</p>;covering an indoor banquet as well as a lawn for our functions and ceremonies to be carried out in a beautiful way!
+;CA100001;;Caterers;<p>provide special Wedding Parties Decoration Services to clients.</p>;All the planning is carried out by our skilled professionals, who take care of wedding invitations, ambiance of the place, design, theme and other things. We can also personalize the event as per the requirements of clients!
+;TR100001;;Travels & Transportation;<p>Partners with transportation & logistics companies and provides optimal solutions to enhance the performance of their supply chains.</p>;We link our partner’s success and growth to ours!
+;WE100001;;Wedding Cards;<p>Our vast collection continues to impress as our innovative teams of experts break new ground by providing quality products with unmatched speed in an affordable package.</p>;
+;BG100001;;Bags;<p>Bags Dress Well with Stylist Handpicked Clothes.</p>;Now get your own style expert who will make you dress well within your budget!
+;SH100001;;Shoes;<p>Discover shoes with ASOS.</p>;Range of different shoes for men, including loafers, sandals, casual shoes, trainers, plimsolls and more!
+;AC100001;;Accessories;<p>A huge selection of accessories for men and women.</p>;Shop for sunglasses, watches, jewelry, scarves, belts & more!
+;BE100001;;Beauty & Grooming;<p>Beauty and Grooming for Girls how to articles with step-by-step instructions and photos.</p>;
+;SG100001;;Sun Glasses;<p>Sunglasses or sun glasses are a form of protective eyewear designed primarily to prevent bright sunlight and high-energy visible light from damaging</p>;
+;HT100001;;Hotels;<p>Cheap hotel deals & accommodation rates around the world</p>;Compare, book & save with Expedia.co.in: NO change or cancellation fees!
+;GR100001;;Grooming;<p>Grooming meaning, definition, what is grooming: the things that you do to make your appearance clean and neat</p>;
+
 
 UPDATE ServiceProduct;code[unique=true];$catalogVersion;name[lang=$lang];summary[lang=$lang];description[lang=$lang]
 ;SBT1000001;;All kinds Laundry Service;<p>Show your love for your clothes! With the People Laundry give your clothes new skin.</p>
+
 
 
