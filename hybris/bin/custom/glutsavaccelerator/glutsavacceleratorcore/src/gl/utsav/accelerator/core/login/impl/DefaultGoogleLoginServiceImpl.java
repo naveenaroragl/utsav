@@ -26,9 +26,9 @@ import gl.utsav.accelerator.core.login.GoogleLoginService;
  */
 public class DefaultGoogleLoginServiceImpl implements GoogleLoginService
 {
-	public static final String CLIENT_ID = "1032532088423-kptir386k6b9qn38ndtoh0o5fgic5hmf.apps.googleusercontent.com";
+	public static final String CLIENT_ID = "838327630667-4s7visper5eq9i1okkukcmt09518c0p5.apps.googleusercontent.com";
 
-	public static final String CLIENT_SECRET = "mN9eR_ZaLHdNpjsX0xVcQ7Do";
+	public static final String CLIENT_SECRET = "z1g6eSSZxLSzJFDCKBkXpMM9";
 
 	public static final String REDIRECT_URI = "https://localhost:9002/glutsavacceleratorstorefront/en/loginGoogle/request";
 
@@ -59,7 +59,7 @@ public class DefaultGoogleLoginServiceImpl implements GoogleLoginService
 			final JsonObject json = (JsonObject) new JsonParser().parse(outputString);
 			final String access_token = json.get("access_token").getAsString();
 
-			url = new URL("https://www.googleapis.com/oauth2/v1/userinfo?access_token=" + access_token);
+			url = new URL("https://www.googleapis.com/oauth2/v2/userinfo?access_token=" + access_token);
 			urlConn = url.openConnection();
 			outputString = "";
 			reader = new BufferedReader(new InputStreamReader(urlConn.getInputStream()));

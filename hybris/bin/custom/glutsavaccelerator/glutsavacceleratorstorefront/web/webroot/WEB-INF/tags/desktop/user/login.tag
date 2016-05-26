@@ -68,7 +68,7 @@
 						href="<c:url value='https://www.facebook.com/dialog/oauth?client_id=1622586648064129&redirect_uri=https://localhost:9002/glutsavacceleratorstorefront/en/loginFacebook/request&scope=email'/>">
 						<i class="modal-icons icon-facebook"></i> Signin with Facebook
 					</a> <a class="btn  google"
-						href="<c:url value='https://accounts.google.com/o/oauth2/auth?scope=email&redirect_uri=https://localhost:9002/glutsavacceleratorstorefront/en/loginGoogle/request&response_type=code&client_id=1032532088423-kptir386k6b9qn38ndtoh0o5fgic5hmf.apps.googleusercontent.com&approval_prompt=force'/>">
+						href="<c:url value='https://accounts.google.com/o/oauth2/auth?scope=email&redirect_uri=https://localhost:9002/glutsavacceleratorstorefront/en/loginGoogle/request&response_type=code&client_id=838327630667-4s7visper5eq9i1okkukcmt09518c0p5.apps.googleusercontent.com&approval_prompt=force&include_granted_scopes=true'/>">
 						<i class="modal-icons icon-google"></i> Signin with Google
 					</a>
 
