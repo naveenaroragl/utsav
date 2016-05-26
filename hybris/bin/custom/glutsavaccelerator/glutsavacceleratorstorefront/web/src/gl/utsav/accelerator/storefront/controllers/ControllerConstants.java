@@ -26,6 +26,8 @@ import de.hybris.platform.acceleratorcms.model.components.SubCategoryListCompone
 import de.hybris.platform.cms2.model.contents.components.CMSLinkComponentModel;
 import de.hybris.platform.cms2lib.model.components.ProductCarouselComponentModel;
 
+import gl.utsav.accelerator.core.model.CategoryGridComponentModel;
+
 
 /**
  */
@@ -61,6 +63,7 @@ public interface ControllerConstants
 			String DynamicBannerComponent = _Prefix + DynamicBannerComponentModel._TYPECODE + _Suffix;
 			String SubCategoryListComponent = _Prefix + SubCategoryListComponentModel._TYPECODE + _Suffix;
 			String SimpleResponsiveBannerComponent = _Prefix + SimpleResponsiveBannerComponentModel._TYPECODE + _Suffix;
+			String CategoryGridComponent = _Prefix + CategoryGridComponentModel._TYPECODE + _Suffix;
 		}
 	}
 
