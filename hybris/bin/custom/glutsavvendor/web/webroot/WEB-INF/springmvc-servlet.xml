@@ -70,6 +70,9 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 
+<mvc:interceptors>
+	<bean class="gl.utsav.vendor.interceptor.AuthenticationInterceptor" />
+</mvc:interceptors>
 	<import resource="glutsavvendor-web-spring.xml" />
 
 </beans>

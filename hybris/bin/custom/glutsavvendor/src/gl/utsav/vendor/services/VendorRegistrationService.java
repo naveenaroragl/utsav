@@ -5,6 +5,8 @@ package gl.utsav.vendor.services;
 
 import de.hybris.platform.jalo.security.JaloSecurityException;
 
+import javax.servlet.http.HttpServletRequest;
+
 import gl.utsav.vendor.dto.VendorCompanyData;
 import gl.utsav.vendor.dto.VendorData;
 import gl.utsav.vendor.dto.VendorUserData;
@@ -30,9 +32,11 @@ public interface VendorRegistrationService
 	/**
 	 * @param userName
 	 * @param password
+	 * @param request
 	 * @return
 	 * @throws JaloSecurityException
 	 */
-	public boolean validateAndCreateSession(String userName, String password) throws JaloSecurityException;
+	public boolean validateAndCreateSession(String userName, String password, HttpServletRequest request)
+			throws JaloSecurityException;
 
 }

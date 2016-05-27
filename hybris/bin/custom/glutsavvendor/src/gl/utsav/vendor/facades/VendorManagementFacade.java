@@ -5,6 +5,8 @@ package gl.utsav.vendor.facades;
 
 import de.hybris.platform.jalo.security.JaloSecurityException;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -46,12 +48,14 @@ public class VendorManagementFacade
 
 
 	/**
+	 * @param request
 	 * @throws JaloSecurityException
 	 *
 	 */
-	public boolean validateAndCreateSession(final String userName, final String password) throws JaloSecurityException
+	public boolean validateAndCreateSession(final String userName, final String password, final HttpServletRequest request)
+			throws JaloSecurityException
 	{
-		return gluVendorRegistrationService.validateAndCreateSession(userName, password);
+		return gluVendorRegistrationService.validateAndCreateSession(userName, password, request);
 
 	}
 }

@@ -20,6 +20,9 @@ import java.util.Arrays;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -56,6 +59,29 @@ public class RegisterPageController
 		return "register";
 	}
 
+	@RequestMapping(method = RequestMethod.GET, value = "logout")
+	public String logout(final HttpServletRequest request, final HttpServletResponse response, final Model model)
+	{
+		final HttpSession session = request.getSession(false);
+
+		if (session != null)
+		{
+			session.invalidate();
+		}
+
+		model.addAttribute("register", new VendorRegistrationData());
+		return "redirect:home";
+	}
+
+
+
+	@RequestMapping(method = RequestMethod.GET, value = "home")
+	public String getHomePage(final Model model)
+	{
+		//model.addAttribute("register", new VendorRegistrationData());
+		return "index";
+	}
+
 	@ModelAttribute("gluVendorTypes")
 	public List<GLUVendorType> populateDepartments()
 	{
@@ -76,8 +102,8 @@ public class RegisterPageController
 	}
 
 	@RequestMapping(value = "login", method = RequestMethod.POST)
-	public String doLogin(final VendorRegistrationData registrationData, final Model model, final BindingResult result)
-			throws JaloSecurityException
+	public String doLogin(final VendorRegistrationData registrationData, final Model model, final BindingResult result,
+			final HttpServletRequest request) throws JaloSecurityException
 	{
 		final String username = registrationData.getUserData().getEmail();
 		final String pwd = registrationData.getUserData().getPassword();
@@ -88,12 +114,13 @@ public class RegisterPageController
 		{
 			System.out.println(username);
 			System.out.println(pwd);
-			final boolean isValidUser = gluVendorManagementFacade.validateAndCreateSession(username, pwd);
+			final boolean isValidUser = gluVendorManagementFacade.validateAndCreateSession(username, pwd, request);
 			if (isValidUser)
 			{
-				return "index";
+				return "redirect:home";
 			}
 		}
+		model.addAttribute("register", new VendorRegistrationData());
 		return "register";
 	}
 }

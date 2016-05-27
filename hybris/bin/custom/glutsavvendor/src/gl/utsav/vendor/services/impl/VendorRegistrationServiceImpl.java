@@ -7,8 +7,6 @@ import de.hybris.platform.commercefacades.user.data.AddressData;
 import de.hybris.platform.core.Registry;
 import de.hybris.platform.core.model.user.AddressModel;
 import de.hybris.platform.core.model.user.UserModel;
-import de.hybris.platform.jalo.JaloConnection;
-import de.hybris.platform.jalo.JaloSession;
 import de.hybris.platform.jalo.security.JaloSecurityException;
 import de.hybris.platform.persistence.security.PasswordEncoder;
 import de.hybris.platform.persistence.security.PasswordEncoderFactory;
@@ -21,6 +19,9 @@ import java.math.BigInteger;
 import java.security.SecureRandom;
 import java.util.HashSet;
 import java.util.Set;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -61,7 +62,7 @@ public class VendorRegistrationServiceImpl implements VendorRegistrationService
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * gl.utsav.vendor.services.GLUVendorRegistrationService#createVendorCompany(gl.utsav.vendor.dto.GLUVendorCompanyData
 	 * )
@@ -99,7 +100,7 @@ public class VendorRegistrationServiceImpl implements VendorRegistrationService
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * gl.utsav.vendor.services.GLUVendorRegistrationService#registerVendor(gl.utsav.vendor.model.GLUVendorCompanyModel,
 	 * gl.utsav.vendor.dto.GLUVendorData)
@@ -124,7 +125,7 @@ public class VendorRegistrationServiceImpl implements VendorRegistrationService
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * gl.utsav.vendor.services.GLUVendorRegistrationService#registerVendorUser(gl.utsav.vendor.dto.GLUVendorUserData)
 	 */
@@ -156,7 +157,7 @@ public class VendorRegistrationServiceImpl implements VendorRegistrationService
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * gl.utsav.vendor.services.GLUVendorRegistrationService#setVendorCompanyContact(gl.utsav.vendor.model.GLUVendorModel
 	 * , gl.utsav.vendor.model.GLUVendorUserModel)
@@ -171,12 +172,13 @@ public class VendorRegistrationServiceImpl implements VendorRegistrationService
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see gl.utsav.vendor.services.VendorRegistrationService#validateAndCreateSession(java.lang.String,
 	 * java.lang.String)
 	 */
 	@Override
-	public boolean validateAndCreateSession(final String userName, final String password) throws JaloSecurityException
+	public boolean validateAndCreateSession(final String userName, final String password, final HttpServletRequest request)
+			throws JaloSecurityException
 	{
 		final PasswordEncoderFactory passwordEncoderFactory = Registry.getApplicationContext().getBean(
 				"core.passwordEncoderFactory", PasswordEncoderFactory.class);
@@ -198,10 +200,14 @@ public class VendorRegistrationServiceImpl implements VendorRegistrationService
 		System.out.println("----------------------" + p2);
 		if (p2.equals(userModel.getEncodedPassword()))
 		{
-			final JaloSession jSession = JaloConnection.getInstance().createSession(userName, p2);
-			jSession.activate();
-			System.out.println("Session ID: " + jSession.getSessionID());
-			System.out.println("User: " + jSession.getUser());
+			/*
+			 * request.getSession(true); final JaloSession jSession = JaloConnection.getInstance().createSession(userName,
+			 * p2); jSession.activate();
+			 */
+			final HttpSession session = request.getSession(true);
+			session.setAttribute("user", userModel);
+			System.out.println("Session ID: " + session.getId());
+			System.out.println("User: " + ((UserModel) session.getAttribute("user")).getUid());
 			return true;
 		}
 		return false;
