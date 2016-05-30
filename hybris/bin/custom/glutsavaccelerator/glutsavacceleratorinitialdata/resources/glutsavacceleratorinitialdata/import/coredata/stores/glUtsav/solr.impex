@@ -10,7 +10,7 @@ $facetSearchConfigName=glUtsavIndex
 $facetSearchConfigDescription=GL Utsav Solr Index
 $searchIndexNamePrefix=glUtsav
 $solrIndexedType=glUtsavProductType
-$indexBaseSite=glUtsav
+$indexBaseSite=glutsav
 $indexLanguages=en
 $indexCurrencies=USD
 
@@ -106,8 +106,6 @@ INSERT_UPDATE SolrIndexedProperty;solrIndexedType(identifier)[unique=true];name[
 ;$solrIndexedType; allCategories ;string;;;Refine;Alpha;-9999;false;;categoryCodeValueProvider                 ;
 ;$solrIndexedType; categoryPath  ;string;;;Refine;Alpha;-9999;false;false;categoryPathValueProvider                 ;
 ;$solrIndexedType; category      ;string;;;Refine;Alpha; 6000;true;;apparelCategoryCodeValueProvider          ;categoryFacetDisplayNameProvider;defaultTopValuesProvider
-;$solrIndexedType; collection    ;string;;;Refine;Alpha; 5500;true;;apparelCollectionCategoryCodeValueProvider;categoryFacetDisplayNameProvider;defaultTopValuesProvider
-;$solrIndexedType; brand         ;string;;;Refine;Alpha; 5000;true;;apparelBrandCategoryCodeValueProvider     ;categoryFacetDisplayNameProvider;defaultTopValuesProvider
 ;$solrIndexedType; gender        ;string;;;Refine;Alpha; 4500;true;false;genderValueProvider                       ;genderFacetDisplayNameProvider
 
 # Other facet properties

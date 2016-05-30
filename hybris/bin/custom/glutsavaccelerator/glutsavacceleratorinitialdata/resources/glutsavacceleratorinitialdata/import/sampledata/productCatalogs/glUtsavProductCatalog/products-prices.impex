@@ -12,7 +12,7 @@ $approved=approvalstatus(code)[default='approved']
 UPDATE Product;code[unique=true];$prices;$approved;$catalogVersion;Europe1PriceFactory_PTG(code)
 
 INSERT_UPDATE PriceRow;productId[unique=true];unit(code[unique=true,default=pieces]);currency(isocode)[unique=true];price;minqtd;unitFactor;net
-;SBT1000001;pieces;USD;35,68;1;1;false
+;BT1000001;pieces;USD;35,68;1;1;false
 ;J1000001;pieces;USD;35,68;1;1;false
 
 #All Categories Prices
