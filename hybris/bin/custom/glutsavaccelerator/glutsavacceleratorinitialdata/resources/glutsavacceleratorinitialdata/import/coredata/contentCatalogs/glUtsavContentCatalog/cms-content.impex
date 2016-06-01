@@ -82,7 +82,7 @@ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents
 ;;CS_HomePage_CategorySlot;CGComponent
 
 INSERT_UPDATE CategoryGridComponent;$contentCV[unique=true];uid[unique=true];name;CategoryItemsList(code,$productCV)
-;;CGComponent;CGComponent;clothes,Necklace,DJs,musicBands,bags,shoes
+;;CGComponent;CGComponent;Travel&Transportation,Necklace,DJs,Musicbands
 
 
 ####################### copying the cms content of the DE site started from here #######################

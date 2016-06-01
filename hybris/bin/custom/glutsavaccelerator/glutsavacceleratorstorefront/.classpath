@@ -23,5 +23,6 @@
 			<attribute name="javadoc_location" value="https://download.hybris.com/api/5.7.0"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry combineaccessrules="false" kind="src" path="/commercefacades"/>
 	<classpathentry kind="output" path="eclipsebin/notused"/>
 </classpath>

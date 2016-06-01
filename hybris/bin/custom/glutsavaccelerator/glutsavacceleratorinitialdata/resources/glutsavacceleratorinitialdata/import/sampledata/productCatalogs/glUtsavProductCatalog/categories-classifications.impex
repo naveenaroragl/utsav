@@ -22,19 +22,22 @@ INSERT_UPDATE ClassificationClass;$classCatalogVersion;code[unique=true];allowed
 ;;gemstoneJewelleryClass
 
 #Classification Classes#
-;;DJ
-;;musicBand
-;;banquetHall
-;;caterer
-;;travelandTransportation
-;;weddingCards
-;;bags
-;;shoes
-;;accessories
-;;beautyAndGrooming
-;;sunglasses
-;;hotel
-;;grooming
+;;DJClass
+;;musicBandClass
+;;banquetHallClass
+;;caterersClass
+;;travelAndTransportationClass
+;;weddingCardsClass
+;;bagsClass
+;;shoesClass
+;;accessoriesClass
+;;beautyAndGroomingClass
+;;sunGlassesClass
+;;hotelsClass
+;;groomingClass
+;;photographyClass
+;;stillPhotographyClass
+;;motionPhotographyClass
 
 #SubClasses in Classfication 
 ;;partyAreaAndCapacityClass
@@ -250,9 +253,13 @@ INSERT_UPDATE ClassificationAttribute;$classSystemVersion;code[unique=true]
 # Links ClassificationClasses to Categories
 INSERT_UPDATE CategoryCategoryRelation;$categories;$supercategories
 ;934;2436
-;metalJewellery;metalJewelleryClass
-;diamondJewellery;diamondJewelleryClass
-;gemstoneJewellery;gemstoneJewelleryClass
+;MetalJewellery;metalJewelleryClass
+;DiamondJewellery;diamondJewelleryClass
+;GemstoneJewellery;gemstoneJewelleryClass
+;Photography;photographyClass
+;StillPhotography;stillPhotographyClass
+;MotionPhotography;motionPhotographyClass
+##########
 
 
 INSERT_UPDATE ClassAttributeAssignment;$class;$attribute;position;$unit;attributeType(code[default=string]);multiValued[default=false];range[default=false];localized[default=true]
@@ -275,35 +282,26 @@ INSERT_UPDATE ClassAttributeAssignment;$class;$attribute;position;$unit;attribut
  #;DJClass;Cancellations, 1016;;300;
  
  #DJclass Classification Attributes. 
- ;DJ;Location , 1020;;300;
- ;DJ;Equipments Used , 1021;;300;
- ;DJ;Music Played , 1022;;300;
- ;DJ;Where all We can travel , 1023;;300;
- ;DJ;Booking Amount , 1024;;300;
- ;DJ;Facebook page , 1025;;300;
- ;DJ;Awards , 1026;;300;
- ;DJ;Experience , 1027;;300;
+ ;DJClass;Location , 1020;;300;
+ ;DJClass;Equipments Used , 1021;;300;
+ ;DJClass;Music Played , 1022;;300;
+ ;DJClass;Where all We can travel , 1023;;300;
+ ;DJClass;Booking Amount , 1024;;300;
+ ;DJClass;Facebook page , 1025;;300;
+ ;DJClass;Awards , 1026;;300;
+ ;DJClass;Experience , 1027;;300;
  
  #Music CLass 
-;musicBand;Location , 1020;;300;
-;musicBand;Equipments Used , 1021;;300;
-;musicBand;Music Played , 1022;;300;
-;musicBand;Where all We can travel , 1023;;300;
-;musicBand;Booking Amount , 1024;;300;
-;musicBand;Facebook page , 1025;;300;
-;musicBand;Awards , 1026;;300;
-;musicBand;Experience , 1027;;300;
+;musicBandClass;Location , 1020;;300;
+;musicBandClass;Equipments Used , 1021;;300;
+;musicBandClass;Music Played , 1022;;300;
+;musicBandClass;Where all We can travel , 1023;;300;
+;musicBandClass;Booking Amount , 1024;;300;
+;musicBandClass;Facebook page , 1025;;300;
+;musicBandClass;Awards , 1026;;300;
+;musicBandClass;Experience , 1027;;300;
  
-  #Musicband Classification Attributes. 
- ;musicBand;Location , 1020;;300;
- ;musicBand;Equipments Used , 1021;;300;
- ;musicBand;Music Played , 1022;;300;
- ;musicBand;Where all We can travel , 1023;;300;
- ;musicBand;Booking Amount , 1024;;300;
- ;musicBand;Facebook page , 1025;;300;
- ;musicBand;Awards , 1026;;300;
- ;musicBand;Experience , 1027;;300;
-  
+
  #partyAreaAndCapacityClass is subclass of Banquet Hall
  ;partyAreaAndCapacityClass;Seating Capacity , 1028;;300;
  ;partyAreaAndCapacityClass;Floating Capacity , 1029;;300;
@@ -326,141 +324,167 @@ INSERT_UPDATE ClassAttributeAssignment;$class;$attribute;position;$unit;attribut
  ;otherHighlightClass;Cuisines , 1049;;300;
  
 # Caterer#
-;caterer;Name , 1050;;300;
-;caterer;About , 1051;;300; 
-;caterer;Cuisine , 1052;;300;
-;caterer;Menu , 1053;;300;
-;caterer;Prices ,1054;;300;
-;caterer;Multiple , 1055;;300;
-;caterer;Minimum ,1056;;300;
-;caterer;People , 1057;;300;
-;caterer;Location , 1058;;300;
-;caterer;Contact Details , 1059;;300;
+;caterersClass;Name , 1050;;300;
+;caterersClass;About , 1051;;300; 
+;caterersClass;Cuisine , 1052;;300;
+;caterersClass;Menu , 1053;;300;
+;caterersClass;Prices ,1054;;300;
+;caterersClass;Multiple , 1055;;300;
+;caterersClass;Minimum ,1056;;300;
+;caterersClass;People , 1057;;300;
+;caterersClass;Location , 1058;;300;
+;caterersClass;Contact Details , 1059;;300;
 
 # Hotel
-;hotel;Name , 1060;;300;
-;hotel;Location , 1061;;300;
-;hotel;Contact Details , 1062;;300;
-;hotel;Packages , 1063;;300; 
-;hotel;Qualification , 1064;;300;
-;hotel;Awards , 1065;;300;
-;hotel;Total Rooms , 1066;;300;
-;hotel;Capacity , 1067;;300;
-;hotel;Prices , 1068;;300;
-;hotel;Other Details , 1069;;300;
+;hotelClass;Name , 1060;;300;
+;hotelClass;Location , 1061;;300;
+;hotelClass;Contact Details , 1062;;300;
+;hotelClass;Packages , 1063;;300; 
+;hotelClass;Qualification , 1064;;300;
+;hotelClass;Awards , 1065;;300;
+;hotelClass;Total Rooms , 1066;;300;
+;hotelClass;Capacity , 1067;;300;
+;hotelClass;Prices , 1068;;300;
+;hotelClass;Other Details , 1069;;300;
 
 #Grooming
-;grooming;Name , 1070;;300;
-;grooming;Location , 1071;;300;
-;grooming;Contact Details , 1072;;300;
-;grooming;Packages , 1073;;300;
-;grooming;Qualification , 1074;;300;
-;grooming;Awards , 1075;;300;
+;groomingClass;Name , 1070;;300;
+;groomingClass;Location , 1071;;300;
+;groomingClass;Contact Details , 1072;;300;
+;groomingClass;Packages , 1073;;300;
+;groomingClass;Qualification , 1074;;300;
+;groomingClass;Awards , 1075;;300;
 
 #Travel and transportation 
-;travelandTransportation;Location , 1076;;300;
-;travelandTransportation;Desciption , 1077;;300;
-;travelandTransportation;Booking Amount , 1078;;300;
-;travelandTransportation;Cancellation Policy , 1079;;300;
-;travelandTransportation;Other Details , 1080;;300;
-;travelandTransportation;Confirmed Bookings , 1081;;300;
-;travelandTransportation;Vehicles available , 1082;;300;
-;travelandTransportation;Where all we can travel , 1083;;300;
-;travelandTransportation;Profile views , 1084;;300;
-;travelandTransportation;Need confirmation by latest , 1085;;300;
+;travelandTransportationClass;Location , 1076;;300;
+;travelandTransportationClass;Desciption , 1077;;300;
+;travelandTransportationClass;Booking Amount , 1078;;300;
+;travelandTransportationClass;Cancellation Policy , 1079;;300;
+;travelandTransportationClass;Other Details , 1080;;300;
+;travelandTransportationClass;Confirmed Bookings , 1081;;300;
+;travelandTransportationClass;Vehicles available , 1082;;300;
+;travelandTransportationClass;Where all we can travel , 1083;;300;
+;travelandTransportationClass;Profile views , 1084;;300;
+;travelandTransportationClass;Need confirmation by latest , 1085;;300;
 
 #Wedding Cards
-;weddingCards;Weight , 1086;;300;
-;weddingCards;Card Type , 1087;;300;
-;weddingCards;Card Size , 1088;;300;
-;weddingCards;Paper Type , 1089;;300;
-;weddingCards;Constituents , 1090;;300;
-;weddingCards;Folds , 1091;;300;
-;weddingCards;Paper Description , 1092;;300;
-;weddingCards;Color , 1093;;300;
-;weddingCards;Themes , 1094;;300;
-;weddingCards;Minimum order quantity , 1095;;300;
-;weddingCards;Religion , 1096;;300;
+;weddingCardsClass;Weight , 1086;;300;
+;weddingCardsClass;Card Type , 1087;;300;
+;weddingCardsClass;Card Size , 1088;;300;
+;weddingCardsClass;Paper Type , 1089;;300;
+;weddingCardsClass;Constituents , 1090;;300;
+;weddingCardsClass;Folds , 1091;;300;
+;weddingCardsClass;Paper Description , 1092;;300;
+;weddingCardsClass;Color , 1093;;300;
+;weddingCardsClass;Themes , 1094;;300;
+;weddingCardsClass;Minimum order quantity , 1095;;300;
+;weddingCardsClass;Religion , 1096;;300;
 
 #Accessories
-;accessories;Gender , 1097;;300;
-;accessories;Brand , 1098;;300;
-;accessories;Logo , 1099;;300;
-;accessories;Model Name , 1100;;300;
-;accessories;Price , 1101;;300;
-;accessories;Color , 1102;;300;
-;accessories;Size , 1103;;300;
-;accessories;Product Info , 1104;;300;
-;accessories;Material , 1105;;300;
-;accessories;Type , 1106;;300;
-;accessories;Other details , 1107;;300;
-;accessories;Width , 1108;;300;
+;accessoriesClass;Gender , 1097;;300;
+;accessoriesClass;Brand , 1098;;300;
+;accessoriesClass;Logo , 1099;;300;
+;accessoriesClass;Model Name , 1100;;300;
+;accessoriesClass;Price , 1101;;300;
+;accessoriesClass;Color , 1102;;300;
+;accessoriesClass;Size , 1103;;300;
+;accessoriesClass;Product Info , 1104;;300;
+;accessoriesClass;Material , 1105;;300;
+;accessoriesClass;Type , 1106;;300;
+;accessoriesClass;Other details , 1107;;300;
+;accessoriesClass;Width , 1108;;300;
 
 #Shoes
-;shoes;Gender , 1135;;300;
-;shoes;Brand , 1136;;300;
-;shoes;Logo , 1137;;300;
-;shoes;Model Name , 1138;;300;
-;shoes;Price , 1139;;300;
-;shoes;Color , 1140;;300;
-;shoes;Size , 1141;;300;
-;shoes;Product Info , 1142;;300;
-;shoes;Material , 1143;;300;
-;shoes;Type , 1144;;300;
-;shoes;Color , 1145;;300;
-;shoes;Upper Material , 1146;;300;
-;shoes;Sole Material , 1147;;300;
-;shoes;ClosingLace , 1148;;300;
-;shoes;Tip shape , 1149;;300;
-;shoes;Product warranty , 1150;;300;
-;shoes;SKU , 1151;;300;
-;shoes;Ankle Height , 1152;;300;
-;shoes;Shoe Weight , 1153;;300;
-;shoes;Fit , 1154;;300;
-;shoes;Inner Lining , 1155;;300;
-;shoes;Heal height , 1156;;300;
-;shoes;Boot Shaft Height , 1157;;300;
-;shoes;other details , 1158;;300;
+;shoesClass;Gender , 1135;;300;
+;shoesClass;Brand , 1136;;300;
+;shoesClass;Logo , 1137;;300;
+;shoesClass;Model Name , 1138;;300;
+;shoesClass;Price , 1139;;300;
+;shoesClass;Color , 1140;;300;
+;shoesClass;Size , 1141;;300;
+;shoesClass;Product Info , 1142;;300;
+;shoesClass;Material , 1143;;300;
+;shoesClass;Type , 1144;;300;
+;shoesClass;Color , 1145;;300;
+;shoesClass;Upper Material , 1146;;300;
+;shoesClass;Sole Material , 1147;;300;
+;shoesClass;ClosingLace , 1148;;300;
+;shoesClass;Tip shape , 1149;;300;
+;shoesClass;Product warranty , 1150;;300;
+;shoesClass;SKU , 1151;;300;
+;shoesClass;Ankle Height , 1152;;300;
+;shoesClass;Shoe Weight , 1153;;300;
+;shoesClass;Fit , 1154;;300;
+;shoesClass;Inner Lining , 1155;;300;
+;shoesClass;Heal height , 1156;;300;
+;shoesClass;Boot Shaft Height , 1157;;300;
+;shoesClass;other details , 1158;;300;
 
 #SunGlasses
-;sunglasses;Product Info , 1171;;300;
-;sunglasses;Brand , 1172;;300;
-;sunglasses;Brand Logo , 1173;;300;
-;sunglasses;Price , 1174;;300;
-;sunglasses;Type , 1175;;300;
-;sunglasses;Frame Shape , 1175;;300;
-;sunglasses;Rim Type , 1176;;300;
-;sunglasses;Frame Color , 1177;;300;
-;sunglasses;Frame material , 1178;;300;
-;sunglasses;Lens Color , 1179;;300;
-;sunglasses;Package Contents , 1080;;300;
-;sunglasses;SKU , 1081;;300;
-;sunglasses;Product Warranty , 1082;;300;
+;sunglassesClass;Product Info , 1171;;300;
+;sunglassesClass;Brand , 1172;;300;
+;sunglassesClass;Brand Logo , 1173;;300;
+;sunglassesClass;Price , 1174;;300;
+;sunglassesClass;Type , 1175;;300;
+;sunglassesClass;Frame Shape , 1175;;300;
+;sunglassesClass;Rim Type , 1176;;300;
+;sunglassesClass;Frame Color , 1177;;300;
+;sunglassesClass;Frame material , 1178;;300;
+;sunglassesClass;Lens Color , 1179;;300;
+;sunglassesClass;Package Contents , 1080;;300;
+;sunglassesClass;SKU , 1081;;300;
+;sunglassesClass;Product Warranty , 1082;;300;
 
 #bags
-;bags;Brand , 1109;;300;
-;bags;Logo , 1110;;300;
-;bags;Model Name , 1111;;300;
-;bags;Price , 1112;;300;
-;bags;Color , 1113;;300;
-;bags;Size , 1114;;300;
-;bags;Product Info , 1115;;300;
-;bags;Material , 1116;;300;
-;bags;Product Dimensions , 1117;;300;
-;bags;SKU , 1118;;300;
-;bags;Model Stats , 1119;;300;
-;bags;Available colors , 1120;;300;
-;bags;Number of Compartments , 1121;;300;
-;bags;No. of Pockets , 1122;;300;
-;bags;Type of Closure , 1123;;300;
-;bags;Number of Card Slots , 1134;;300;
+;bagsClass;Brand , 1109;;300;
+;bagsClass;Logo , 1110;;300;
+;bagsClass;Model Name , 1111;;300;
+;bagsClass;Price , 1112;;300;
+;bagsClass;Color , 1113;;300;
+;bagsClass;Size , 1114;;300;
+;bagsClass;Product Info , 1115;;300;
+;bagsClass;Material , 1116;;300;
+;bagsClass;Product Dimensions , 1117;;300;
+;bagsClass;SKU , 1118;;300;
+;bagsClass;Model Stats , 1119;;300;
+;bagsClass;Available colors , 1120;;300;
+;bagsClass;Number of Compartments , 1121;;300;
+;bagsClass;No. of Pockets , 1122;;300;
+;bagsClass;Type of Closure , 1123;;300;
+;bagsClass;Number of Card Slots , 1134;;300;
 
 
+# Photography #
+;photographyClass;Name , 1183;;300;
+;photographyClass;Category , 1184;;300;
+;photographyClass;Code , 1185;;300;
+;photographyClass;Product Url , 1186;;300;
+;photographyClass;Location , 1187;;300;
+;photographyClass;Badge , 1188;;300;
+;photographyClass;Images , 1189;;300;
+;photographyClass;Price , 1190;;300;
+;photographyClass;Description , 1191;;300;
+;photographyClass;Per Day Costs , 1192;;300;
+;photographyClass;Pictures Delivered , 1193;;300;
+;photographyClass;Payment Terms , 1194;;300;
+;photographyClass;Travel Cost , 1195;;300;
+;photographyClass;Albums , 1196;;300;
+;photographyClass;About Photographer , 1197;;300;
+;photographyClass;Cancellation Policy , 1198;;300;
+;photographyClass;Camera Used , 1199;;300;
+;photographyClass;Photography Type , 1200;;300;
+;photographyClass;Profile Views , 1201;;300;
+;photographyClass;Gallery , 1202;;300;
 
+# Still Photography #
+;stillPhotographyClass;Still Photography Equipment , 1203;;300;
+;stillPhotographyClass;Still Photography Skill Sets , 1204;;300;
+;stillPhotographyClass;Still Photography Cameraman , 1205;;300;
 
-
-
-
+# Motion Photography #
+;motionPhotographyClass;Motion Photography Equipment , 1206;;300;
+;motionPhotographyClass;Motion Photography Skill sets , 1207;;300;
+;motionPhotographyClass;Motion Photography Cameraman , 1208;;300;
 
  
  

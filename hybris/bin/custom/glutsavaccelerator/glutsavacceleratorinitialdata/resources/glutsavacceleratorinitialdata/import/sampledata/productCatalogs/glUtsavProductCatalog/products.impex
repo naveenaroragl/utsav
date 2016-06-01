@@ -11,24 +11,24 @@ $approved=approvalstatus(code)[default='approved']
 
 # Insert Products
 INSERT_UPDATE Product;code[unique=true];$supercategories;manufacturerName;manufacturerAID;unit(code);ean;variantType(code);$catalogVersion;$approved
-;BT1000001;934, clothes;Blue Tomato,caps;;;1022436212;;;;
-;J1000001;gemstoneJewellery, diamondJewellery, metalJewellery, Necklace;J1000001;;;1000000001;;
+;BT1000001;934, Clothings;Blue Tomato,caps;;;1022436212;;;;
+;J1000001;Necklace, GemstoneJewellery, DiamondJewellery, MetalJewellery;J1000001;;;1000000001;;
 
 #for DJ
 INSERT_UPDATE Product;code[unique=true];$supercategories;manufacturerName;manufacturerAID;unit(code);ean;variantType(code);$catalogVersion;$approved
 					 ;DJ100001;DJs;;;;;;
-					 ;MU100001;musicBands;;;;;;
-					 ;BA100001;banquetHall;;;;;;
-					 ;CA100001;caterers;;;;;;
-					 ;TR100001;travelAndTransportation;;;;;;
-					 ;WE100001;weddingCards;;;;;;
-					 ;BG100001;bags;;;;;;
-					 ;SH100001;shoes;;;;;;
-					 ;AC100001;accessories;;;;;;
+					 ;MU100001;MusicBands;;;;;;
+					 ;BA100001;BanquetHall;;;;;;
+					 ;CA100001;Caterers;;;;;;
+					 ;TR100001;TravelAndTransportation;;;;;;
+					 ;WE100001;WeddingCards;;;;;;
+					 ;BG100001;Bags;;;;;;
+					 ;SH100001;Shoes;;;;;;
+					 ;AC100001;Accessories;;;;;;
 					 ;BE100001;BeautyAndGrooming;;;;;;
-					 ;SG100001;sunGlasses;;;;;;
-					 ;HT100001;hotels;;;;;;
-					 ;GR100001;grooming;;;;;;
+					 ;SG100001;SunGlasses;;;;;;
+					 ;HT100001;Hotels;;;;;;
+					 ;GR100001;Grooming;;;;;;
 					 
 
 INSERT_UPDATE ServiceProduct;code[unique=true];$supercategories;manufacturerName;manufacturerAID;unit(code);ean;variantType(code);$catalogVersion;$approved
