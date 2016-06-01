@@ -52,8 +52,36 @@ $feature6=@Facebook page , 1025[$clAttrModifiers];
 $feature7=@Awards , 1026[$clAttrModifiers];  
 $feature8=@Experience , 1027[$clAttrModifiers]; 
 INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$catalogVersion;
-					 ;DJ100001;NCR		;WoodenBase			;Rock	 ;All over the India;5000;www.facebook.com;best Dj at Delhi;20
-					 ;MU100001;NCR		;All Type of Drum   ;Rock	 ;All over the India;5000;www.facebook.com;best Music band at Delhi;20
+					 ;DJ100001;NCR;WoodenBase;Rock;All over the India;5000;www.facebook.com/jockey;best Dj at Delhi;5
+					 ;DJ100002;JAIPUR;WoodenBase;Rock ;All over the India;4000;www.facebook.com/nyk;best Dj at Jaipur;10
+					 ;DJ100003;KERLA;WoodenBase;Rock ;All over the India;2000;www.facebook.com/aqueel;best Dj at Kerla;11
+					 ;DJ100004;MUMBAI;WoodenBase;Rock ;All over the India;10000;www.facebook.com/ap;best Dj at Mumbai;12
+					 ;DJ100005;MUMBAI;WoodenBase;Rock ;All over the India;10000;www.facebook.com/at;best Dj at Mumbai;13
+					 ;DJ100006;NCR;WoodenBase;Rock ;All over the India;5000;www.facebook.com/nc;best Dj at Delhi;14
+					 ;DJ100007;MUMBAI;WoodenBase;Rock ;All over the India;15000;www.facebook.com/ank;best Dj at Mumbai;15
+					 ;DJ100008;DUBAI;WoodenBase;Rock;All over the India;50000;www.facebook.com/suk;best Dj at Dubai;16
+					 ;DJ100009;KOLKATA;WoodenBase;Rock;All over the India;7000;www.facebook.com/lum;best Dj at Kolkata;17
+					 ;DJ100010;NCR;WoodenBase;Rock ;All over the India;5000;www.facebook.com/am;best Dj at Delhi;18
+					 ;DJ100011;NCR;WoodenBase;Rock ;All over the India;5000;www.facebook.com/ak;best Dj at Delhi;19
+					 ;DJ100012;NCR;WoodenBase;Rock ;All over the India;5000;www.facebook.com/nasa;best Dj at Delhi;11
+					 ;DJ100013;NCR;WoodenBase;Rock ;All over the India;5000;www.facebook.com/kk;best Dj at Delhi;12
+					 ;DJ100014;NCR;WoodenBase;Rock ;All over the India;5000;www.facebook.com/ryan;best Dj at Delhi;13
+					 ;DJ100015;GURGAON;WoodenBase;Rock;All over the India;13000;www.facebook.com/akh;best Dj at Gurgaon;14					 
+					 ;MU100001;NCR;All Type of Drum ;Rock;All over the India;5000;www.facebook.com/avi;best Music band at Delhi;5
+					 ;MU100002;Gurgaon;All Type of Drum ;Rock;All over the India;5000;www.facebook.com/cac;best Music band at Delhi;6
+					 ;MU100003;Pune;All Type of Drum ;Rock;All over the India;5000;www.facebook.com/con;best Music band at Delhi;7
+					 ;MU100004;Mumbai;All Type of Drum ;Rock;All over the India;5000;www.facebook.com/fos;best Music band at Delhi;8
+					 ;MU100005;Chandigarh;All Type of Drum ;Rock;All over the India;5000;www.facebook.com/per;best Music band at Delhi;9
+					 ;MU100006;Lucknow;All Type of Drum ;Rock;All over the India;5000;www.facebook.com;best Music band at Delhi;10
+					 ;MU100007;Karnataka;All Type of Drum ;Rock;All over the India;5000;www.facebook.com/bha;best Music band at Delhi;11
+					 ;MU100008;Kerla;All Type of Drum ;Rock;All over the India;5000;www.facebook.com/mot;best Music band at Delhi;12
+					 ;MU100009;Andman;All Type of Drum ;Rock;All over the India;5000;www.facebook.com/sif;best Music band at Delhi;13
+					 ;MU100010;Delhi;All Type of Drum ;Rock;All over the India;5000;www.facebook.com/tri;best Music band at Delhi;14
+					 ;MU100011;Delhi;All Type of Drum ;Rock;All over the India;5000;www.facebook.com/the;best Music band at Delhi;5
+					 ;MU100012;Delhi;All Type of Drum ;Rock;All over the India;5000;www.facebook.com/sou;best Music band at Delhi;6
+					 ;MU100013;Pune;All Type of Drum ;Rock;All over the India;5000;www.facebook.com/asi;best Music band at Delhi;7
+					 ;MU100014;Pune;All Type of Drum ;Rock;All over the India;5000;www.facebook.com/sil;best Music band at Delhi;8
+					 ;MU100015;Pune;All Type of Drum ;Rock;All over the India;5000;www.facebook.com/nic;best Music band at Delhi;9
 
 # Classification: Banquet Hall
 $feature1=@Seating Capacity , 1028[$clAttrModifiers];  
@@ -79,6 +107,20 @@ $feature20=@Timings , 1048[$clAttrModifiers];
 $feature21=@Cuisines , 1049[$clAttrModifiers];
 INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$feature11;$feature12;$feature13;$feature14;$feature15;$feature16;$feature17;$feature18;$feature19;$feature20;$feature21;$catalogVersion;
 				;BA100001;1000;200;200sq.ft.;Spacious and clean;;Yes;Veg,Non-veg;USD 200;;Wine,Whishky,Scotch;14%;;Non-Refundable;NO;YES;YES;YES;1122334455;6PM-11PM;XYZ;21
+				;BA100002;1100;300;300sq.ft.;Spacious and clean;;Yes;Veg,Non-veg;USD 250;;Wine,Whishky,Scotch;14%;;Non-Refundable;NO;YES;YES;YES;1122334455;3PM-11PM;XYZ;22
+				;BA100003;1200;400;400sq.ft.;Spacious and clean;;Yes;Veg,Non-veg;USD 300;;Wine,Whishky,Scotch;14%;;Non-Refundable;NO;YES;YES;YES;1122334455;2PM-11PM;XYZ;23
+				;BA100004;1300;500;500sq.ft.;Spacious and clean;;Yes;Veg,Non-veg;USD 350;;Wine,Whishky,Scotch;14%;;Non-Refundable;NO;YES;YES;YES;1122334455;4PM-11PM;XYZ;24
+				;BA100005;1400;600;600sq.ft.;Spacious and clean;;Yes;Veg,Non-veg;USD 400;;Wine,Whishky,Scotch;14%;;Non-Refundable;NO;YES;YES;YES;1122334455;5PM-11PM;XYZ;25
+				;BA100006;1500;700;700sq.ft.;Spacious and clean;;Yes;Veg,Non-veg;USD 450;;Wine,Whishky,Scotch;14%;;Non-Refundable;NO;YES;YES;YES;1122334455;7PM-11PM;XYZ;26
+				;BA100007;1600;800;800sq.ft.;Spacious and clean;;Yes;Veg,Non-veg;USD 500;;Wine,Whishky,Scotch;14%;;Non-Refundable;NO;YES;YES;YES;1122334455;6PM-11PM;XYZ;27
+				;BA100008;1700;900;900sq.ft.;Spacious and clean;;Yes;Veg,Non-veg;USD 550;;Wine,Whishky,Scotch;14%;;Non-Refundable;NO;YES;YES;YES;1122334455;8PM-11PM;XYZ;28
+				;BA100009;1800;1000;1000sq.ft.;Spacious and clean;;Yes;Veg,Non-veg;USD 600;;Wine,Whishky,Scotch;14%;;Non-Refundable;NO;YES;YES;YES;1122334455;1PM-11PM;XYZ;29
+				;BA1000010;1900;1100;1100sq.ft.;Spacious and clean;;Yes;Veg,Non-veg;USD 650;;Wine,Whishky,Scotch;14%;;Non-Refundable;NO;YES;YES;YES;1122334455;2PM-11PM;XYZ;30
+				;BA1000011;2000;1200;1200sq.ft.;Spacious and clean;;Yes;Veg,Non-veg;USD 700;;Wine,Whishky,Scotch;14%;;Non-Refundable;NO;YES;YES;YES;1122334455;3PM-11PM;XYZ;31
+				;BA1000012;2100;1300;1300sq.ft.;Spacious and clean;;Yes;Veg,Non-veg;USD 750;;Wine,Whishky,Scotch;14%;;Non-Refundable;NO;YES;YES;YES;1122334455;5PM-11PM;XYZ;32
+				;BA1000013;2200;1400;1400sq.ft.;Spacious and clean;;Yes;Veg,Non-veg;USD 800;;Wine,Whishky,Scotch;14%;;Non-Refundable;NO;YES;YES;YES;1122334455;1PM-11PM;XYZ;33
+				;BA1000014;2300;1500;1500sq.ft.;Spacious and clean;;Yes;Veg,Non-veg;USD 850;;Wine,Whishky,Scotch;14%;;Non-Refundable;NO;YES;YES;YES;1122334455;12PM-11PM;XYZ;34
+				;BA1000015;2400;1600;1600sq.ft.;Spacious and clean;;Yes;Veg,Non-veg;USD 900;;Wine,Whishky,Scotch;14%;;Non-Refundable;NO;YES;YES;YES;1122334455;2PM-11PM;XYZ;35
 						 
 						 
 # Classification: Caterer
@@ -93,7 +135,21 @@ $feature8=@People , 1057[$clAttrModifiers];
 $feature9=@Location , 1058[$clAttrModifiers];  
 $feature10=@Contact Details , 1059[$clAttrModifiers]; 
 INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$catalogVersion;
-;CA100001;Utsav Cateres,Small home parties catering services;Indian;1 Type of Cuisine including 1-2 starters, 3-4 main course dishes, 1 dessert, rice & breads;250/- per plate;YES;10000/-;500;NCR;1122334455;22
+;CA100001;Utsav Cateres,Small home parties catering services;Indian;1 Type of Cuisine including 1-2 starters, 3-4 main course dishes, 1 dessert, rice & breads;250/- per plate;YES;10000/-;500;NCR;1122334454;22
+;CA100002;CosmicBites;Indian;1 Type of Cuisine including 1-2 starters, 2-4 main course dishes, 1 dessert, rice & breads;250/- per plate;YES;10000/-;500;NCR;1122334455;23
+;CA100003;Crazy Cook;Indian;1 Type of Cuisine including 2-3 starters, 3-4 main course dishes, 1 dessert, rice & breads;350/- per plate;YES;10000/-;500;NCR;1122334456;24
+;CA100004;ARSH Foods;Indian;1 Type of Cuisine including 1-4 starters, 1-4 main course dishes, 1 dessert, rice & breads;450/- per plate;YES;10000/-;500;NCR;1122334457;25
+;CA100005;Sagar Ratna;Indian;1 Type of Cuisine including 2-4 starters, 3-4 main course dishes, 1 dessert, rice & breads;220/- per plate;YES;10000/-;500;NCR;1122334458;26
+;CA100006;Spice Of India;Indian;1 Type of Cuisine including 2-2 starters, 3-4 main course dishes, 1 dessert, rice & breads;200/- per plate;YES;10000/-;500;NCR;1122334459;27
+;CA100007;Nawab's Kitchen & Restaurant;Indian;1 Type of Cuisine including 1-2 starters, 3-4 main course dishes, 1 dessert, rice & breads;250/- per plate;YES;10000/-;500;NCR;1122334460;28
+;CA100008;FiveSpice;Indian;1 Type of Cuisine including 2-4 starters, 3-4 main course dishes, 1 dessert, rice & breads;500/- per plate;YES;10000/-;500;NCR;1122334461;29
+;CA100009;Khidmat Caterers;1 Type of Cuisine including 1-2 starters, 3-4 main course dishes, 1 dessert, rice & breads;850/- per plate;YES;10000/-;500;NCR;1122334462;30
+;CA1000010;TCS Caters;Indian;1 Type of Cuisine including 1-2 starters, 3-4 main course dishes, 1 dessert, rice & breads;250/- per plate;YES;10000/-;500;NCR;1122334463;31
+;CA1000011;Corporate Foods;Indian;1 Type of Cuisine including 1-2 starters, 3-4 main course dishes, 1 dessert, rice & breads;250/- per plate;YES;10000/-;500;NCR;1122334464;32
+;CA1000012;Mirch Masala;1 Type of Cuisine including 2-3 starters, 3-4 main course dishes, 1 dessert, rice & breads;250/- per plate;YES;10000/-;500;NCR;1122334465;33
+;CA1000013;Cilantro Catering;Indian;1 Type of Cuisine including 1-2 starters, 3-4 main course dishes, 1 dessert, rice & breads;350/- per plate;YES;10000/-;500;NCR;1122334466;34
+;CA1000014;Dawat Catering;Indian;1 Type of Cuisine including 1-2 starters, 3-4 main course dishes, 1 dessert, rice & breads;2250/- per plate;YES;10000/-;500;NCR;1122334467;35
+;CA1000015;Uncle's Caterers;Indian;1 Type of Cuisine including 1-2 starters, 3-4 main course dishes, 1 dessert, rice & breads;1250/- per plate;YES;10000/-;500;NCR;1122334468;36
 						 
 # Classification: Hotel
 $feature1=@Name , 1060[$clAttrModifiers];  
@@ -108,6 +164,20 @@ $feature9=@Prices , 1068[$clAttrModifiers];
 $feature10=@Other Details , 1069[$clAttrModifiers]; 
 INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$catalogVersion;
 						 ;HT100001;Hotel Radison;NCR;1122334455;NA;7 Star;;700;2000;Single Bed: 2000/- per night; Double Bed : 5000/- per night;;23
+						 ;HT100002;Hotel Imperial;NCR;1122334456;NA;5 Star;;700;2000;Single Bed:19000/- per night; Double Bed : 5000/- per night;;23
+						 ;HT100003;Hotel Taj;NCR;1122334457;NA;5 Star;;700;2000;Single Bed: 2000/- per night; Double Bed : 5000/- per night;;23
+						 ;HT100004;Hotel Ganga;Nainital;1122334458;NA;3 Star;;400;1500;Single Bed: 2000/- per night; Double Bed : 3000/- per night;;23
+						 ;HT100005;Hotel Roadways;NCR;1122334459;NA;3 Star;;700;2000;Single Bed: 2000/- per night; Double Bed : 3000/- per night;;23
+						 ;HT100006;Hotel Heathway;NCR;1122334460;NA;5 Star;;700;2000;Single Bed: 2000/- per night; Double Bed : 6000/- per night;;23
+						 ;HT100007;Hotel STAR;NCR;1122334461;NA;7 Star;;700;2000;Single Bed: 2000/- per night; Double Bed : 5000/- per night;;23
+						 ;HT100008;Hotel BLUE-STAR;NCR;1122334462;NA;5 Star;;700;2000;Single Bed: 2000/- per night; Double Bed : 5000/- per night;;23
+						 ;HT100009;Hotel NIGHT VIEW;NCR;1122334455;NA;7 Star;;700;2000;Single Bed: 2000/- per night; Double Bed : 5000/- per night;;23
+						 ;HT1000010;Hotel Sea;JAIPUR;1122334455;NA;7 Star;;700;2000;Single Bed: 2000/- per night; Double Bed : 5000/- per night;;23
+						 ;HT1000011;Hotel Eagle;NCR;1122334455;NA;7 Star;;700;2000;Single Bed: 2000/- per night; Double Bed : 5000/- per night;;23
+						 ;HT1000012;Hotel Malik;NCR;1122334455;NA;7 Star;;700;2000;Single Bed: 2000/- per night; Double Bed : 5000/- per night;;23
+						 ;HT1000013;Hotel TRAVEL;NCR;1122334455;NA;7 Star;;700;2000;Single Bed: 2000/- per night; Double Bed : 5000/- per night;;23
+						 ;HT1000014;Hotel OCEAN;NCR;1122334455;NA;7 Star;;700;2000;Single Bed: 2000/- per night; Double Bed : 5000/- per night;;23
+						 ;HT1000015;Hotel PUNJABI;NCR;1122334455;NA;7 Star;;700;2000;Single Bed: 2000/- per night; Double Bed : 5000/- per night;;23
 						 
 # Classification: Grooming
 $feature1=@Name , 1070[$clAttrModifiers];  
@@ -118,6 +188,20 @@ $feature5=@Qualification , 1074[$clAttrModifiers];
 $feature6=@Awards , 1075[$clAttrModifiers]; 
 INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$catalogVersion;
 						 ;GR100001;VLCC Center;NCR;1122334455;NA;2 star;24
+						 ;GR100002;BestLook;NCR;1122334456;NA;2 star;24
+						 ;GR100003;StarLook;NCR;1122334457;NA;2 star;24
+						 ;GR100004;Neha Boutique;NCR;1122334458;NA;2 star;24
+						 ;GR100005;StarGroom;NCR;1122334459;NA;2 star;24
+						 ;GR100006;Charlie;NCR;1122334460;NA;2 star;24
+						 ;GR100007;JhonGroom;NCR;1122334461;NA;2 star;24
+						 ;GR100008;UniqueGroom;NCR;1122334462;NA;2 star;24
+						 ;GR100009;MenGroom;NCR;1122334455;NA;2 star;24
+						 ;GR1000010;BridalGroom;NCR;1122334455;NA;2 star;24
+						 ;GR1000011;AllWel;NCR;1122334455;NA;2 star;24
+						 ;GR1000012;NewLook;NCR;1122334455;NA;2 star;24
+						 ;GR1000013;Groom Delhi;NCR;1122334455;NA;2 star;24
+						 ;GR1000014;GroSons;NCR;1122334455;NA;2 star;24
+						 ;GR1000015;BharatGroom;NCR;1122334455;NA;2 star;24
 						 
 						 
 # Classification: Travel and Transportion
@@ -132,7 +216,21 @@ $feature8=@Where all we can travel , 1083[$clAttrModifiers];
 $feature9=@Profile views , 1084[$clAttrModifiers]; 
 $feature10=@Need confirmation by latest , 1085[$clAttrModifiers];  
 INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$catalogVersion;
-						 ;TR100001;NCR;Good travel and transaportation;2000/-;NON-REFUNDABLE;;YES;YES;Anywhere in city;250084;YES;
+						 ;TR100001;NCR;Good travel and transportation;2000/-;NON-REFUNDABLE;;YES;YES;Anywhere in city;250084;YES;
+						 ;TR100002;NCR;Nuance travel and transportation;1000/-;NON-REFUNDABLE;;YES;YES;Anywhere in city;250084;YES;
+						 ;TR100003;NCR;ZS travel and transportation;1000/-;NON-REFUNDABLE;;YES;YES;Anywhere in city;250084;YES;
+						 ;TR100004;NCR;Trust travel and transportation;1500/-;NON-REFUNDABLE;;YES;YES;Anywhere in city;250084;YES;
+						 ;TR100005;NCR;StreamLite travel and transportation;1500/-;NON-REFUNDABLE;;YES;YES;Anywhere in city;250084;YES;
+						 ;TR100006;NCR;Swiss travel and transportation;1000/-;NON-REFUNDABLE;;YES;YES;Anywhere in city;250084;YES;
+						 ;TR100007;NCR;WorldWide Express travel and transportation;1000/-;NON-REFUNDABLE;;YES;YES;Anywhere in city;250084;YES;
+						 ;TR100008;NCR;NIIT travel and transportation;1200/-;NON-REFUNDABLE;;YES;YES;Anywhere in city;250084;YES;
+						 ;TR100009;NCR;IBM travel and transportation;1000/-;NON-REFUNDABLE;;YES;YES;Anywhere in city;250084;YES;
+						 ;TR1000010;NCR;Helpologist travel and transportation;500/-;NON-REFUNDABLE;;YES;YES;Anywhere in city;250084;YES;
+						 ;TR1000011;NCR;Greenily travel and transportation;500/-;NON-REFUNDABLE;;YES;YES;Anywhere in city;250084;YES;
+						 ;TR1000012;NCR;Cityby travel and transportation;1000/-;NON-REFUNDABLE;;YES;YES;Anywhere in city;250084;YES;
+						 ;TR1000013;NCR;Grand travel and transportation;1200/-;NON-REFUNDABLE;;YES;YES;Anywhere in city;250084;YES;
+						 ;TR1000014;NCR;Zemga travel and transportation;1200/-;NON-REFUNDABLE;;YES;YES;Anywhere in city;250084;YES;
+						 ;TR1000015;NCR;Mindtree travel and transportation;1000/-;NON-REFUNDABLE;;YES;YES;Anywhere in city;250084;YES;
 						 
 # Classification: Wedding Cards
 $feature1=@Weight , 1086[$clAttrModifiers];  
