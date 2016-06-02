@@ -18,5 +18,11 @@
 	<classpathentry kind="src" output="eclipsebin/web/classes" path="web/testsrc"/>
 	<classpathentry kind="lib" path="lib/gson-2.2.2.jar"/>
 	<classpathentry kind="lib" path="lib/gson-2.2.4-sources.jar"/>
+	<classpathentry kind="lib" path="/liveeditaddon/bin/liveeditaddonserver.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="https://download.hybris.com/api/5.7.0"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry combineaccessrules="false" kind="src" path="/commercefacades"/>
 	<classpathentry kind="output" path="eclipsebin/notused"/>
 </classpath>

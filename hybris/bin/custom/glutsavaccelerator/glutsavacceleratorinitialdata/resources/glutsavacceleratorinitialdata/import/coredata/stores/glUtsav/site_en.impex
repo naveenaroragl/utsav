@@ -2,7 +2,7 @@
 # Import the CMS Site configuration for the store
 #
 
-$siteUid=glUtsav
+$siteUid=glutsav
 
 # Language
 $lang=en

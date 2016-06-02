@@ -46,16 +46,6 @@
 	
 	<title>Ecart</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="/glutsavacceleratorstorefront/_ui/desktop/theme-blue/js/vendors/jquery-1.11.3.min.js"></script>
-	<script src="/glutsavacceleratorstorefront/_ui/desktop/theme-blue/js/vendors/bootstrap.min.js"></script>
-	<script src="/glutsavacceleratorstorefront/_ui/desktop/theme-blue/js/vendors/bootstrap-select.min.js"></script>
-	<script src="/glutsavacceleratorstorefront/_ui/desktop/theme-blue/js/custom.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular-route.min.js"></script>
-	
-	<script src="/glutsavacceleratorstorefront/_ui/desktop/theme-blue/js/app.js"></script>
-	<script src="/glutsavacceleratorstorefront/_ui/desktop/theme-blue/js/routes.js"></script>
-	
 	
 </head>
 
@@ -149,16 +139,12 @@
 	</div>
 </div><!-- end of verticals-popup -->
 
+<%-- Load JavaScript required by the site --%>
+	<template:javaScript/>
 	
-	
+	<%-- Inject any additional JavaScript required by the page --%>
+	<jsp:invoke fragment="pageScripts"/>		
   
-
-	
-	
-	<%-- <jsp:doBody/> --%>
-
-	
-
 </body>
 
 <debug:debugFooter/>

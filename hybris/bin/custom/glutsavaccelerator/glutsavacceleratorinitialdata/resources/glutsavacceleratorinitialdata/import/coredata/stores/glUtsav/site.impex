@@ -6,7 +6,7 @@ $contentCatalog=glUtsavContentCatalog
 $contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged]
 $defaultLanguage=en
 $storeUid=glUtsavStore
-$siteUid=glUtsav
+$siteUid=glutsav
 $promoGrp=glUtsavPromoGrp
 $siteMapUrlLimitPerFile=50000
 
