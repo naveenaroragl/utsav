@@ -13,6 +13,7 @@
     <extension name='yacceleratorfulfilmentprocess' />
     <extension name='yacceleratorstorefront' />
 	-->
+	<extension name='platformwebservices' />
     <extension name='yaddon' />
     <extension name='ycommercewebservices' />
     <extension name='captchaaddon' />
