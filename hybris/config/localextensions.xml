@@ -15,8 +15,6 @@
 	-->
     <extension name='yaddon' />
     <extension name='ycommercewebservices' />
-    <extension name='electronicsstore' />
-    <extension name='apparelstore' />
     <extension name='captchaaddon' />
     <extension name='liveeditaddon' />
     <extension name='acceleratorwebservicesaddon' />

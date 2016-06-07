@@ -86,6 +86,16 @@
 <%-- Future Link --%>
 <script type="text/javascript" src="${commonResourcePath}/js/acc.futurelink.js"></script>
 
+<script src="${themeResourcePath}/js/vendors/jquery-1.11.3.min.js"></script>
+	<script src="${themeResourcePath}/js/vendors/bootstrap.min.js"></script>
+	<script src="${themeResourcePath}/js/vendors/bootstrap-select.min.js"></script>
+	<script src="${themeResourcePath}/js/custom.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular-route.min.js"></script>
+	
+	<script src="${themeResourcePath}/js/app.js"></script>
+	<script src="${themeResourcePath}/js/routes.js"></script>
+
 <%-- Cms Action JavaScript files --%>
 <c:forEach items="${cmsActionsJsFiles}" var="actionJsFile">
     <script type="text/javascript" src="${commonResourcePath}/js/cms/${actionJsFile}"></script>
