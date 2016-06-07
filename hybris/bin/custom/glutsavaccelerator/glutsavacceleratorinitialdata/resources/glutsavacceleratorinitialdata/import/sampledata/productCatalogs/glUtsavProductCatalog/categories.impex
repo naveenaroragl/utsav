@@ -150,8 +150,8 @@ INSERT_UPDATE Category;code[unique=true];$catalogVersion;supercategories(code,$c
 ;Caterer;;
 ;Hotel;;
 ;Grooming;;
-;Still;;Photography
-;Motion;;Photography
+;StillPhotography;;Photography
+;MotionPhotography;;Photography
 ;Travel&Transportation;;
 
 

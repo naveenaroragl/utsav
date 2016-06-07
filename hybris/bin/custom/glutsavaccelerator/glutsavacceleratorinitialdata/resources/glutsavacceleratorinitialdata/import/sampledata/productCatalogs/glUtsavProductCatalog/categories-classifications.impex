@@ -26,14 +26,14 @@ INSERT_UPDATE ClassificationClass;$classCatalogVersion;code[unique=true];allowed
 ;;musicBandClass
 ;;banquetHallClass
 ;;caterersClass
-;;travelAndTransportationClass
+;;travelandTransportationClass
 ;;weddingCardsClass
 ;;bagsClass
 ;;shoesClass
 ;;accessoriesClass
 ;;beautyAndGroomingClass
-;;sunGlassesClass
-;;hotelsClass
+;;sunglassesClass
+;;hotelClass
 ;;groomingClass
 ;;photographyClass
 ;;stillPhotographyClass
@@ -259,6 +259,19 @@ INSERT_UPDATE CategoryCategoryRelation;$categories;$supercategories
 ;Photography;photographyClass
 ;StillPhotography;stillPhotographyClass
 ;MotionPhotography;motionPhotographyClass
+;Bags;bagsClass
+;Sunglasses;sunglassesClass
+;Shoes;shoesClass
+;Accessories;accessoriesClass
+;WeddingCards;weddingCardsClass
+;Travel&Transportation;travelandTransportationClass
+;Grooming;groomingClass
+;Hotel;hotelClass
+;Caterer;caterersClass
+;Musicbands;musicBandClass
+;DJs;DJClass
+
+
 ##########
 
 

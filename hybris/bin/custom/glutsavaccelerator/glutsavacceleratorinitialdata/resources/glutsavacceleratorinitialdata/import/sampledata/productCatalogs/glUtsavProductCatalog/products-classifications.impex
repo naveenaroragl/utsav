@@ -348,3 +348,84 @@ $feature12=@Product Warranty , 1082[$clAttrModifiers];
 INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$feature11;$feature12;$catalogVersion;
 						 ;SG100001;save eyes;John Castle;;INR 1575;AVIATOR;;Black;Fiber;Brown Shades;NA;;8 years;
 
+
+						 
+# Classification: Photography
+$feature1=@Name , 1183[$clAttrModifiers];  
+$feature2=@Category , 1184[$clAttrModifiers];  
+$feature3=@Code , 1185[$clAttrModifiers];  
+$feature4=@Product Url , 1186[$clAttrModifiers];  
+$feature5=@Location ,1187[$clAttrModifiers];  
+$feature6=@Badge , 1188[$clAttrModifiers]; 
+$feature7=@Images ,1189[$clAttrModifiers];  
+$feature8=@Price , 1190[$clAttrModifiers];
+$feature9=@Description , 1191[$clAttrModifiers];  
+$feature10=@Per Day Costs , 1192[$clAttrModifiers]; 
+$feature11=@Pictures Delivered , 1193[$clAttrModifiers];  
+$feature12=@Payment Terms , 1194[$clAttrModifiers];  
+$feature13=@Travel Cost , 1195[$clAttrModifiers];  
+$feature14=@Albums , 1196[$clAttrModifiers];  
+$feature15=@About Photographer ,1197[$clAttrModifiers];  
+$feature16=@Cancellation Policy , 1198[$clAttrModifiers]; 
+$feature17=@Camera Used ,1199[$clAttrModifiers];  
+$feature18=@Photography Type , 1200[$clAttrModifiers];
+$feature19=@Profile Views , 1201[$clAttrModifiers];  
+$feature20=@Gallery , 1202[$clAttrModifiers];
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$feature11;$feature12;$feature13;$feature14;$feature15;$feature16;$feature17;$feature18;$feature19;$feature20;$catalogVersion;
+;PT100001;Vaibhav's photography;All types photos;1101;/p/02020D2;Noida;Vaibz;;2000/-;Good Photographs;200-300;On time;;;true;;;Nikon;All;;
+;PT100002;Varun's photography;All types photos;1102;/p/02021D2;Greater Noida;Varunnz;;12000/-;Good Photographs;200-300;On time;;;false;;;Cannon;All;;
+;PT100003;Pradeep's photography;All types photos;1103;/p/02022D2;Moradabad;Pradeepz;;6000/-;Good Photographs;200-300;On time;;;true;;;Nikon;All;;
+;PT100004;Nidhi's photography;All types photos;1104;/p/02023D2;Dhampur;Nidhiz;;8000/-;Good Photographs;200-300;On time;;;true;;;Nikon;All;;
+;PT100005;Devendra's photography;All types photos;1105;/p/02024D2;Agra;Devz;;7000/-;Good Photographs;200-300;On time;;;false;;;Sony;All;;
+;PT100006;Rupesh's photography;All types photos;1106;/p/02025D2;Indore;Rupz;;22000/-;Good Photographs;200-300;On time;;;true;;;Nikon DSLR;All;;
+;PT100007;Kuldeep's photography;All types photos;1107;/p/02026D2;Bangalore;Kulz;;8000/-;Good Photographs;200-300;On time;;;true;;;Panasonic;All;;
+;PT100008;Gaurav's photography;All types photos;1108;/p/02027D2;Noida;Gaurz;;9000/-;Good Photographs;200-300;On time;;;false;;;Nikon;All;;
+;PT100009;Vikramjit's photography;All types photos;1109;/p/02028D2;Gurgaon;Vikramz;;5000/-;Good Photographs;200-300;On time;;;true;;;Cannon;All;;
+;PT100010;Deepak's photography;All types photos;1110;/p/02029D2;Noida;Deepakz;;2000/-;Good Photographs;200-300;On time;;;false;;;Nikon;All;;
+;PT100011;Kapil's photography;All types photos;1111;/p/02030D2;Noida;Kapilzz;;12000/-;Good Photographs;200-300;On time;;;false;;;Sony;All;;
+;PT100012;Ranjit's photography;All types photos;1112;/p/02031D2;Noida;Ranjitz;;22000/-;Good Photographs;200-300;On time;;;true;;;Nikon;All;;
+;PT100013;Shishal's photography;All types photos;1113;/p/02032D2;Noida;Shishalz;;21000/-;Good Photographs;200-300;On time;;;false;;;Sony;All;;
+;PT100014;Sujatha's photography;All types photos;1114;/p/02033D2;Noida;Sujathaz;;23000/-;Good Photographs;200-300;On time;;;true;;;Nikon;All;;
+;PT100015;Yogita's photography;All types photos;1115;/p/02034D2;Noida;Yogitaz;;12000/-;Good Photographs;200-300;On time;;;true;;;Cannon;All;;	
+
+# Classification: StillPhotography
+$feature1=@Still Photography Equipment , 1203[$clAttrModifiers];  
+$feature2=@Still Photography Skill Sets , 1204[$clAttrModifiers];  
+$feature3=@Still Photography Cameraman , 1205[$clAttrModifiers];   
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$catalogVersion;
+;SPT100001;StillPhotography;Still Stand, Camera;;;
+;SPT100002;StillPhotography;Camera;;;
+;SPT100003;StillPhotography;Tripod, Camera;;;
+;SPT100004;StillPhotography;Tripod, Camera;;;
+;SPT100005;StillPhotography;Tripod;;;
+;SPT100006;StillPhotography;Tripod, Camera;;;
+;SPT100007;StillPhotography;Tripod, Camera;;;
+;SPT100008;StillPhotography;Tripod, Camera;;;
+;SPT100009;StillPhotography;Tripod, Camera;;;
+;SPT100010;StillPhotography;Tripod, Camera;;;
+;SPT100011;StillPhotography;Tripod, Camera;;;
+;SPT100012;StillPhotography;Tripod, Camera;;;
+;SPT100013;StillPhotography;Tripod, Camera;;;
+;SPT100014;StillPhotography;Tripod, Camera;;;
+;SPT100015;StillPhotography;Tripod, Camera;;;	
+
+# Classification: MotionPhotography
+$feature1=@Motion Photography Equipment , 1206[$clAttrModifiers];  
+$feature2=@Motion Photography Skill Sets , 1207[$clAttrModifiers];  
+$feature3=@Motion Photography Cameraman , 1208[$clAttrModifiers];   
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$catalogVersion;	
+;MPT100001;MotionPhotography;;;;
+;MPT100002;MotionPhotography;;;;
+;MPT100003;MotionPhotography;;;;
+;MPT100004;MotionPhotography;;;;
+;MPT100005;MotionPhotography;;;;
+;MPT100006;MotionPhotography;;;;
+;MPT100007;MotionPhotography;;;;
+;MPT100008;MotionPhotography;;;;
+;MPT100009;MotionPhotography;;;;
+;MPT100010;MotionPhotography;;;;
+;MPT100011;MotionPhotography;;;;
+;MPT100012;MotionPhotography;;;;
+;MPT100013;MotionPhotography;;;;
+;MPT100014;MotionPhotography;;;;
+;MPT100015;MotionPhotography;;;;					 

@@ -99,10 +99,54 @@ UPDATE Product;code[unique=true];$catalogVersion;name[lang=$lang];summary[lang=$
 ;GR1000013;;Grooming;<p>SeasonGroom: the things that you do to make your appearance clean and neat</p>;
 ;GR1000014;;Grooming;<p>Best look: the things that you do to make your appearance clean and neat</p>;
 ;GR1000015;;Grooming;<p>MakeUp groom: the things that you do to make your appearance clean and neat</p>;
+;PT100001;;Photography;<p>Photography is an essential part of any ceremony: it creates memories for our future!</p>;
+;PT100002;;Photography;<p>Photography is an essential part of any ceremony: it creates memories for our future!</p>;
+;PT100003;;Photography;<p>Photography is an essential part of any ceremony: it creates memories for our future!</p>;
+;PT100004;;Photography;<p>Photography is an essential part of any ceremony: it creates memories for our future!</p>;
+;PT100005;;Photography;<p>Photography is an essential part of any ceremony: it creates memories for our future!</p>;
+;PT100006;;Photography;<p>Photography is an essential part of any ceremony: it creates memories for our future!</p>;
+;PT100007;;Photography;<p>Photography is an essential part of any ceremony: it creates memories for our future!</p>;
+;PT100008;;Photography;<p>Photography is an essential part of any ceremony: it creates memories for our future!</p>;
+;PT100009;;Photography;<p>Photography is an essential part of any ceremony: it creates memories for our future!</p>;
+;PT100010;;Photography;<p>Photography is an essential part of any ceremony: it creates memories for our future!</p>;
+;PT100011;;Photography;<p>Photography is an essential part of any ceremony: it creates memories for our future!</p>;
+;PT100012;;Photography;<p>Photography is an essential part of any ceremony: it creates memories for our future!</p>;
+;PT100013;;Photography;<p>Photography is an essential part of any ceremony: it creates memories for our future!</p>;
+;PT100014;;Photography;<p>Photography is an essential part of any ceremony: it creates memories for our future!</p>;
+;PT100015;;Photography;<p>Photography is an essential part of any ceremony: it creates memories for our future!</p>;
+;SPT100001;;StillPhotography;<p>Have you ever tried for Still Photography, Try it once!</p>;
+;SPT100002;;StillPhotography;<p>Have you ever tried for Still Photography, Try it once!</p>;
+;SPT100003;;StillPhotography;<p>Have you ever tried for Still Photography, Try it once!</p>;
+;SPT100004;;StillPhotography;<p>Have you ever tried for Still Photography, Try it once!</p>;
+;SPT100005;;StillPhotography;<p>Have you ever tried for Still Photography, Try it once!</p>;
+;SPT100006;;StillPhotography;<p>Have you ever tried for Still Photography, Try it once!</p>;
+;SPT100007;;StillPhotography;<p>Have you ever tried for Still Photography, Try it once!</p>;
+;SPT100008;;StillPhotography;<p>Have you ever tried for Still Photography, Try it once!</p>;
+;SPT100009;;StillPhotography;<p>Have you ever tried for Still Photography, Try it once!</p>;
+;SPT100010;;StillPhotography;<p>Have you ever tried for Still Photography, Try it once!</p>;
+;SPT100011;;StillPhotography;<p>Have you ever tried for Still Photography, Try it once!</p>;
+;SPT100012;;StillPhotography;<p>Have you ever tried for Still Photography, Try it once!</p>;
+;SPT100013;;StillPhotography;<p>Have you ever tried for Still Photography, Try it once!</p>;
+;SPT100014;;StillPhotography;<p>Have you ever tried for Still Photography, Try it once!</p>;
+;SPT100015;;StillPhotography;<p>Have you ever tried for Still Photography, Try it once!</p>;
+;MPT100001;;MotionPhotography;<p>Its lot more than just the use of motion sensors!</p>;
+;MPT100002;;MotionPhotography;<p>Its lot more than just the use of motion sensors!</p>;
+;MPT100003;;MotionPhotography;<p>Its lot more than just the use of motion sensors!</p>;
+;MPT100004;;MotionPhotography;<p>Its lot more than just the use of motion sensors!</p>;
+;MPT100005;;MotionPhotography;<p>Its lot more than just the use of motion sensors!</p>;
+;MPT100006;;MotionPhotography;<p>Its lot more than just the use of motion sensors!</p>;
+;MPT100007;;MotionPhotography;<p>Its lot more than just the use of motion sensors!</p>;
+;MPT100008;;MotionPhotography;<p>Its lot more than just the use of motion sensors!</p>;
+;MPT100009;;MotionPhotography;<p>Its lot more than just the use of motion sensors!</p>;
+;MPT100010;;MotionPhotography;<p>Its lot more than just the use of motion sensors!</p>;
+;MPT100011;;MotionPhotography;<p>Its lot more than just the use of motion sensors!</p>;
+;MPT100012;;MotionPhotography;<p>Its lot more than just the use of motion sensors!</p>;
+;MPT100013;;MotionPhotography;<p>Its lot more than just the use of motion sensors!</p>;
+;MPT100014;;MotionPhotography;<p>Its lot more than just the use of motion sensors!</p>;
+;MPT100015;;MotionPhotography;<p>Its lot more than just the use of motion sensors!</p>;
 
 
 UPDATE ServiceProduct;code[unique=true];$catalogVersion;name[lang=$lang];summary[lang=$lang];description[lang=$lang]
-;SBT1000001;;All kinds Laundry Service;<p>Show your love for your clothes! With the People Laundry give your clothes new skin.</p>
 
 
 
