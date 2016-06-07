@@ -12,7 +12,7 @@
 <%@ taglib prefix="theme" tagdir="/WEB-INF/tags/shared/theme" %>
            
            <header>
-           <div class="row">
+           <div class="row" id="headerDiv">
 				<div class="col-md-6 col-sm-6 col-xs-12">  <img src="/glutsavacceleratorstorefront/_ui/desktop/theme-blue/images/logo.png" class="logo" alt="Ecart" />       </div>
 				<div class="col-md-6 col-sm-6 col-xs-12 text-right text-xs-left"> 
 					<ul class="top-header-links">
