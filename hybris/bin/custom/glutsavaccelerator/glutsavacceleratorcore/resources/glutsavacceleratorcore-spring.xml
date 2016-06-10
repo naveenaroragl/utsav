@@ -435,7 +435,4 @@
 		<property name="rootCategoryCode" value="categories"/>
 	</bean>
 	
-	<alias alias="googleLoginService" name="defaultGoogleLoginServiceImpl"/>
-	<bean id="defaultGoogleLoginServiceImpl" class="gl.utsav.accelerator.core.login.impl.DefaultGoogleLoginServiceImpl">	    
-	</bean>
 </beans>

@@ -50,7 +50,7 @@
 </head>
 
 <body ng-app="MainApp" class="${pageBodyCssClasses} ${cmsPageRequestContextData.liveEdit ? ' yCmsLiveEdit' : ''} language-${currentLanguage.isocode}">
-
+<div id="fb-root"></div>
 	<%-- Inject the page body here --%>
 	
 	
@@ -63,7 +63,7 @@
     </div>
 
 <c:url value="/j_spring_security_check" var="loginActionUrl" />
-<%-- <user:login actionNameKey="login.login" action="${loginActionUrl}"/> --%>
+<user:login actionNameKey="login.login" action="${loginActionUrl}"/>
 
 
 
@@ -138,13 +138,12 @@
 	</div>
 	</div>
 </div><!-- end of verticals-popup -->
-
 <%-- Load JavaScript required by the site --%>
 	<template:javaScript/>
 	
 	<%-- Inject any additional JavaScript required by the page --%>
 	<jsp:invoke fragment="pageScripts"/>		
-  
+
 </body>
 
 <debug:debugFooter/>
