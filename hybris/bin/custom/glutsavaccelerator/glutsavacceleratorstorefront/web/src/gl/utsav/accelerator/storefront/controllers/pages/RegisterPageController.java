@@ -13,11 +13,12 @@
  */
 package gl.utsav.accelerator.storefront.controllers.pages;
 
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.AbstractRegisterPageController;
-import de.hybris.platform.acceleratorstorefrontcommons.forms.RegisterForm;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.cms2.model.pages.AbstractPageModel;
+
+import gl.utsav.accelerator.storefront.commonabstract.controllers.pages.AbstractRegisterPageController;
 import gl.utsav.accelerator.storefront.controllers.ControllerConstants;
+import gl.utsav.accelerator.storefront.forms.RegisterForm;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;

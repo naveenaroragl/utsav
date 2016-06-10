@@ -18,13 +18,14 @@ import de.hybris.platform.acceleratorfacades.device.data.DeviceData;
 import de.hybris.platform.acceleratorservices.addonsupport.RequiredAddOnsNameProvider;
 import de.hybris.platform.acceleratorservices.config.SiteConfigService;
 import de.hybris.platform.acceleratorservices.uiexperience.UiExperienceService;
-import de.hybris.platform.acceleratorstorefrontcommons.constants.WebConstants;
 import de.hybris.platform.cms2.model.site.CMSSiteModel;
 import de.hybris.platform.cms2.servicelayer.services.CMSSiteService;
 import de.hybris.platform.commerceservices.enums.SiteTheme;
 import de.hybris.platform.commerceservices.enums.UiExperienceLevel;
 import de.hybris.platform.commerceservices.i18n.CommerceCommonI18NService;
 import de.hybris.platform.core.model.c2l.LanguageModel;
+
+import gl.utsav.accelerator.storefront.constants.WebConstants;
 import gl.utsav.accelerator.storefront.interceptors.BeforeViewHandler;
 import gl.utsav.accelerator.storefront.util.CSRFTokenManager;
 import gl.utsav.accelerator.storefront.web.view.UiExperienceViewResolver;

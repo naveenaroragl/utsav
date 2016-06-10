@@ -13,10 +13,6 @@
  */
 package gl.utsav.accelerator.storefront.controllers.pages;
 
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.AbstractPageController;
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.util.GlobalMessages;
-import de.hybris.platform.acceleratorstorefrontcommons.forms.LoginForm;
-import de.hybris.platform.acceleratorstorefrontcommons.forms.RegisterForm;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.cms2.model.pages.AbstractPageModel;
 import de.hybris.platform.commercefacades.user.UserFacade;
@@ -34,6 +30,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import gl.utsav.accelerator.storefront.commonabstract.controllers.pages.AbstractPageController;
+import gl.utsav.accelerator.storefront.commonabstract.controllers.util.GlobalMessages;
+import gl.utsav.accelerator.storefront.forms.LoginForm;
+import gl.utsav.accelerator.storefront.forms.RegisterForm;
 
 
 /**

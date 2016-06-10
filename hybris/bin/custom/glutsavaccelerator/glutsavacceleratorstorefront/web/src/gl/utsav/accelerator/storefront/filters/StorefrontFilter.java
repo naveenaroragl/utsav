@@ -13,8 +13,6 @@
  */
 package gl.utsav.accelerator.storefront.filters;
 
-import de.hybris.platform.acceleratorstorefrontcommons.history.BrowseHistory;
-import de.hybris.platform.acceleratorstorefrontcommons.history.BrowseHistoryEntry;
 import de.hybris.platform.cms2.misc.CMSFilter;
 import de.hybris.platform.commercefacades.storesession.StoreSessionFacade;
 
@@ -31,6 +29,9 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Required;
 import org.springframework.web.filter.OncePerRequestFilter;
 import org.springframework.web.util.CookieGenerator;
+
+import gl.utsav.accelerator.storefront.history.BrowseHistory;
+import gl.utsav.accelerator.storefront.history.BrowseHistoryEntry;
 
 
 /**

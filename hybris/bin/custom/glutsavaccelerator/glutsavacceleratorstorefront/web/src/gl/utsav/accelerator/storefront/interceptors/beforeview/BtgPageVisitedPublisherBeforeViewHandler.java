@@ -13,10 +13,11 @@
  */
 package gl.utsav.accelerator.storefront.interceptors.beforeview;
 
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.AbstractPageController;
 import de.hybris.platform.btg.events.ContentPageVisitedBTGRuleDataEvent;
 import de.hybris.platform.cms2.model.pages.AbstractPageModel;
 import de.hybris.platform.servicelayer.event.EventService;
+
+import gl.utsav.accelerator.storefront.commonabstract.controllers.pages.AbstractPageController;
 import gl.utsav.accelerator.storefront.interceptors.BeforeViewHandler;
 
 import javax.annotation.Resource;

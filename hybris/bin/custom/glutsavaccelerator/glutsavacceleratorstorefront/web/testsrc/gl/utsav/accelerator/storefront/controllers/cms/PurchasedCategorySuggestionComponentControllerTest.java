@@ -22,8 +22,8 @@ import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.cms2.servicelayer.services.impl.DefaultCMSComponentService;
 import de.hybris.platform.commercefacades.product.data.ProductData;
 import gl.utsav.accelerator.facades.suggestion.SimpleSuggestionFacade;
+import gl.utsav.accelerator.storefront.commonabstract.controllers.pages.AbstractPageController;
 import gl.utsav.accelerator.storefront.controllers.ControllerConstants;
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.AbstractPageController;
 
 import java.util.Arrays;
 import java.util.Collections;

@@ -16,9 +16,10 @@ package gl.utsav.accelerator.storefront.controllers.cms;
 import de.hybris.bootstrap.annotations.UnitTest;
 import de.hybris.platform.acceleratorcms.enums.NavigationBarMenuLayout;
 import de.hybris.platform.acceleratorcms.model.components.NavigationBarComponentModel;
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.AbstractPageController;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.cms2.servicelayer.services.impl.DefaultCMSComponentService;
+
+import gl.utsav.accelerator.storefront.commonabstract.controllers.pages.AbstractPageController;
 import gl.utsav.accelerator.storefront.controllers.ControllerConstants;
 
 import javax.servlet.http.HttpServletRequest;

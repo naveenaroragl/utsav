@@ -13,8 +13,6 @@
  */
 package gl.utsav.accelerator.storefront.security.impl;
 
-import de.hybris.platform.acceleratorstorefrontcommons.security.AutoLoginStrategy;
-import de.hybris.platform.acceleratorstorefrontcommons.security.GUIDCookieStrategy;
 import de.hybris.platform.commercefacades.customer.CustomerFacade;
 
 import javax.servlet.http.HttpServletRequest;
@@ -28,6 +26,9 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.RememberMeServices;
 import org.springframework.security.web.authentication.WebAuthenticationDetails;
+
+import gl.utsav.accelerator.storefront.security.AutoLoginStrategy;
+import gl.utsav.accelerator.storefront.security.GUIDCookieStrategy;
 
 
 /**

@@ -3,9 +3,6 @@
  */
 package gl.utsav.accelerator.storefront.controllers.pages;
 
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.AbstractLoginPageController;
-import de.hybris.platform.acceleratorstorefrontcommons.forms.ForgottenPwdForm;
-import de.hybris.platform.acceleratorstorefrontcommons.security.AutoLoginStrategy;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.cms2.model.pages.AbstractPageModel;
 import de.hybris.platform.commercefacades.user.data.RegisterData;
@@ -30,7 +27,10 @@ import com.google.gson.Gson;
 
 import gl.utsav.accelerator.facades.login.GoogleLoginFacade;
 import gl.utsav.accelerator.facades.user.data.GoogleData;
+import gl.utsav.accelerator.storefront.commonabstract.controllers.pages.AbstractLoginPageController;
 import gl.utsav.accelerator.storefront.controllers.ControllerConstants;
+import gl.utsav.accelerator.storefront.forms.ForgottenPwdForm;
+import gl.utsav.accelerator.storefront.security.AutoLoginStrategy;
 
 
 /**

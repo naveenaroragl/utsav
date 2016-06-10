@@ -13,7 +13,6 @@
  */
 package gl.utsav.accelerator.storefront.security.impl;
 
-import de.hybris.platform.acceleratorstorefrontcommons.constants.WebConstants;
 import de.hybris.platform.servicelayer.session.SessionService;
 
 import java.io.Serializable;
@@ -32,6 +31,8 @@ import org.springframework.security.web.savedrequest.SavedRequest;
 import org.springframework.security.web.util.UrlUtils;
 import org.springframework.security.web.util.matcher.AnyRequestMatcher;
 import org.springframework.security.web.util.matcher.RequestMatcher;
+
+import gl.utsav.accelerator.storefront.constants.WebConstants;
 
 
 /**

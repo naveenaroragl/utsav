@@ -14,10 +14,11 @@
 package gl.utsav.accelerator.storefront.interceptors.beforeview;
 
 import de.hybris.platform.acceleratorservices.config.HostConfigService;
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.ThirdPartyConstants;
 import de.hybris.platform.core.Registry;
 import de.hybris.platform.servicelayer.i18n.CommonI18NService;
 import de.hybris.platform.util.config.ConfigIntf;
+
+import gl.utsav.accelerator.storefront.commonabstract.controllers.ThirdPartyConstants;
 import gl.utsav.accelerator.storefront.interceptors.BeforeViewHandler;
 
 import java.util.HashMap;

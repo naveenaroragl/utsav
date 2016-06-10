@@ -13,12 +13,12 @@
  */
 package gl.utsav.accelerator.storefront.web.mvc;
 
-import de.hybris.platform.acceleratorstorefrontcommons.constants.WebConstants;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.lang.StringUtils;
 import org.springframework.web.util.UrlPathHelper;
+
+import gl.utsav.accelerator.storefront.constants.WebConstants;
 
 /**
  * This implementation overrides the default implementation of Spring framework's {@link UrlPathHelper}

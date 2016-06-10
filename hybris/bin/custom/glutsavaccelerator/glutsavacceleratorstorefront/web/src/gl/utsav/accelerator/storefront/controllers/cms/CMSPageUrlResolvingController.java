@@ -13,7 +13,6 @@
  */
 package gl.utsav.accelerator.storefront.controllers.cms;
 
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.AbstractController;
 import de.hybris.platform.cms2.constants.Cms2Constants;
 import de.hybris.platform.cms2.model.preview.CMSPreviewTicketModel;
 import de.hybris.platform.cms2.model.preview.PreviewDataModel;
@@ -30,6 +29,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
+
+import gl.utsav.accelerator.storefront.commonabstract.controllers.AbstractController;
 
 
 /**

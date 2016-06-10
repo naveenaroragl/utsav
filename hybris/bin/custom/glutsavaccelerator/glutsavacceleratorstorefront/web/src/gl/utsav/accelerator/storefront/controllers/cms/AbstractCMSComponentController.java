@@ -15,11 +15,12 @@ package gl.utsav.accelerator.storefront.controllers.cms;
 
 import de.hybris.platform.acceleratorcms.services.CMSPageContextService;
 import de.hybris.platform.acceleratorservices.data.RequestContextData;
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.AbstractController;
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.AbstractPageController;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.cms2.model.contents.components.AbstractCMSComponentModel;
 import de.hybris.platform.cms2.servicelayer.services.CMSComponentService;
+
+import gl.utsav.accelerator.storefront.commonabstract.controllers.AbstractController;
+import gl.utsav.accelerator.storefront.commonabstract.controllers.pages.AbstractPageController;
 import gl.utsav.accelerator.storefront.controllers.ControllerConstants;
 
 import javax.annotation.Resource;
