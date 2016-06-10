@@ -6,7 +6,7 @@
 <%@ taglib prefix="cms" tagdir="/WEB-INF/tags/desktop/template/cms" %>
 
 
-<c:choose>
+<%-- <c:choose>
 	<c:when test="${granuleEnabled}">
 		<g:compress urlpattern="${encodingAttributes}">
 			<compressible:css/>
@@ -15,7 +15,7 @@
 	<c:otherwise>
 		<compressible:css/>
 	</c:otherwise>
-</c:choose>
+</c:choose> --%>
 
 <link rel="stylesheet" href="${themeResourcePath}/css/style.css"> 
 
