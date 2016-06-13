@@ -46,6 +46,8 @@
 
 <%-- Custom ACC JS --%>
 <script type="text/javascript" src="${commonResourcePath}/js/acc.common.js"></script>
+<script type="text/javascript" src="${commonResourcePath}/js/acc.login.js"></script>
+
 <%-- <script type="text/javascript" src="${commonResourcePath}/js/acc.userlocation.js"></script>
 <script type="text/javascript" src="${commonResourcePath}/js/acc.track.js"></script>
 <script type="text/javascript" src="${commonResourcePath}/js/acc.cms.js"></script>
