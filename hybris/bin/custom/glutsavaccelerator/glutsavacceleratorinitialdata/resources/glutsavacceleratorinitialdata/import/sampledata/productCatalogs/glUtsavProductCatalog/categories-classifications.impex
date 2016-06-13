@@ -248,6 +248,37 @@ INSERT_UPDATE ClassificationAttribute;$classSystemVersion;code[unique=true]
 ;;SKU , 1081
 ;;Product Warranty , 1082
 
+#Photography
+;;Name , 1183
+;;Category , 1184
+;;Code , 1185
+;;Product Url , 1186
+;;Location , 1187
+;;Badge , 1188
+;;Images , 1189
+;;Price , 1190
+;;Description , 1191
+;;Per Day Costs , 1192
+;;Pictures Delivered , 1193
+;;Payment Terms , 1194
+;;Travel Cost , 1195
+;;Albums , 1196
+;;About Photographer , 1197
+;;Cancellation Policy , 1198
+;;Camera Used , 1199
+;;Photography Type , 1200
+;;Profile Views , 1201
+;;Gallery , 1202
+
+#Still Photography
+;;Still Photography Equipment , 1203
+;;Still Photography Skill Sets , 1204
+;;Still Photography Cameraman , 1205
+
+# Motion Photography
+;;Motion Photography Equipment , 1206
+;;Motion Photography Skill sets , 1207
+;;Motion Photography Cameraman , 1208
 
 
 # Links ClassificationClasses to Categories
@@ -498,14 +529,3 @@ INSERT_UPDATE ClassAttributeAssignment;$class;$attribute;position;$unit;attribut
 ;motionPhotographyClass;Motion Photography Equipment , 1206;;300;
 ;motionPhotographyClass;Motion Photography Skill sets , 1207;;300;
 ;motionPhotographyClass;Motion Photography Cameraman , 1208;;300;
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
