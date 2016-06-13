@@ -6,7 +6,7 @@
 	<script src="${themeResourcePath}/js/vendors/bootstrap-select.min.js"></script>
 	<script src="${themeResourcePath}/js/custom.js"></script>
 <!-- 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular-route.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular-route.min.js"></script> 
 	
 	<%-- <script src="${themeResourcePath}/js/app.js"></script>
 	<script src="${themeResourcePath}/js/routes.js"></script> --%>
@@ -38,11 +38,11 @@
 <script type="text/javascript" src="${commonResourcePath}/js/jquery.ui.stars-3.0.1.min.js"></script>
 <script type="text/javascript" src="${commonResourcePath}/js/jquery.form-3.09.js"></script>
 <%-- BeautyTips  --%>
-<script type="text/javascript" src="${commonResourcePath}/js/jquery.bgiframe-2.1.2.min.js"></script>
-<!--[if IE]><script type="text/javascript" src="${commonResourcePath}/js/excanvas-r3.compiled.js"></script>-->
+<script type="text/javascript" src="${commonResourcePath}/js/jquery.bgiframe-2.1.2.min.js"></script>-->
+<!--[if IE]><script type="text/javascript" src="${commonResourcePath}/js/excanvas-r3.compiled.js"></script>
 <script type="text/javascript" src="${commonResourcePath}/js/jquery.bt-0.9.5-rc1.min.js"></script>
 <%-- PasswordStrength  --%>
-<script type="text/javascript" src="${commonResourcePath}/js/jquery.pstrength.custom-1.2.0.js"></script>
+<script type="text/javascript" src="${commonResourcePath}/js/jquery.pstrength.custom-1.2.0.js"></script>-->
 
 <%-- Custom ACC JS --%>
 <script type="text/javascript" src="${commonResourcePath}/js/acc.common.js"></script>
@@ -107,5 +107,5 @@ Future Link
     <script type="text/javascript" src="${addOnJavaScript}"></script>
 </c:forEach>
 
-<%-- Fix for Webkit Browsers (Needs to be loaded last)  --%>
-<script type="text/javascript" src="${commonResourcePath}/js/acc.skiplinks.js"></script>
+<%-- Fix for Webkit Browsers (Needs to be loaded last)  
+<script type="text/javascript" src="${commonResourcePath}/js/acc.skiplinks.js"></script>--%>

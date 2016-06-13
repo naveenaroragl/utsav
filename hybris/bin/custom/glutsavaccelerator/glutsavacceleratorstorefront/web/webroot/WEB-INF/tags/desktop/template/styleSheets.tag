@@ -23,9 +23,9 @@
 
 
 
-<%-- <link rel="stylesheet" href="${commonResourcePath}/blueprint/print.css" type="text/css" media="print" /> --%>
+<%-- <link rel="stylesheet" href="${commonResourcePath}/blueprint/print.css" type="text/css" media="print" /> 
 <style type="text/css" media="print">
 	@IMPORT url("${commonResourcePath}/blueprint/print.css");
-</style>
+</style>--%>
 
 <cms:previewCSS cmsPageRequestContextData="${cmsPageRequestContextData}" />
