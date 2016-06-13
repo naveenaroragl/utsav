@@ -53,6 +53,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 
 import gl.utsav.accelerator.storefront.commonabstract.controllers.AbstractController;
 import gl.utsav.accelerator.storefront.constants.WebConstants;
+import gl.utsav.accelerator.storefront.forms.LoginForm;
+import gl.utsav.accelerator.storefront.forms.RegisterForm;
 
 
 /**
@@ -164,6 +166,18 @@ public abstract class AbstractPageController extends AbstractController
 	public CurrencyData getCurrentCurrency()
 	{
 		return storeSessionFacade.getCurrentCurrency();
+	}
+
+	@ModelAttribute("loginForm")
+	public LoginForm getLoginForm()
+	{
+		return new LoginForm();
+	}
+
+	@ModelAttribute("registerForm")
+	public RegisterForm getRegisterForm()
+	{
+		return new RegisterForm();
 	}
 
 	@ModelAttribute("siteName")

@@ -126,6 +126,28 @@ function loginCallback(result){
         });
     }
 };
+
+$(document).on('submit', '#login-form', function(e) {
+	e.preventDefault();
+	console.log('heha')
+    $.ajax({
+        url     : $(this).attr('action'),
+        type    : $(this).attr('method'),
+        data    : $(this).serialize(),
+        success : function( data ) {
+        	var errorMsg = $(data).find('.alert.negative').html();
+        	if(errorMsg != undefined)
+        		$('.form_field_error').html(errorMsg);
+        	else 
+        		$('#myModalLogin').modal('toggle');
+        	$('#headerDiv').html($(data).find('#headerDiv').html());
+        },
+        error   : function( xhr, err ) {
+                     alert('Error'+xhr.responseText+" "+err);     
+        }
+    });    
+    return false;
+});
 </script>
 
 <!-- Login Modal -->
@@ -146,15 +168,8 @@ function loginCallback(result){
 					<div class="form-header">
 						<i class="icon-user"></i>
 					</div>
-					<form:form id="login-form" method="post" class="form-signin" role="form" action="${action}" commandName="loginForm">
-						<c:if test="${not empty message}">
-							<span class="errors">
-								<spring:theme code="${message}"/>
-							</span>
-						</c:if>
-						<c:if test="${loginError}">
-							<div class="form_field_error">
-						</c:if>
+					<form:form id="login-form" method="post" class="form-signin" role="form" action="${action}" commandName="loginForm" name="login-form">
+							<div class="form_field_error">	</div>
 						<div class="input-group">
 							<span id="basic-addon1" class="input-group-addon icon-user"></span>
 							<!-- <input type="text" id="username" required placeholder="Username"
@@ -177,9 +192,7 @@ function loginCallback(result){
 						<h4 class="text-center login-txt-center">Alternatively, you
 							can log in using:</h4>
 							
-						<c:if test="${loginError}">
-							</div>
-						</c:if>
+							
 					</form:form>
 					<a class="btn  facebook"
 						href="#" onclick="fb_login();" >
