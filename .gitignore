@@ -38,3 +38,4 @@ hybris/config/licence/installedSaplicenses.properties
 hybris/.project
 *platformhome.properties
 *corehmc.jar
+*-webtestclasses.xml
