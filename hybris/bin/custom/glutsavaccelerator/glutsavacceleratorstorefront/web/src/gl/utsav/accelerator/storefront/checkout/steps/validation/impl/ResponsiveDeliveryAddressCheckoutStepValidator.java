@@ -13,10 +13,10 @@
  */
 package gl.utsav.accelerator.storefront.checkout.steps.validation.impl;
 
-import de.hybris.platform.acceleratorstorefrontcommons.checkout.steps.validation.AbstractCheckoutStepValidator;
-import de.hybris.platform.acceleratorstorefrontcommons.checkout.steps.validation.ValidationResults;
-
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import gl.utsav.accelerator.storefront.checkout.steps.validation.AbstractCheckoutStepValidator;
+import gl.utsav.accelerator.storefront.checkout.steps.validation.ValidationResults;
 
 
 public class ResponsiveDeliveryAddressCheckoutStepValidator extends AbstractCheckoutStepValidator

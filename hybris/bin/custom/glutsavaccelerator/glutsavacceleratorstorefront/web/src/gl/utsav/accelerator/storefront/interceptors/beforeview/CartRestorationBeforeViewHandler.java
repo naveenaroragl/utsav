@@ -13,8 +13,9 @@
  */
 package gl.utsav.accelerator.storefront.interceptors.beforeview;
 
-import de.hybris.platform.acceleratorstorefrontcommons.constants.WebConstants;
 import de.hybris.platform.servicelayer.session.SessionService;
+
+import gl.utsav.accelerator.storefront.constants.WebConstants;
 import gl.utsav.accelerator.storefront.interceptors.BeforeViewHandler;
 
 import java.util.List;

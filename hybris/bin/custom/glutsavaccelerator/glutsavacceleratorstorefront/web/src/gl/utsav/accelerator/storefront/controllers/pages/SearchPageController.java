@@ -16,12 +16,6 @@ package gl.utsav.accelerator.storefront.controllers.pages;
 import de.hybris.platform.acceleratorcms.model.components.SearchBoxComponentModel;
 import de.hybris.platform.acceleratorservices.controllers.page.PageType;
 import de.hybris.platform.acceleratorservices.customer.CustomerLocationService;
-import de.hybris.platform.acceleratorstorefrontcommons.breadcrumb.impl.SearchBreadcrumbBuilder;
-import de.hybris.platform.acceleratorstorefrontcommons.constants.WebConstants;
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.ThirdPartyConstants;
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.AbstractSearchPageController;
-import de.hybris.platform.acceleratorstorefrontcommons.util.MetaSanitizerUtil;
-import de.hybris.platform.acceleratorstorefrontcommons.util.XSSFilterUtil;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.cms2.servicelayer.services.CMSComponentService;
 import de.hybris.platform.commercefacades.product.data.ProductData;
@@ -56,6 +50,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.sap.security.core.server.csi.XSSEncoder;
+
+import gl.utsav.accelerator.storefront.breadcrumb.impl.SearchBreadcrumbBuilder;
+import gl.utsav.accelerator.storefront.commonabstract.controllers.ThirdPartyConstants;
+import gl.utsav.accelerator.storefront.commonabstract.controllers.pages.AbstractSearchPageController;
+import gl.utsav.accelerator.storefront.constants.WebConstants;
+import gl.utsav.accelerator.storefront.util.MetaSanitizerUtil;
+import gl.utsav.accelerator.storefront.util.XSSFilterUtil;
 
 
 @Controller

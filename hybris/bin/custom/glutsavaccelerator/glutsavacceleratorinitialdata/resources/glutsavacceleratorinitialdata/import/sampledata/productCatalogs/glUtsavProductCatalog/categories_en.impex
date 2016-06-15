@@ -150,6 +150,6 @@ UPDATE Category;code[unique=true];$catalogVersion;name[lang=$lang]
 ;Travel&Transportation;;Travel and Transportation Services;
 ;Hotel;;Hotels; 
 ;Grooming;;Grooming;
-;Still;;Still Photography
-;Motion;;Motion Photography
+;StillPhotography;;Still Photography
+;MotionPhotography;;Motion Photography
 

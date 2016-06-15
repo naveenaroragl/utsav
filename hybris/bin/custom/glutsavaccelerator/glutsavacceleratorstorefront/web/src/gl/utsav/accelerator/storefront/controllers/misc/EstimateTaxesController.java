@@ -13,7 +13,6 @@
  */
 package gl.utsav.accelerator.storefront.controllers.misc;
 
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.AbstractController;
 import de.hybris.platform.commercefacades.order.CartFacade;
 import de.hybris.platform.commercefacades.order.data.CartData;
 
@@ -27,6 +26,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import gl.utsav.accelerator.storefront.commonabstract.controllers.AbstractController;
 
 
 /**

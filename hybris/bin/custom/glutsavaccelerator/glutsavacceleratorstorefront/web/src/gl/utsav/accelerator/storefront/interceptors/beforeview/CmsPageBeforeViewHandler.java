@@ -18,7 +18,6 @@ import de.hybris.platform.acceleratorcms.model.actions.AbstractCMSActionModel;
 import de.hybris.platform.acceleratorcms.services.CMSPageContextService;
 import de.hybris.platform.acceleratorservices.data.RequestContextData;
 import de.hybris.platform.acceleratorservices.util.SpringHelper;
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.AbstractPageController;
 import de.hybris.platform.cms2.jalo.preview.PreviewData;
 import de.hybris.platform.cms2.model.contents.components.AbstractCMSComponentModel;
 import de.hybris.platform.cms2.model.contents.contentslot.ContentSlotModel;
@@ -35,6 +34,8 @@ import de.hybris.platform.cms2.servicelayer.services.CMSSiteService;
 import de.hybris.platform.jalo.c2l.LocalizableItem;
 import de.hybris.platform.servicelayer.model.AbstractItemModel;
 import de.hybris.platform.servicelayer.session.SessionService;
+
+import gl.utsav.accelerator.storefront.commonabstract.controllers.pages.AbstractPageController;
 import gl.utsav.accelerator.storefront.filters.cms.CMSSiteFilter;
 import gl.utsav.accelerator.storefront.interceptors.BeforeViewHandler;
 

@@ -13,12 +13,13 @@
  */
 package gl.utsav.accelerator.storefront.security.impl;
 
-import de.hybris.platform.acceleratorstorefrontcommons.constants.WebConstants;
 import de.hybris.platform.commerceservices.strategies.CheckoutCustomerStrategy;
 import de.hybris.platform.core.model.order.CartModel;
 import de.hybris.platform.order.CartService;
 import de.hybris.platform.servicelayer.session.SessionService;
 import de.hybris.platform.servicelayer.user.UserService;
+
+import gl.utsav.accelerator.storefront.constants.WebConstants;
 import gl.utsav.accelerator.storefront.security.GuestCheckoutCartCleanStrategy;
 
 import java.util.regex.Pattern;

@@ -15,9 +15,7 @@ package gl.utsav.accelerator.storefront.controllers.pages;
 
 import de.hybris.bootstrap.annotations.UnitTest;
 import de.hybris.platform.acceleratorservices.config.SiteConfigService;
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.AbstractSearchPageController;
 import de.hybris.platform.commerceservices.search.pagedata.SearchPageData;
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.AbstractSearchPageController.ShowMode;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -28,6 +26,9 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.springframework.ui.Model;
+
+import gl.utsav.accelerator.storefront.commonabstract.controllers.pages.AbstractSearchPageController;
+import gl.utsav.accelerator.storefront.commonabstract.controllers.pages.AbstractSearchPageController.ShowMode;
 
 
 @UnitTest

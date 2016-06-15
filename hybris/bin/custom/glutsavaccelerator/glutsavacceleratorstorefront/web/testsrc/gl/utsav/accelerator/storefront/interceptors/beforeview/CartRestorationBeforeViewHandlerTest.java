@@ -14,7 +14,6 @@
 package gl.utsav.accelerator.storefront.interceptors.beforeview;
 
 import de.hybris.bootstrap.annotations.UnitTest;
-import de.hybris.platform.acceleratorstorefrontcommons.constants.WebConstants;
 import de.hybris.platform.commercefacades.order.data.CartRestorationData;
 import de.hybris.platform.servicelayer.session.SessionService;
 
@@ -34,6 +33,8 @@ import org.mockito.BDDMockito;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.web.servlet.ModelAndView;
+
+import gl.utsav.accelerator.storefront.constants.WebConstants;
 
 
 @UnitTest

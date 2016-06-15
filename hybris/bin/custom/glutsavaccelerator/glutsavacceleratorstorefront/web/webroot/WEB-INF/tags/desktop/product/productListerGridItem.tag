@@ -23,7 +23,7 @@
 	<div class="col-xs-12 col-md-4 col-sm-6 package ${hasPromotion ? 'productGridItemPromotion' : ''}">
 		<a href="${productUrl}" title="${product.name}" class="productMainLink">
 			<div class="img-text-cntr thumb" data-toggle="modal" data-target="#quickViewPopup">
-				<product:productPrimaryImage product="${product}" format="thumbnail"/>
+				<product:productPrimaryImage product="${product}" format="product"/>
 				<c:if test="${not empty product.potentialPromotions and not empty product.potentialPromotions[0].productBanner}">
 					<img class="promo" src="${product.potentialPromotions[0].productBanner.url}" alt="${product.potentialPromotions[0].description}" title="${product.potentialPromotions[0].description}"/>
 				</c:if>

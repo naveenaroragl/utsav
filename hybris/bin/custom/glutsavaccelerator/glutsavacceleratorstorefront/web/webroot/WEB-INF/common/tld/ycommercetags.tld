@@ -26,7 +26,7 @@
 			Get the primary image for the ProductData specified in the format specified.
 		</description>
 		<name>productImage</name>
-		<function-class>de.hybris.platform.acceleratorstorefrontcommons.tags.Functions</function-class>
+		<function-class>gl.utsav.accelerator.storefront.tags.Functions</function-class>
 		<function-signature>de.hybris.platform.commercefacades.product.data.ImageData getPrimaryImageForProductAndFormat(de.hybris.platform.commercefacades.product.data.ProductData,java.lang.String)</function-signature>
 	</function>
 	
@@ -35,7 +35,7 @@
 			Get the primary image for the ProductData specified in the format specified.
 		</description>
 		<name>productCodeImage</name>
-		<function-class>de.hybris.platform.acceleratorstorefrontcommons.tags.Functions</function-class>
+		<function-class>gl.utsav.accelerator.storefront.tags.Functions</function-class>
 		<function-signature>de.hybris.platform.commercefacades.product.data.ImageData getImageForProductCode(de.hybris.platform.commercefacades.product.data.ProductData,java.lang.String,java.lang.String)</function-signature>
 	</function>
 
@@ -44,7 +44,7 @@
 			Get the store image for the PointOfServiceData specified in the format specified.
 		</description>
 		<name>storeImage</name>
-		<function-class>de.hybris.platform.acceleratorstorefrontcommons.tags.Functions</function-class>
+		<function-class>gl.utsav.accelerator.storefront.tags.Functions</function-class>
 		<function-signature>de.hybris.platform.commercefacades.product.data.ImageData getImageForStoreAndFormat(de.hybris.platform.commercefacades.storelocator.data.PointOfServiceData,java.lang.String))</function-signature>
 	</function>
 
@@ -53,7 +53,7 @@
 			Test if an order entry number in a cart has an applied promotion.
 		</description>
 		<name>doesAppliedPromotionExistForOrderEntry</name>
-		<function-class>de.hybris.platform.acceleratorstorefrontcommons.tags.Functions</function-class>
+		<function-class>gl.utsav.accelerator.storefront.tags.Functions</function-class>
 		<function-signature>boolean doesAppliedPromotionExistForOrderEntry(de.hybris.platform.commercefacades.order.data.CartData,int)</function-signature>
 	</function>
 
@@ -62,7 +62,7 @@
 			Test if an order entry number in a cart has a potential promotion.
 		</description>
 		<name>doesPotentialPromotionExistForOrderEntry</name>
-		<function-class>de.hybris.platform.acceleratorstorefrontcommons.tags.Functions</function-class>
+		<function-class>gl.utsav.accelerator.storefront.tags.Functions</function-class>
 		<function-signature>boolean doesPotentialPromotionExistForOrderEntry(de.hybris.platform.commercefacades.order.data.CartData,int)</function-signature>
 	</function>
 
@@ -71,7 +71,7 @@
 			Encodes given URL
 		</description>
 		<name>encodeUrl</name>
-		<function-class>de.hybris.platform.acceleratorstorefrontcommons.tags.Functions</function-class>
+		<function-class>gl.utsav.accelerator.storefront.tags.Functions</function-class>
 		<function-signature>java.lang.String encodeUrl(java.lang.String)</function-signature>
 	</function>
 	
@@ -80,7 +80,7 @@
 			Returns normalized code for selection data code
 		</description>
 		<name>normalizedCode</name>
-		<function-class>de.hybris.platform.acceleratorstorefrontcommons.tags.Functions</function-class>
+		<function-class>gl.utsav.accelerator.storefront.tags.Functions</function-class>
 		<function-signature>java.lang.String normalizedCode(java.lang.String)</function-signature>
 	</function>
 	
@@ -89,7 +89,7 @@
 			Evaluate restrictions.
 		</description>
 		<name>evaluateRestrictions</name>
-		<function-class>de.hybris.platform.acceleratorstorefrontcommons.tags.Functions</function-class>
+		<function-class>gl.utsav.accelerator.storefront.tags.Functions</function-class>
 		<function-signature>boolean evaluateRestrictions(de.hybris.platform.cms2.model.contents.components.AbstractCMSComponentModel)</function-signature>
 	</function>
 
@@ -98,7 +98,7 @@
 		   Checks if PickupStore is enabled for a base store.
 		</description>
 		<name>checkIfPickupEnabledForStore</name>
-		<function-class>de.hybris.platform.acceleratorstorefrontcommons.tags.Functions</function-class>
+		<function-class>gl.utsav.accelerator.storefront.tags.Functions</function-class>
 		<function-signature>boolean checkIfPickupEnabledForStore()</function-signature>
 	</function>
 
@@ -107,7 +107,7 @@
 			Check if an extension is installed
 		</description>
 		<name>isExtensionInstalled</name>
-		<function-class>de.hybris.platform.acceleratorstorefrontcommons.tags.Functions</function-class>
+		<function-class>gl.utsav.accelerator.storefront.tags.Functions</function-class>
 		<function-signature>boolean isExtensionInstalled(java.lang.String)</function-signature>
 	</function>
 

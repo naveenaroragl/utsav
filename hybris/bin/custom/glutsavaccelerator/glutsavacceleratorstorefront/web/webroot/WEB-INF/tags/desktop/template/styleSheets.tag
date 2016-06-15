@@ -6,7 +6,7 @@
 <%@ taglib prefix="cms" tagdir="/WEB-INF/tags/desktop/template/cms" %>
 
 
-<c:choose>
+<%-- <c:choose>
 	<c:when test="${granuleEnabled}">
 		<g:compress urlpattern="${encodingAttributes}">
 			<compressible:css/>
@@ -15,7 +15,7 @@
 	<c:otherwise>
 		<compressible:css/>
 	</c:otherwise>
-</c:choose>
+</c:choose> --%>
 
 <link rel="stylesheet" href="${themeResourcePath}/css/style.css"> 
 
@@ -23,9 +23,9 @@
 
 
 
-<%-- <link rel="stylesheet" href="${commonResourcePath}/blueprint/print.css" type="text/css" media="print" /> --%>
+<%-- <link rel="stylesheet" href="${commonResourcePath}/blueprint/print.css" type="text/css" media="print" /> 
 <style type="text/css" media="print">
 	@IMPORT url("${commonResourcePath}/blueprint/print.css");
-</style>
+</style>--%>
 
 <cms:previewCSS cmsPageRequestContextData="${cmsPageRequestContextData}" />

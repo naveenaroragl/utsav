@@ -13,7 +13,7 @@
  */
 package gl.utsav.accelerator.storefront.controllers.misc;
 
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.AbstractController;
+import gl.utsav.accelerator.storefront.commonabstract.controllers.AbstractController;
 import gl.utsav.accelerator.storefront.controllers.ControllerConstants;
 
 import javax.servlet.http.HttpServletResponse;

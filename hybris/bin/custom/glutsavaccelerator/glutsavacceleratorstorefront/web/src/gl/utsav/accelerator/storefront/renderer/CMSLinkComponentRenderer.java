@@ -21,7 +21,6 @@ import de.hybris.platform.commercefacades.product.data.CategoryData;
 import de.hybris.platform.commercefacades.product.data.ProductData;
 import de.hybris.platform.core.model.product.ProductModel;
 import de.hybris.platform.servicelayer.dto.converter.Converter;
-import de.hybris.platform.acceleratorstorefrontcommons.tags.Functions;
 
 import java.io.IOException;
 
@@ -32,6 +31,8 @@ import javax.servlet.jsp.PageContext;
 
 import org.apache.taglibs.standard.tag.common.core.UrlSupport;
 import org.springframework.beans.factory.annotation.Required;
+
+import gl.utsav.accelerator.storefront.tags.Functions;
 
 /**
  */

@@ -30,6 +30,52 @@ INSERT_UPDATE Product;code[unique=true];$supercategories;manufacturerName;manufa
 					 #;HT100001;Hotel;;;;;;
 					 #;GR100001;Grooming
 					 
+# For Photography
+					;PT100001;Photography;;;;;;
+					 ;PT100002;Photography;;;;;;
+					 ;PT100003;Photography;;;;;;
+					 ;PT100004;Photography;;;;;;
+					 ;PT100005;Photography;;;;;;
+					 ;PT100006;Photography;;;;;;
+					 ;PT100007;Photography;;;;;;
+					 ;PT100008;Photography;;;;;;
+					 ;PT100009;Photography;;;;;;
+					 ;PT100010;Photography;;;;;;
+					 ;PT100011;Photography;;;;;;
+					 ;PT100012;Photography;;;;;;
+					 ;PT100013;Photography;;;;;;
+					 ;PT100014;Photography;;;;;;
+					 ;PT100015;Photography;;;;;;
+					 ;SPT100001;StillPhotography;;;;;;
+					 ;SPT100002;StillPhotography;;;;;;
+					 ;SPT100003;StillPhotography;;;;;;
+					 ;SPT100004;StillPhotography;;;;;;
+					 ;SPT100005;StillPhotography;;;;;;
+					 ;SPT100006;StillPhotography;;;;;;
+					 ;SPT100007;StillPhotography;;;;;;
+					 ;SPT100008;StillPhotography;;;;;;
+					 ;SPT100009;StillPhotography;;;;;;
+					 ;SPT100010;StillPhotography;;;;;;
+					 ;SPT100011;StillPhotography;;;;;;
+					 ;SPT100012;StillPhotography;;;;;;
+					 ;SPT100013;StillPhotography;;;;;;
+					 ;SPT100014;StillPhotography;;;;;;
+					 ;SPT100015;StillPhotography;;;;;;
+					 ;MPT100001;MotionPhotography;;;;;;
+					 ;MPT100002;MotionPhotography;;;;;;
+					 ;MPT100003;MotionPhotography;;;;;;
+					 ;MPT100004;MotionPhotography;;;;;;
+					 ;MPT100005;MotionPhotography;;;;;;
+					 ;MPT100006;MotionPhotography;;;;;;
+					 ;MPT100007;MotionPhotography;;;;;;
+					 ;MPT100008;MotionPhotography;;;;;;
+					 ;MPT100009;MotionPhotography;;;;;;
+					 ;MPT100010;MotionPhotography;;;;;;
+					 ;MPT100011;MotionPhotography;;;;;;
+					 ;MPT100012;MotionPhotography;;;;;;
+					 ;MPT100013;MotionPhotography;;;;;;
+					 ;MPT100014;MotionPhotography;;;;;;
+					 ;MPT100015;MotionPhotography;;;;;;
 					 
 #for Hotel and Grooming
 					;HT100001;Hotel;;;;;;
