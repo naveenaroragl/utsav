@@ -36,3 +36,4 @@ hybris/config/solr/
 hybris/config/licence/installedSaplicenses.properties
 *platformhome.properties
 *corehmc.jar
+*-webtestclasses.xml

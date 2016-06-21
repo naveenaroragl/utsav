@@ -43,6 +43,12 @@
 	<jsp:invoke fragment="pageCss"/>
 	<analytics:analytics/>
 	
+	<%-- Load JavaScript required by the0 site --%>
+	<template:javaScript/>
+	
+	<%-- Inject any additional JavaScript required by the page --%>
+	<jsp:invoke fragment="pageScripts"/>
+	
 	
 	<title>Ecart</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -138,11 +144,7 @@
 	</div>
 	</div>
 </div><!-- end of verticals-popup -->
-<%-- Load JavaScript required by the site --%>
-	<template:javaScript/>
-	
-	<%-- Inject any additional JavaScript required by the page --%>
-	<jsp:invoke fragment="pageScripts"/>		
+		
 
 </body>
 
