@@ -1,4 +1,8 @@
 ACC.login = {
+		
+	user_name: "",
+	user_email: "",
+		
 	bindlogin: function ()
 	{
 		ACC.login.bindFB();
@@ -46,23 +50,10 @@ ACC.login = {
 		            access_token = response.authResponse.accessToken; //get access token
 		            user_id = response.authResponse.userID; //get FB UID
 		            FB.api('/me', { locale: 'en_US', fields: 'name, email'}, function(response) {
-		            	user_name = response.name;
-		                user_email = response.email; //get user email
+		            	ACC.login.user_name = response.name;
+		            	ACC.login.user_email = response.email; //get user email
 		                // store this data into your database 
-		                $.ajax({
-						    type: "POST",
-						    url: ACC.config.contextPath+'/socialLogin/request?name='+user_name+'&email='+user_email,
-						    success: function(data){
-						    	$('#headerDiv').html($(data).find('#headerDiv').html());
-						    	$('#myModalLogin').modal('toggle');
-						    	
-						    },
-						    failure: function(errMsg) {
-						        console.log(errMsg);
-						    }
-					});
-
-		                
+		                ACC.login.checkRegistration();
 		            });
 
 		        } else {
@@ -83,9 +74,27 @@ ACC.login = {
 		    'cookiepolicy' : 'single_host_origin',
 		    'callback' : 'googleLoginCallback', //callback function
 		    'approvalprompt':'force',
-		    'scope' : 'https://mail.google.com  https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/plus.login  '
+		    'scope' : 'https://mail.google.com  https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/plus.me https://www.googleapis.com/auth/plus.login  '
 		  };
 		  gapi.auth.signIn(myParams);
+	},
+	
+	checkRegistration: function()
+	{
+		 $.ajax({
+			    type: "POST",
+			    url: ACC.config.contextPath+'/socialLogin/check?name='+ACC.login.user_name+'&email='+ACC.login.user_email,
+			    success: function(data){
+			    	$('#myModalLogin').modal('toggle');
+			    	if($(data).find('#ifRegistered').val() == 'true')
+			    		$('#headerDiv').html($(data).find('#headerDiv').html());
+			    	else
+			    		$('#myModalPhone').modal('toggle');
+			    },
+			    failure: function(errMsg) {
+			        console.log(errMsg);
+			    }
+		});
 	},
 	
 	bindLogin: function()
@@ -110,6 +119,22 @@ ACC.login = {
 		    });    
 		    return false;
 		});
+	},
+	
+	updatePhone: function(){
+		var user_phone = $('#phone').val();
+		 $.ajax({
+			    type: "POST",
+			    url: ACC.config.contextPath+'/socialLogin/request?name='+ACC.login.user_name+'&email='+ACC.login.user_email+'&phone='+user_phone,
+			    success: function(data){
+			    	$('#headerDiv').html($(data).find('#headerDiv').html());
+			    	$('#myModalPhone').modal('toggle');
+			    	
+			    },
+			    failure: function(errMsg) {
+			        console.log(errMsg);
+			    }
+		});
 	}
 };
 
@@ -125,29 +150,16 @@ function googleLoginCallback (result)
 	            'userId': 'me'
 	        });
 	        request.execute(function (resp)  {
-	            var user_email = '';
 	            if(resp['emails'])   {
 	                for(i = 0; i < resp['emails'].length; i++)  {
 	                    if(resp['emails'][i]['type'] == 'account')  {
-	                    	user_email = resp['emails'][i]['value'];
+	                    	ACC.login.user_email = resp['emails'][i]['value'];
 	                    }
 	                }
 	            }
 	 
-	            var user_name = resp['displayName'] ;
-	            $.ajax({
-				    type: "POST",
-				    url: ACC.config.contextPath+'/socialLogin/request?name='+user_name+'&email='+user_email,
-				    success: function(data){
-				    	$('#headerDiv').html($(data).find('#headerDiv').html());
-				    	$('#myModalLogin').modal('toggle');
-				    	
-				    },
-				    failure: function(errMsg) {
-				        console.log(errMsg);
-				    }
-			});
-
+	            ACC.login.user_name = resp['displayName'] ;
+	            ACC.login.checkRegistration();
 	        });
 	    }
 };

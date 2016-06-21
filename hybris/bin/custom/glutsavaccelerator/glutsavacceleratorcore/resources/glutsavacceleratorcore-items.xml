@@ -169,6 +169,16 @@
 			</itemtype>
 	     </typegroup>
 	     <!-- Item definition for Category Grid Component -->
-
+		
+		<typegroup name="Customer">
+		<itemtype code="Customer" autocreate="false"  generate="false">
+			<attributes>
+				  <attribute autocreate="true" qualifier="phone" type="java.lang.String">
+                    <modifiers read="true" write="true" search="true" optional="true"/>
+                    <persistence type="property"/>
+                </attribute>
+			</attributes>
+		</itemtype>
+		</typegroup>
 	</itemtypes>
 </items>

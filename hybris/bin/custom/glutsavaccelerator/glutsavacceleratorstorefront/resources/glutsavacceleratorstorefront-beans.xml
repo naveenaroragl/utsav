@@ -12,6 +12,8 @@
 -->
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="beans.xsd">
 
-	
+	<bean class="de.hybris.platform.commercefacades.user.data.CustomerData">
+		<property name="phone" type="String"/>
+	</bean>
 
 </beans>

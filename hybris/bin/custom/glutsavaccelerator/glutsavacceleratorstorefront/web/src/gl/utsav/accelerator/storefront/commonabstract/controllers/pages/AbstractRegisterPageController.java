@@ -17,6 +17,7 @@ import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.cms2.model.pages.AbstractPageModel;
 import de.hybris.platform.cms2.model.pages.ContentPageModel;
 import de.hybris.platform.commercefacades.user.UserFacade;
+import de.hybris.platform.commercefacades.user.data.CustomerData;
 import de.hybris.platform.commercefacades.user.data.RegisterData;
 import de.hybris.platform.commercefacades.user.data.TitleData;
 import de.hybris.platform.commerceservices.customer.DuplicateUidException;
@@ -31,6 +32,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.Validator;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -42,8 +44,6 @@ import gl.utsav.accelerator.storefront.forms.LoginForm;
 import gl.utsav.accelerator.storefront.forms.RegisterForm;
 import gl.utsav.accelerator.storefront.security.AutoLoginStrategy;
 import gl.utsav.accelerator.storefront.security.GUIDCookieStrategy;
-
-import org.springframework.validation.Validator;
 
 
 public abstract class AbstractRegisterPageController extends AbstractPageController
@@ -95,7 +95,7 @@ public abstract class AbstractRegisterPageController extends AbstractPageControl
 	}
 
 	/**
-	 * 
+	 *
 	 * @return GUIDCookieStrategy
 	 */
 	protected GUIDCookieStrategy getGuidCookieStrategy()
@@ -113,8 +113,8 @@ public abstract class AbstractRegisterPageController extends AbstractPageControl
 	{
 		storeCmsPageInModel(model, getCmsPage());
 		setUpMetaDataForContentPage(model, (ContentPageModel) getCmsPage());
-		final Breadcrumb loginBreadcrumbEntry = new Breadcrumb("#", getMessageSource().getMessage("header.link.login", null,
-				getI18nService().getCurrentLocale()), null);
+		final Breadcrumb loginBreadcrumbEntry = new Breadcrumb("#",
+				getMessageSource().getMessage("header.link.login", null, getI18nService().getCurrentLocale()), null);
 		model.addAttribute("breadcrumbs", Collections.singletonList(loginBreadcrumbEntry));
 		model.addAttribute(new RegisterForm());
 		return getView();
@@ -123,7 +123,7 @@ public abstract class AbstractRegisterPageController extends AbstractPageControl
 	/**
 	 * This method takes data from the registration form and create a new customer account and attempts to log in using
 	 * the credentials of this new user.
-	 * 
+	 *
 	 * @return true if there are no binding errors or the account does not already exists.
 	 * @throws CMSItemNotFoundException
 	 */
@@ -150,7 +150,9 @@ public abstract class AbstractRegisterPageController extends AbstractPageControl
 		{
 			getCustomerFacade().register(data);
 			getAutoLoginStrategy().login(form.getEmail().toLowerCase(), form.getPwd(), request, response);
-
+			final CustomerData customerData = getCustomerFacade().getCurrentCustomer();
+			customerData.setPhone(form.getMobileNumber());
+			getCustomerFacade().updateFullProfile(customerData);
 			GlobalMessages.addFlashMessage(redirectModel, GlobalMessages.CONF_MESSAGES_HOLDER,
 					"registration.confirmation.message.title");
 		}
@@ -171,15 +173,15 @@ public abstract class AbstractRegisterPageController extends AbstractPageControl
 	/**
 	 * Anonymous checkout process.
 	 *
-	 * Creates a new guest customer and updates the session cart with this user.
-	 * The session user will be anonymous and it's never updated with this guest user.
+	 * Creates a new guest customer and updates the session cart with this user. The session user will be anonymous and
+	 * it's never updated with this guest user.
 	 *
 	 * If email is required, grab the email from the form and set it as uid with "guid|email" format.
 	 *
 	 * @throws de.hybris.platform.cms2.exceptions.CMSItemNotFoundException
 	 */
-	protected String processAnonymousCheckoutUserRequest(final GuestForm form,final BindingResult bindingResult, final Model model,
-			final HttpServletRequest request, final HttpServletResponse response) throws CMSItemNotFoundException
+	protected String processAnonymousCheckoutUserRequest(final GuestForm form, final BindingResult bindingResult,
+			final Model model, final HttpServletRequest request, final HttpServletResponse response) throws CMSItemNotFoundException
 	{
 		try
 		{
@@ -193,7 +195,7 @@ public abstract class AbstractRegisterPageController extends AbstractPageControl
 			}
 
 			getCustomerFacade().createGuestUserForAnonymousCheckout(form.getEmail(),
-					getMessageSource().getMessage("text.guest.customer",null,getI18nService().getCurrentLocale()));
+					getMessageSource().getMessage("text.guest.customer", null, getI18nService().getCurrentLocale()));
 			getGuidCookieStrategy().setCookie(request, response);
 			getSessionService().setAttribute(WebConstants.ANONYMOUS_CHECKOUT, Boolean.TRUE);
 		}
