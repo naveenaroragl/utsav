@@ -1,0 +1,221 @@
+# ImpEx for Importing Category Classifications
+
+# Macros / Replacement Parameter definitions
+$productCatalog=glUtsavProductCatalog
+$productCatalogName=GL Utsav Product Catalog
+$classificationCatalog=glUtsavClassificationCatalog
+
+$classCatalogVersion=catalogversion(catalog(id[default='$classificationCatalog']),version[default='1.0'])[unique=true,default='$classificationCatalog:1.0']
+$classSystemVersion=systemVersion(catalog(id[default='$classificationCatalog']),version[default='1.0'])[unique=true]
+
+# Language
+$lang=en
+
+# Insert Classifications
+UPDATE ClassificationClass;code[unique=true];$classCatalogVersion;name[lang=$lang]
+ ;2436;;Connectivity;
+ ;metalJewelleryClass;;Metal Details;
+ ;diamondJewelleryClass;;Diamond details;
+ ;gemstoneJewelleryClass;;Gem Stone details;
+ ;DJ;;Dj Details;
+ 
+ 
+
+# Insert Classification Attributes
+UPDATE ClassificationAttribute;code[unique=true];$classSystemVersion;name[lang=$lang]
+ ;Connector s , 1496;;Connector(s);
+ ;Metal , 1001;;Metal;
+ ;Purity , 1002;;Carat(ct);
+ ;No 0f Diamonds , 1003;;No of Diamonds;
+ ;Color , 1004;;Color;
+ ;Brand , 1005;;Brand;
+ ;Wt of Diamond , 1006;;Weight of Diamond;
+ ;Diamond Quality , 1007;;Diamond Quality;
+ ;Setting Type , 1008;;Setting Type;
+ ;Shape , 1009;;Shape;
+ ;Stone Type , 1010;; Stone Type;
+ ;Stone Wt , 1011;;Stone Wt;
+ ;Stone Color , 1012;;Stone Color;
+ ;Stone size , 1013;;Stone Size;
+ ;Stone shape , 1014;;Stone Shape;
+ ;No of Stones , 1015;;No of Stones;
+ 
+#Attributes localization
+#DJ and Music CLass 
+ 
+;Location , 1020;;Location;
+;Equipments Used , 1021;;Equipment Used;
+;Music Played , 1022;;Music Played;
+;Where all We can travel , 1023;;Where all We can travel;
+;Booking Amount , 1024;;Booking Amount;
+;Facebook page , 1025;;Facebook page;
+;Awards , 1026;;Awards;
+;Experience , 1027;;Experience;
+
+#Banquet hall  
+;Seating Capacity , 1028;;Seating capacity;
+;Floating Capacity , 1029;;Floating Capacity;
+;Lawn Area , 1030;;Lawn Area;
+;Description , 1031;;Description;
+;Notes , 1032;;Notes;
+;Is Meal provided , 1033;;Is Meal provided;
+;Cuisine , 1034;;Cuisine;
+;DJ Cost , 1035;;DJ Cost;
+;Decoration Notes , 1036;;Decoration Notes;
+;Liqor Details , 1037;;Liqor Details;
+;Taxes F&B , 1038;;Taxes F&B;
+;Additional Expenses , 1039;;Additional Expenses;
+;Other Notes , 1040 ;;Other Notes;
+;Cancellation Policy , 1041;;Cancellation Policy;
+;Music Allowed Late , 1042;;Music Allowed Late;
+;Decor Provided by the Venue , 1043;;Decor Provided by the Venue;
+;Halls are Air Conditioned , 1045;;Halls are Air Conditioned;
+;Ample Parking , 1046;;Ample Parking;
+;Contact Details , 1047;;Contact Details;
+;Timings , 1048;;Timings;
+;Cuisines , 1049;;Cuisines;
+
+# Caterer;;
+;Name , 1050;;Name;
+;About , 1051 ;;About;
+;Cuisine , 1052;;Cuisine;
+;Menu , 1053;;Menu;
+;Prices ,1054;;Prices;
+;Multiple , 1055;;Multiple;
+;Minimum ,1056;;Minimum;
+;People , 1057;;People;
+;Location , 1058;;Location;
+;Contact Details , 1059;;Contact Details;
+
+# Hotel;;;
+;Name , 1060;;Name;
+;Location , 1061;;Location;
+;Contact Details , 1062;;Contact Details;
+;Packages , 1063 ;;Packages;
+;Qualification , 1064;;Qualification;
+;Awards , 1065;;Awards;
+;Total Rooms , 1066;;Total Rooms;
+;Capacity , 1067;;Capacity;
+;Prices , 1068;;Prices;
+;Other Details , 1069;;Other Details;
+
+#Grooming;;;
+;Name , 1070;;Name;
+;Location , 1071;;Location;
+;Contact Details , 1072;;Contact Details;
+;Packages , 1073;;Packages;
+;Qualification , 1074;;Qualification;
+;Awards , 1075;;Awards;
+
+#Travel and Transportion;;;
+;Location , 1076;;Location;
+;Desciption , 1077;;Desciption;
+;Booking Amount , 1078;;Booking Amount ;
+;Cancellation Policy , 1079;;Cancellation Policy;
+;Other Details , 1080;;Other Details;
+;Confirmed Bookings , 1081;;Confirmed Bookings;
+;Vehicles available , 1082;;Vehicles available;
+;Where all we can travel , 1083;;Where all we can travel;
+;Profile views , 1084;;Profile views;
+;Need confirmation by latest , 1085 ;;Need confirmation by latest;
+
+#Wedding Cards;;;
+;Weight , 1086;;Weight;
+;Card Type , 1087;;Card Type;
+;Card Size , 1088;;Card Size;
+;Paper Type , 1089;;Paper Type;
+;Constituents , 1090;;Constituents;
+;Folds , 1091;;Folds;
+;Paper Description , 1092;;Paper Description;
+;Color , 1093;;Color;
+;Themes , 1094;;Themes;
+;Minimum order quantity , 1095;;Minimum order quantity;
+;Religion , 1096;;Religion;
+
+#Accessories;;;
+;Gender , 1097;;Gender;
+;Brand , 1098;;Brand;
+;Logo , 1099;;Logo;
+;Model Name , 1100;;Model Name;
+;Price , 1101;;Price;
+;Color , 1102;;Color;
+;Size , 1103;;Size;
+;Product Info , 1104;;Product Info;
+;Material , 1105;;Material;
+;Type , 1106;;Type;
+;Other details , 1107;;Other details;
+;Width , 1108;;Width;
+
+#bags;
+;Brand , 1109;;Brand;
+;Logo , 1110;;Logo;
+;Model Name , 1111;;Model Name;
+;Price , 1112;;Price;
+;Color , 1113;;Color;
+;Size , 1114;;Size;
+;Product Info , 1115;;Product Info;
+;Material , 1116;;Material;
+;Product Dimensions , 1117;;Product Dimensions;
+;SKU , 1118;;SKU;
+;Model Stats , 1119;;Model Stats;
+;Available colors , 1120;;Available colors;
+;Number of Compartments , 1121;;Number of Compartments;
+;No. of Pockets , 1122;;No. of Pockets;
+;Type of Closure , 1123;;Type of Closure;
+;Number of Card Slots , 1134;;Number of Card Slots;
+
+
+#Shoes;
+;Gender , 1135;;Gender;
+;Brand , 1136;;Brand;
+;Logo , 1137;;Logo;
+;Model Name , 1138;;Model Name;
+;Price , 1139;;Price;
+;Color , 1140;;Color;
+;Size , 1141;;Size;
+;Product Info , 1142;;Product Info;
+;Material , 1143;;Material;
+;Type , 1144;;Type;
+;Color , 1145;;Color;
+;Upper Material , 1146;;Upper Material;
+;Sole Material , 1147;;Sole Material;
+;ClosingLace , 1148;;ClosingLace;
+;Tip shape , 1149;;Tip shape;
+;Product warranty , 1150;;Product warranty;
+;SKU , 1151;;SKU;
+;Ankle Height , 1152;;Ankle Height;
+;Shoe Weight , 1153;;Shoe Weight;
+;Fit , 1154;;Fit;
+;Inner Lining , 1155;;Inner Lining;
+;Heal height , 1156;;Heal height;
+;Boot Shaft Height , 1157;;Boot Shaft Height;
+;other details , 1158;;other details;
+
+#Beauty and Grooming ;
+;Name , 1159;;Name;
+;Location , 1160;;Location;
+;Contact Details , 1161;;Contact Details;
+;Packages , 1162;;Packages;
+;What all will be done , 1163;;What all will be done;
+;Qualification , 1164;;Qualification;
+;Awards , 1165;;Awards;
+;Services and their prices , 1166;;Services and their prices;
+;Total Exp , 1167;;Total Exp;
+;Seating Capacity , 1168;;Seating Capacity;
+;Approx time , 1169;;Approx time;
+;Sitting per service , 1170;;Sitting per service;
+
+#SunGlassess;
+;Product Info , 1171;;Product Info;
+;Brand , 1172;;Brand;
+;Brand Logo , 1173;;Brand Logo;
+;Price , 1174;;Price;
+;Type , 1175;;Type;
+;Frame Shape , 1175;;Frame Shape;
+;Rim Type , 1176;;Rim Type;
+;Frame Color , 1177;;Frame Color;
+;Frame material , 1178;;Frame material;
+;Lens Color , 1179;;Lens Color;
+;Package Contents , 1080;;Package Contents;
+;SKU , 1081;;SKU;
+;Product Warranty , 1082;;Product Warranty;

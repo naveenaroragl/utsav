@@ -13,8 +13,6 @@
  */
 package gl.utsav.accelerator.storefront.security;
 
-import de.hybris.platform.acceleratorstorefrontcommons.security.GUIDCookieStrategy;
-
 import java.io.IOException;
 
 import javax.servlet.ServletException;

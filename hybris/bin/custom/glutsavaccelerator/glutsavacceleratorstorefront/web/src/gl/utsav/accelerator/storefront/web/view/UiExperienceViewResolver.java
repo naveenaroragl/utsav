@@ -14,7 +14,6 @@
 package gl.utsav.accelerator.storefront.web.view;
 
 import de.hybris.platform.acceleratorservices.uiexperience.UiExperienceService;
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.AbstractPageController;
 import de.hybris.platform.commerceservices.enums.UiExperienceLevel;
 
 import java.util.Locale;
@@ -25,6 +24,8 @@ import org.springframework.beans.factory.annotation.Required;
 import org.springframework.web.servlet.view.AbstractUrlBasedView;
 import org.springframework.web.servlet.view.InternalResourceView;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+
+import gl.utsav.accelerator.storefront.commonabstract.controllers.pages.AbstractPageController;
 
 
 /**

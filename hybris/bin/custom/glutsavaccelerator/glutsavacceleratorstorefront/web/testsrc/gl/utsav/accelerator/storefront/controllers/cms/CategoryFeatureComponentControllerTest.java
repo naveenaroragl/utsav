@@ -15,12 +15,13 @@ package gl.utsav.accelerator.storefront.controllers.cms;
 
 import de.hybris.bootstrap.annotations.UnitTest;
 import de.hybris.platform.acceleratorcms.model.components.CategoryFeatureComponentModel;
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.AbstractPageController;
 import de.hybris.platform.category.model.CategoryModel;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.cms2.servicelayer.services.impl.DefaultCMSComponentService;
 import de.hybris.platform.commercefacades.product.data.CategoryData;
 import de.hybris.platform.servicelayer.dto.converter.Converter;
+
+import gl.utsav.accelerator.storefront.commonabstract.controllers.pages.AbstractPageController;
 import gl.utsav.accelerator.storefront.controllers.ControllerConstants;
 
 import javax.servlet.http.HttpServletRequest;

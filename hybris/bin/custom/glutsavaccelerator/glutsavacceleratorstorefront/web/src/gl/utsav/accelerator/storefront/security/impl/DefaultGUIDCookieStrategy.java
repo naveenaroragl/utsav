@@ -13,8 +13,8 @@
  */
 package gl.utsav.accelerator.storefront.security.impl;
 
-import de.hybris.platform.acceleratorstorefrontcommons.security.GUIDCookieStrategy;
 import gl.utsav.accelerator.storefront.interceptors.beforecontroller.RequireHardLoginBeforeControllerHandler;
+import gl.utsav.accelerator.storefront.security.GUIDCookieStrategy;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

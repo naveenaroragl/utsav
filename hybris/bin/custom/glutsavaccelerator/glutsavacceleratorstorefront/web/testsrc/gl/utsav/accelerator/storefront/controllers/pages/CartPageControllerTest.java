@@ -15,7 +15,6 @@ package gl.utsav.accelerator.storefront.controllers.pages;
 
 import de.hybris.bootstrap.annotations.UnitTest;
 import de.hybris.platform.acceleratorservices.config.SiteConfigService;
-import de.hybris.platform.acceleratorstorefrontcommons.constants.WebConstants;
 import de.hybris.platform.commercefacades.order.data.CartRestorationData;
 import de.hybris.platform.servicelayer.session.SessionService;
 
@@ -29,6 +28,8 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.springframework.ui.Model;
 import org.springframework.validation.support.BindingAwareModelMap;
+
+import gl.utsav.accelerator.storefront.constants.WebConstants;
 
 
 @UnitTest

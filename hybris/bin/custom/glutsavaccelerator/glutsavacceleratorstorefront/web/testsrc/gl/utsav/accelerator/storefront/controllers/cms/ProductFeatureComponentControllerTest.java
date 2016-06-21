@@ -15,13 +15,14 @@ package gl.utsav.accelerator.storefront.controllers.cms;
 
 import de.hybris.bootstrap.annotations.UnitTest;
 import de.hybris.platform.acceleratorcms.model.components.ProductFeatureComponentModel;
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.AbstractPageController;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.cms2.servicelayer.services.impl.DefaultCMSComponentService;
 import de.hybris.platform.commercefacades.product.ProductFacade;
 import de.hybris.platform.commercefacades.product.ProductOption;
 import de.hybris.platform.commercefacades.product.data.ProductData;
 import de.hybris.platform.core.model.product.ProductModel;
+
+import gl.utsav.accelerator.storefront.commonabstract.controllers.pages.AbstractPageController;
 import gl.utsav.accelerator.storefront.controllers.ControllerConstants;
 
 import java.util.Arrays;

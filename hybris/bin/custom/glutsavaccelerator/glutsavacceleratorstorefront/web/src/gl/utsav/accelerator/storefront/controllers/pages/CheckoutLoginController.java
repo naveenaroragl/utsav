@@ -13,16 +13,17 @@
  */
 package gl.utsav.accelerator.storefront.controllers.pages;
 
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.AbstractLoginPageController;
-import de.hybris.platform.acceleratorstorefrontcommons.forms.GuestForm;
-import de.hybris.platform.acceleratorstorefrontcommons.forms.RegisterForm;
-import de.hybris.platform.acceleratorstorefrontcommons.forms.validation.GuestValidator;
-import de.hybris.platform.acceleratorstorefrontcommons.security.GUIDCookieStrategy;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.cms2.model.pages.AbstractPageModel;
 import de.hybris.platform.commercefacades.order.data.CartData;
 import de.hybris.platform.acceleratorfacades.flow.CheckoutFlowFacade;
+
+import gl.utsav.accelerator.storefront.commonabstract.controllers.pages.AbstractLoginPageController;
 import gl.utsav.accelerator.storefront.controllers.ControllerConstants;
+import gl.utsav.accelerator.storefront.forms.GuestForm;
+import gl.utsav.accelerator.storefront.forms.RegisterForm;
+import gl.utsav.accelerator.storefront.forms.validation.GuestValidator;
+import gl.utsav.accelerator.storefront.security.GUIDCookieStrategy;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;

@@ -1,0 +1,155 @@
+# ImpEx for Importing Categories
+
+# Macros / Replacement Parameter definitions
+$productCatalog=glUtsavProductCatalog
+$productCatalogName=GL Utsav Product Catalog
+
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
+
+# Language
+$lang=en
+
+# Create Categories
+UPDATE Category;code[unique=true];$catalogVersion;name[lang=$lang]
+;934;;Laundry Service;
+;Jewellery;;
+;Ring;;Jewellery
+;NosePin&NoseRing;;NosePin & NoseRing
+;Necklace;;Necklace
+;Bangles&Bracelets;;Bangles & Bracelets
+;Chain;;Chain
+;Teeka;;Teeka
+;Waistbelt;;Waistbelt
+;ToeRing;;Toe Ring
+;Anklet;;Anklet
+;Earing;;Earing
+;GoldCoin;;Gold Coin
+;SilverCoin;;Silver Coin
+;Ginni;;Ginni
+;LakshmiGaneshJi;;Lakshmi Ganesh Ji
+;LemonSet;;Lemon Set
+;Glass;;Glass
+;Plates;;Plates
+;Deepak;;Deepak
+;Hathphool;;Hathphool
+;Bajooband;;Bajooband
+;MetalJewellery;;Metal Jewellery
+;DiamondJewellery;;Diamond Jewellery
+;GemstoneJewellery;;Gemstone Jewellery
+
+;Gifts;;Gifts
+;ReligiousBooks;;Religious Books
+;Blankets&Quilts;;Blankets & Quilts
+;Besheets;;Besheets
+;GodFiguresandIdols;;GodFigures and Idols
+;Watches;;Watches
+;Wallclock;;Wallclock
+;Books;;Books
+;Showpieces;;Show pieces
+;Pottery&Vases;;Pottery & Vases
+;Lamps&Lanterns;;Lamps & Lanterns
+;PersonalizedGifts;;Personalized Gifts
+;Photoframes;;Photo frames
+;JewelleryBoxes;;Jewellery Boxes
+;Accessories;;Accessories
+;Handbags;;Handbags
+
+;WeddingCards;;Wedding Cards
+
+;Clothings;;Clothings
+;Tops;;Tops
+;PolosTees&Shirts;;PolosTees & Shirts
+;Dresses;;Dresses
+;Sweaters;;Sweaters
+;Jackets;;Jackets
+;Sweatshirts;;Sweat shirts
+;Trousers&Jeans;;Trousers & Jeans
+;Shorts&Skirts;;Shorts & Skirts
+;Leggings&Jeggings;;Leggings & Jeggings
+;Tunics;;Tunics
+;WinterAccessories;;Winter Accessories
+;Kurtas&Kurtis;;Kurtas & Kurtis
+;SuitsSets;;SuitsSets
+;Sarees&DressMaterial;;Sarees & Dress Material
+;Salwars&Churidars;;Salwars & Churidars
+;CasualShirts;;Casual Shirts
+;Jeans;;Jeans
+;FormalShirts;;Formal Shirts
+;FormalTrousers;;Formal Trousers
+;Suits&Blazers;;Suits & Blazers
+;TrackWear;;TrackWear
+;Shorts&3/4ths;;Shorts & 3/4ths
+;InnerWear;;InnerWear
+;TwinSets;;TwinSets
+;Jumpsuits&Rompers;;Jumpsuits & Rompers
+;WINTERWEAR;;WINTERWEAR
+;Dresses&Frocks;;Dresses & Frocks
+;Capris;;Capris
+;Skirts;;Skirts
+;LEHENGACHOLIS;;LEHENGA CHOLIS
+;PARTYFROCKS&DRESSES;;PARTYFROCKS & DRESSES
+;Gowns;;Gowns
+
+;Bags;;Bags
+;Handbags;;Handbags
+;SlingBags;;Sling Bags
+;Clutches;;Clutches
+;Totes;;Totes
+;Wallets;;Wallets
+;Backpacks;;Backpacks
+;LaptopBags;;Laptop Bags
+;TravelBags;;Travel Bags
+;MessengerBags;;Messenger Bags
+
+;Shoes;;Shoes
+;Flats;;Flats
+;Sandals;;Sandals
+;Bellies;;Bellies
+;Boots;;Boots
+;Heels;;Heels
+;Wedges;;Wedges
+;Stilettos;;Stilettos
+;PeepToes;;PeepToes
+;FlipFlops;;FlipFlops
+;SportsShoes;;Sports Shoes
+;Sneakers;;Sneakers
+;Loafers;;Loafers
+;CasualShoes;;Casual Shoes
+;FormalShoes;;Formal Shoes
+;Outdoor&Hiking;;Outdoor & Hiking
+;Floaters;;Floaters
+
+;Accessories;;Accessories
+;Belts;;Belts
+
+;Beauty&Grooming;;Beauty&Grooming
+;MakeUp;;MakeUp
+;SkinCare;;SkinCare
+;HairCare;;HairCare
+;Bath&Body;;Bath & Body
+
+;Watches;;Watches
+;Analog;;Analog
+;Chronograph;;Chronograph
+;Digital;;Digital
+;Analog&Digital;;Analog&Digital
+;WatchCases;;WatchCases
+
+;Sunglasses;;Sunglasses
+;Aviators;;Aviators
+;Wayfarers;;Wayfarers
+
+;Photography;;Photography
+
+#Dj and Music Band 
+UPDATE Category;code[unique=true];$catalogVersion;name[lang=$lang]
+;DJs;;disc Jockey Services;
+;Musicbands;;Music Band Services;
+;Banquethall;;Banquet Hall Servies;
+;Caterer;;Caterer Services;
+;Travel&Transportation;;Travel and Transportation Services;
+;Hotel;;Hotels; 
+;Grooming;;Grooming;
+;StillPhotography;;Still Photography
+;MotionPhotography;;Motion Photography
+

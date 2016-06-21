@@ -16,7 +16,7 @@ ACC.common = {
 
 	bindAll: function ()
 	{
-		ACC.common.bindToUiCarouselLink();
+		/*ACC.common.bindToUiCarouselLink();*/
 		ACC.common.bindShowProcessingMessageToSubmitButton();
 	},
 

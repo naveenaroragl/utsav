@@ -14,7 +14,6 @@
 package gl.utsav.accelerator.storefront.filters;
 
 import de.hybris.bootstrap.annotations.UnitTest;
-import de.hybris.platform.acceleratorstorefrontcommons.history.BrowseHistory;
 import de.hybris.platform.commercefacades.storesession.StoreSessionFacade;
 import de.hybris.platform.servicelayer.config.ConfigurationService;
 
@@ -36,6 +35,8 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.springframework.http.HttpMethod;
 import org.springframework.web.util.CookieGenerator;
+
+import gl.utsav.accelerator.storefront.history.BrowseHistory;
 
 
 @UnitTest

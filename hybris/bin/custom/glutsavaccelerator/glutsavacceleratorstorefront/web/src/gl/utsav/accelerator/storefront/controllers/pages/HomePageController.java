@@ -13,18 +13,29 @@
  */
 package gl.utsav.accelerator.storefront.controllers.pages;
 
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.AbstractPageController;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.cms2.model.pages.AbstractPageModel;
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.util.GlobalMessages;
+import de.hybris.platform.commercefacades.user.UserFacade;
+import de.hybris.platform.commercefacades.user.data.TitleData;
+
+import java.util.Collection;
+
+import javax.annotation.Resource;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import gl.utsav.accelerator.storefront.commonabstract.controllers.pages.AbstractPageController;
+import gl.utsav.accelerator.storefront.commonabstract.controllers.util.GlobalMessages;
+import gl.utsav.accelerator.storefront.forms.LoginForm;
+import gl.utsav.accelerator.storefront.forms.RegisterForm;
+
 
 /**
  * Controller for home page
@@ -34,21 +45,30 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @RequestMapping("/")
 public class HomePageController extends AbstractPageController
 {
+	@ModelAttribute("titles")
+	public Collection<TitleData> getTitles()
+	{
+		return userFacade.getTitles();
+	}
+
+	@Resource(name = "userFacade")
+	private UserFacade userFacade;
+
 	@RequestMapping(method = RequestMethod.GET)
 	public String home(@RequestParam(value = "logout", defaultValue = "false") final boolean logout, final Model model,
 			final RedirectAttributes redirectModel) throws CMSItemNotFoundException
 	{
 		if (logout)
 		{
-			GlobalMessages.addFlashMessage(redirectModel, GlobalMessages.INFO_MESSAGES_HOLDER,
-					"account.confirmation.signout.title");
+			GlobalMessages.addFlashMessage(redirectModel, GlobalMessages.INFO_MESSAGES_HOLDER, "account.confirmation.signout.title");
 			return REDIRECT_PREFIX + ROOT;
 		}
 
 		storeCmsPageInModel(model, getContentPageForLabelOrId(null));
 		setUpMetaDataForContentPage(model, getContentPageForLabelOrId(null));
 		updatePageTitle(model, getContentPageForLabelOrId(null));
-
+		model.addAttribute("loginForm", new LoginForm());
+		model.addAttribute("registerForm", new RegisterForm());
 		return getViewForPage(model);
 	}
 

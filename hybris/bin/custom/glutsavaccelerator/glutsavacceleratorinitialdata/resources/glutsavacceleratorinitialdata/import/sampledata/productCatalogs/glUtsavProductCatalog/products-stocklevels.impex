@@ -1,0 +1,28 @@
+# ImpEx for Importing Products Stock Levels and Warehouses
+
+# Macros / Replacement Parameter definitions
+$productCatalog=glUtsavProductCatalog
+$productCatalogName=GL Utsav Product Catalog
+$vendor=partyTestVendor
+
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
+
+
+INSERT_UPDATE Vendor;code[unique=true]
+;$vendor
+
+INSERT_UPDATE Warehouse;code[unique=true];name[lang=en];vendor(code);default[default=true]
+;warehouse_noida;Warehouse Noida;partyTestVendor;true
+
+INSERT_UPDATE StockLevel;available;warehouse(code)[unique=true];inStockStatus(code);maxPreOrder;maxStockLevelHistoryCount;overSelling;preOrder;productCode[unique=true];reserved
+;4;warehouse_noida;forceOutOfStock;1;0;0;0;SBT1000001;0
+;4;warehouse_noida;forceOutOfStock;1;0;0;0;J1000001;0
+;10;warehouse_noida;forceOutOfStock;1;0;0;0;DJ100001;0
+
+
+
+UPDATE Product;code[unique=true];$catalogVersion;stockLevels(productCode,warehouse(code));vendors(code)
+;SBT1000001;;SBT1000001:warehouse_noida;$vendor
+;J1000001;;J1000001:warehouse_noida;$vendor
+;DJ100001;;DJ100001:warehouse_noida;$vendor
+

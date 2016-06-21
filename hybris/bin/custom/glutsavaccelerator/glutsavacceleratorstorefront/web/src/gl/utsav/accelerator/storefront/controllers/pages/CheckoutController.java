@@ -15,14 +15,6 @@ package gl.utsav.accelerator.storefront.controllers.pages;
 
 import de.hybris.platform.acceleratorfacades.flow.impl.SessionOverrideCheckoutFlowFacade;
 import de.hybris.platform.acceleratorservices.controllers.page.PageType;
-import de.hybris.platform.acceleratorstorefrontcommons.annotations.RequireHardLogIn;
-import de.hybris.platform.acceleratorstorefrontcommons.constants.WebConstants;
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.ThirdPartyConstants;
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.AbstractCheckoutController;
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.util.GlobalMessages;
-import de.hybris.platform.acceleratorstorefrontcommons.forms.GuestRegisterForm;
-import de.hybris.platform.acceleratorstorefrontcommons.forms.validation.GuestRegisterValidator;
-import de.hybris.platform.acceleratorstorefrontcommons.security.AutoLoginStrategy;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.cms2.model.pages.AbstractPageModel;
 import de.hybris.platform.commercefacades.order.CheckoutFacade;
@@ -34,7 +26,16 @@ import de.hybris.platform.commercefacades.product.ProductOption;
 import de.hybris.platform.commercefacades.product.data.ProductData;
 import de.hybris.platform.commerceservices.customer.DuplicateUidException;
 import de.hybris.platform.servicelayer.exceptions.ModelNotFoundException;
+
+import gl.utsav.accelerator.storefront.annotations.RequireHardLogIn;
+import gl.utsav.accelerator.storefront.commonabstract.controllers.ThirdPartyConstants;
+import gl.utsav.accelerator.storefront.commonabstract.controllers.pages.AbstractCheckoutController;
+import gl.utsav.accelerator.storefront.commonabstract.controllers.util.GlobalMessages;
+import gl.utsav.accelerator.storefront.constants.WebConstants;
 import gl.utsav.accelerator.storefront.controllers.ControllerConstants;
+import gl.utsav.accelerator.storefront.forms.GuestRegisterForm;
+import gl.utsav.accelerator.storefront.forms.validation.GuestRegisterValidator;
+import gl.utsav.accelerator.storefront.security.AutoLoginStrategy;
 
 import java.util.Arrays;
 

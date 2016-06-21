@@ -226,7 +226,7 @@
 
 	<!-- CMS Content Element Controllers -->
 
-	<bean id="browseHistory" class="de.hybris.platform.acceleratorstorefrontcommons.history.impl.DefaultBrowseHistory" >
+	<bean id="browseHistory" class="gl.utsav.accelerator.storefront.history.impl.DefaultBrowseHistory" >
 		<property name="cmsSiteService" ref="cmsSiteService" />
 		<property name="sessionService" ref="sessionService" />
 		<property name="capacity" value="10" />
@@ -234,40 +234,40 @@
 
 	<!-- Page Breadcrumb Builders -->
 
-	<bean id="productBreadcrumbBuilder" class="de.hybris.platform.acceleratorstorefrontcommons.breadcrumb.impl.ProductBreadcrumbBuilder" >
+	<bean id="productBreadcrumbBuilder" class="gl.utsav.accelerator.storefront.breadcrumb.impl.ProductBreadcrumbBuilder" >
 		<property name="browseHistory" ref="browseHistory" />
 		<property name="productModelUrlResolver" ref="productModelUrlResolver"/>
 		<property name="categoryModelUrlResolver" ref="categoryModelUrlResolver"/>
 	</bean>
 
-	<bean id="searchBreadcrumbBuilder" class="de.hybris.platform.acceleratorstorefrontcommons.breadcrumb.impl.SearchBreadcrumbBuilder" >
+	<bean id="searchBreadcrumbBuilder" class="gl.utsav.accelerator.storefront.breadcrumb.impl.SearchBreadcrumbBuilder" >
 		<property name="commerceCategoryService" ref="commerceCategoryService"/>
 		<property name="categoryModelUrlResolver" ref="categoryModelUrlResolver"/>
 	</bean>
 
-	<bean id="contentPageBreadcrumbBuilder" class="de.hybris.platform.acceleratorstorefrontcommons.breadcrumb.impl.ContentPageBreadcrumbBuilder" />
+	<bean id="contentPageBreadcrumbBuilder" class="gl.utsav.accelerator.storefront.breadcrumb.impl.ContentPageBreadcrumbBuilder" />
 
-	<bean id="storefinderBreadcrumbBuilder" class="de.hybris.platform.acceleratorstorefrontcommons.breadcrumb.impl.StorefinderBreadcrumbBuilder" >
+	<bean id="storefinderBreadcrumbBuilder" class="gl.utsav.accelerator.storefront.breadcrumb.impl.StorefinderBreadcrumbBuilder" >
 		<property name="messageSource" ref="storefrontMessageSource" />
 		<property name="i18nService" ref="i18nService" />
 	</bean>
 
-	<bean id="simpleBreadcrumbBuilder" class="de.hybris.platform.acceleratorstorefrontcommons.breadcrumb.impl.DefaultResourceBreadcrumbBuilder" >
+	<bean id="simpleBreadcrumbBuilder" class="gl.utsav.accelerator.storefront.breadcrumb.impl.DefaultResourceBreadcrumbBuilder" >
 		<property name="i18nService" ref="i18nService" />
 	</bean>
 	
-	<bean id="storeBreadcrumbBuilder" class="de.hybris.platform.acceleratorstorefrontcommons.breadcrumb.impl.StoreBreadcrumbBuilder" >
+	<bean id="storeBreadcrumbBuilder" class="gl.utsav.accelerator.storefront.breadcrumb.impl.StoreBreadcrumbBuilder" >
 		<property name="messageSource" ref="storefrontMessageSource" />
 		<property name="i18nService" ref="i18nService" />
 	</bean>
 
-	<bean id="accountBreadcrumbBuilder" class="de.hybris.platform.acceleratorstorefrontcommons.breadcrumb.impl.DefaultResourceBreadcrumbBuilder" >
+	<bean id="accountBreadcrumbBuilder" class="gl.utsav.accelerator.storefront.breadcrumb.impl.DefaultResourceBreadcrumbBuilder" >
 		<property name="i18nService" ref="i18nService" />
 		<property name="parentBreadcrumbLinkPath" value="/my-account"/>
 		<property name="parentBreadcrumbResourceKey" value="#{'responsive' == '${commerceservices.default.desktop.ui.experience}' ? '' : 'header.link.account'}"/>
 	</bean>
 
-	<bean id="multiStepCheckoutBreadcrumbBuilder" class="de.hybris.platform.acceleratorstorefrontcommons.breadcrumb.impl.DefaultResourceBreadcrumbBuilder" >
+	<bean id="multiStepCheckoutBreadcrumbBuilder" class="gl.utsav.accelerator.storefront.breadcrumb.impl.DefaultResourceBreadcrumbBuilder" >
 		<property name="i18nService" ref="i18nService" />
 		<property name="parentBreadcrumbResourceKey" value="checkout.multi.breadcrumb"/>
 	</bean>
@@ -333,7 +333,7 @@
 	</bean>
 
 	<alias name="defaultVariantSortStrategy" alias="variantSortStrategy" />
-	<bean id="defaultVariantSortStrategy" class="de.hybris.platform.acceleratorstorefrontcommons.variants.impl.DefaultVariantSortStrategy" >
+	<bean id="defaultVariantSortStrategy" class="gl.utsav.accelerator.storefront.variants.impl.DefaultVariantSortStrategy" >
 		<property name="sortingFieldsOrder">
 			<list>
 				<value>size</value>
@@ -349,7 +349,7 @@
 
 	<alias name="defaultVariantsComparator" alias="variantsComparator"/>
 	<bean id="defaultVariantsComparator"
-		  class="de.hybris.platform.acceleratorstorefrontcommons.variants.impl.DefaultVariantComparator" />
+		  class="gl.utsav.accelerator.storefront.variants.impl.DefaultVariantComparator" />
 
 	<bean id="fixation" class="de.hybris.platform.servicelayer.security.spring.HybrisSessionFixationProtectionStrategy"/>
 
@@ -359,14 +359,14 @@
 	<bean id="mapMergeBeanPostProcessor"
 	      class="de.hybris.platform.commerceservices.spring.config.MapMergeDirectiveBeanPostProcessor"/>
 
-	<bean id='checkoutStepValidationAspect' class="de.hybris.platform.acceleratorstorefrontcommons.checkout.steps.validation.CheckoutStepValidationAspect" >
+	<bean id='checkoutStepValidationAspect' class="gl.utsav.accelerator.storefront.checkout.steps.validation.CheckoutStepValidationAspect" >
 		<property name="checkoutFlowGroupMap" ref="checkoutFlowGroupMap"/>
 		<property name="checkoutFacade" ref="acceleratorCheckoutFacade"/>
 	</bean>
 
 	<!-- AOP -->
 	<aop:config proxy-target-class="true">
-		<aop:pointcut id="entryCheckoutStepPoint"  expression="@annotation(de.hybris.platform.acceleratorstorefrontcommons.annotations.PreValidateCheckoutStep)" />
+		<aop:pointcut id="entryCheckoutStepPoint"  expression="@annotation(gl.utsav.accelerator.storefront.annotations.PreValidateCheckoutStep)" />
 		<aop:aspect ref="checkoutStepValidationAspect">
 			<aop:around pointcut-ref="entryCheckoutStepPoint" method="validateCheckoutStep" />
 		</aop:aspect>

@@ -14,10 +14,11 @@
 package gl.utsav.accelerator.storefront.controllers.misc;
 
 import de.hybris.platform.acceleratorservices.urlresolver.SiteBaseUrlResolutionService;
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.AbstractController;
 import de.hybris.platform.cms2.model.site.CMSSiteModel;
 import de.hybris.platform.cms2.servicelayer.services.CMSSiteService;
 import de.hybris.platform.core.model.media.MediaModel;
+
+import gl.utsav.accelerator.storefront.commonabstract.controllers.AbstractController;
 import gl.utsav.accelerator.storefront.controllers.ControllerConstants;
 
 import java.util.ArrayList;

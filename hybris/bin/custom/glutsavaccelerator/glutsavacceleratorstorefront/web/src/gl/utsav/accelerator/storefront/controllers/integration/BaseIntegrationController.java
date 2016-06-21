@@ -13,7 +13,6 @@
  */
 package gl.utsav.accelerator.storefront.controllers.integration;
 
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.AbstractController;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.cms2.model.site.CMSSiteModel;
 import de.hybris.platform.cms2.servicelayer.services.CMSSiteService;
@@ -30,6 +29,8 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
+
+import gl.utsav.accelerator.storefront.commonabstract.controllers.AbstractController;
 
 /**
  * Base controller for all integration controllers.

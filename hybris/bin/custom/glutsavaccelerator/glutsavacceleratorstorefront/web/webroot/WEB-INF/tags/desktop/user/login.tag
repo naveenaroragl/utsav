@@ -1,63 +1,165 @@
-<%@ tag body-content="empty" trimDirectiveWhitespaces="true" %>
-<%@ attribute name="actionNameKey" required="true" type="java.lang.String" %>
-<%@ attribute name="action" required="true" type="java.lang.String" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ taglib prefix="formElement" tagdir="/WEB-INF/tags/desktop/formElement" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ taglib prefix="theme" tagdir="/WEB-INF/tags/shared/theme" %>
-<%@ taglib prefix="ycommerce" uri="http://hybris.com/tld/ycommercetags" %>
-<%@ taglib prefix="cart" tagdir="/WEB-INF/tags/desktop/cart" %>
+<%@ tag body-content="empty" trimDirectiveWhitespaces="true"%>
+<%@ attribute name="actionNameKey" required="true"
+	type="java.lang.String"%>
+<%@ attribute name="action" required="true" type="java.lang.String"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="formElement"
+	tagdir="/WEB-INF/tags/desktop/formElement"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="theme" tagdir="/WEB-INF/tags/shared/theme"%>
+<%@ taglib prefix="ycommerce" uri="http://hybris.com/tld/ycommercetags"%>
+<%@ taglib prefix="cart" tagdir="/WEB-INF/tags/desktop/cart"%>
 
-<div class="userLogin">
-	<div class="headline"><spring:theme code="login.title"/></div>
-	<div class="required right"><spring:theme code="form.required"/></div>
-	<div class="description"><spring:theme code="login.description"/></div>
 
-	<form:form action="${action}" method="post" commandName="loginForm">
-		<c:if test="${not empty message}">
-			<span class="errors">
-				<spring:theme code="${message}"/>
-			</span>
-		</c:if>
-		<c:if test="${loginError}">
-			<div class="form_field_error">
-		</c:if>
-		<div class="form_field-elements">
-			<formElement:formInputBox idKey="j_username" labelKey="login.email" path="j_username" inputCSS="text" mandatory="true"/>
-			<formElement:formPasswordBox idKey="j_password" labelKey="login.password" path="j_password" inputCSS="text password" mandatory="true"/>
-			<div class="form_field_error-message">
-				<a href="javascript:void(0)" data-url="<c:url value='/login/pw/request'/>" class="password-forgotten"><spring:theme code="login.link.forgottenPwd"/></a>
+<!-- Login Modal -->
+<div class="modal fade" id="myModalLogin" tabindex="-1" role="dialog"
+	aria-labelledby="myModalLabel">
+	<div class="modal-dialog modal-dialog-login" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
 			</div>
-		</div>
-		<c:if test="${loginError}">
-			</div>
-		</c:if>
-		<c:if test="${expressCheckoutAllowed}">
-				<div class="expressCheckoutLogin">
-					<div class="headline"><spring:theme text="Express Checkout" code="text.expresscheckout.header"/></div>
+			<div class="modal-body">
 
-					<div class="description"><spring:theme text="Benefit from a faster checkout by:" code="text.expresscheckout.title"/></div>
-
-					<ul>
-						<li><spring:theme text="setting a default Delivery Address in your account" code="text.expresscheckout.line1"/></li>
-						<li><spring:theme text="setting a default Payment Details in your account" code="text.expresscheckout.line2"/></li>
-						<li><spring:theme text="a default shipping method is used" code="text.expresscheckout.line3"/></li>
-					</ul>
-
-					<div class="expressCheckoutCheckbox clearfix">
-						<label for="expressCheckoutCheckbox"><input id="expressCheckoutCheckbox" name="expressCheckoutEnabled"  type="checkbox" class="form left doExpressCheckout"/>
-							<spring:theme text="I would like to Express checkout" code="cart.expresscheckout.checkbox"/></label>
+				<!-- Login Part -->
+				<div class="login-form popup-form-cntr">
+					<div class="form-header">
+						<i class="icon-user"></i>
+					</div>
+					<input id="ifRegistered" value="${registered}" type="hidden" />
+					<form:form id="login-form" method="post" class="form-signin" role="form" action="${action}" commandName="loginForm" name="login-form">
+							<div class="form_field_error">	</div>
+						<div class="input-group">
+							<span id="basic-addon1" class="input-group-addon icon-user"></span>
+							<div class="form-control">
+								<formElement:formInputBox idKey="j_username" labelKey="login.email" path="j_username" inputCSS="text" mandatory="true" />
+							</div>
+						</div>
+						<div class="input-group">
+							<span id="basic-addon1" class="input-group-addon icon-lock"></span>
+							<div class="form-control">
+								<formElement:formPasswordBox idKey="j_password" labelKey="login.password" path="j_password" inputCSS="text password" mandatory="true" />
+							</div>
+						</div>
+						<button class="btn btn-block bt-login" type="submit">
+							<i class="modal-icons icon-login"></i>Sign in
+						</button>
+						<h4 class="text-center login-txt-center">Alternatively, you
+							can log in using:</h4>
+							
+							
+					</form:form>
+					<a class="btn  facebook"
+						href="#" onclick="ACC.login.fb_login();" >
+						<i class="modal-icons icon-facebook"></i> Signin with Facebook
+					</a>
+					<a class="btn  google" href="#" onclick="ACC.login.google_login()">
+						<i class="modal-icons icon-google"></i> Signin with Google
+					</a>
+					<div class="form-footer">
+						<div class="row">
+							<div class="col-xs-6 col-sm-6 col-md-6">
+								<a href="" class="forgotPassword"> Forgot password? </a>
+							</div>
+							<div class="col-xs-6 col-sm-6 col-md-6">
+								<!--<a href="#" data-dismiss="modal" data-toggle="modal" class="signupUser" data-target="#myModalSignup" > Sign Up</a>-->
+								<a href="" class="signupUser"> Sign Up</a>
+							</div>
+						</div>
 					</div>
 				</div>
-		</c:if>
-
-		<div class="form-actions clearfix">
-			<ycommerce:testId code="login_Login_button">
-				<button type="submit" class="positive"><spring:theme code="${actionNameKey}"/></button>
-			</ycommerce:testId>
+				<!-- end of Login Part -->
+				<!-- Sign Up Part -->
+				<c:url value="/login/register" var="registerActionUrl" />
+				<div class="signup-form hidden popup-form-cntr">
+					<div class="form-header">
+						<i class="icon-edit"></i>
+					</div>
+					<form:form id="signup-form" method="post" class="form-signin" role="form" action="${registerActionUrl}" commandName="registerForm">
+						<p class="text-secondary-color">All fields are mandatory</p>
+										
+						<formElement:formSelectBox idKey="register.title" labelKey="register.title" path="titleCode" mandatory="true" skipBlank="false" skipBlankMessageKey="form.select.empty" items="${titles}"/>
+						<formElement:formInputBox idKey="register.firstName" labelKey="register.firstName" path="firstName" inputCSS="text" mandatory="true"/>
+						<formElement:formInputBox idKey="register.lastName" labelKey="register.lastName" path="lastName" inputCSS="text" mandatory="true"/>
+						<formElement:formInputBox idKey="register.email" labelKey="register.email" path="email" inputCSS="text" mandatory="true"/>
+						<formElement:formInputBox idKey="register.mobileNumber" labelKey="register.mobileNumber" path="mobileNumber" inputCSS="text" mandatory="true"/>
+						<formElement:formPasswordBox idKey="password" labelKey="register.pwd" path="pwd" inputCSS="text password strength" mandatory="true"/>
+						<formElement:formPasswordBox idKey="register.checkPwd" labelKey="register.checkPwd" path="checkPwd" inputCSS="text password" mandatory="true"/>
+						
+						
+						<button class="btn btn-block bt-login" type="submit">
+							<i class="modal-icons icon-login"></i>Sign Up
+						</button>
+					</form:form>
+					<div class="form-footer"></div>
+				</div>
+				<!-- end of Sign Up Part -->
+				<!-- Forgot Password Part -->
+				<div class="forgot-password-form hidden popup-form-cntr">
+					<div class="form-header">
+						<i class="icon-at"></i>
+					</div>
+					<form id="forgot-password-form" method="post" class="form-signin"
+						role="form" action="#">
+						<p class="text-secondary-color">Enter your E-Mail address
+							below to reset your password.</p>
+						<input type="email" id="Email" required
+							placeholder="Email Address" class="form-control" />
+						<button class="btn btn-block bt-login" type="submit">
+							<i class="modal-icons icon-login"></i>Send Email
+						</button>
+					</form>
+					<div class="form-footer"></div>
+				</div>
+				<!-- end of Forgot Password  Part -->
+			</div>
 		</div>
-	</form:form>
-	
-
+	</div>
 </div>
+<!-- end of Login Modal -->
+
+<!-- Phone Registration Modal -->
+<div class="modal fade" id="myModalPhone" tabindex="-1" role="dialog"
+	aria-labelledby="myModalLabel">
+	<div class="modal-dialog modal-dialog-login" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+
+				<!-- Login Part -->
+				<div class="login-form popup-form-cntr">
+					<div class="form-header">
+						<i class="icon-user"></i>
+					</div>
+					<form id="phone-form" method="post" class="form-signin" role="form" action="${action}" name="phone-form">
+							<div class="form_field_error">	</div>
+						<div class="input-group">
+							<span id="basic-addon1" class="input-group-addon icon-user"></span>
+							<div class="form-control">
+								Phone no
+								<input id="phone" labelKey="phone" inputCSS="text" mandatory="true" />
+							</div>
+						</div>
+						<button class="btn btn-block bt-login" type="button" onclick="ACC.login.updatePhone()">
+							<i class="modal-icons icon-login"></i>Update
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end of Phone Registration Modal -->
+
+
+					
+					

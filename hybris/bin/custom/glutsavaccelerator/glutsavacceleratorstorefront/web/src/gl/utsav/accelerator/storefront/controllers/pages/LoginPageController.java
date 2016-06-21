@@ -13,11 +13,12 @@
  */
 package gl.utsav.accelerator.storefront.controllers.pages;
 
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.AbstractLoginPageController;
-import de.hybris.platform.acceleratorstorefrontcommons.forms.RegisterForm;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.cms2.model.pages.AbstractPageModel;
-import gl.utsav.accelerator.storefront.controllers.ControllerConstants;
+import de.hybris.platform.commercefacades.user.UserFacade;
+import de.hybris.platform.commercefacades.user.data.TitleData;
+
+import java.util.Collection;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -30,11 +31,16 @@ import org.springframework.security.web.savedrequest.HttpSessionRequestCache;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import gl.utsav.accelerator.storefront.commonabstract.controllers.pages.AbstractLoginPageController;
+import gl.utsav.accelerator.storefront.controllers.ControllerConstants;
+import gl.utsav.accelerator.storefront.forms.RegisterForm;
 
 
 /**
@@ -46,6 +52,16 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 public class LoginPageController extends AbstractLoginPageController
 {
 	private HttpSessionRequestCache httpSessionRequestCache;
+
+	@Override
+	@ModelAttribute("titles")
+	public Collection<TitleData> getTitles()
+	{
+		return userFacade.getTitles();
+	}
+
+	@Resource(name = "userFacade")
+	private UserFacade userFacade;
 
 	@Override
 	protected String getView()
@@ -66,7 +82,7 @@ public class LoginPageController extends AbstractLoginPageController
 	@Override
 	protected AbstractPageModel getCmsPage() throws CMSItemNotFoundException
 	{
-		return getContentPageForLabelOrId("login");
+		return getContentPageForLabelOrId("homepage");
 	}
 
 
@@ -80,7 +96,7 @@ public class LoginPageController extends AbstractLoginPageController
 	public String doLogin(@RequestHeader(value = "referer", required = false) final String referer,
 			@RequestParam(value = "error", defaultValue = "false") final boolean loginError, final Model model,
 			final HttpServletRequest request, final HttpServletResponse response, final HttpSession session)
-			throws CMSItemNotFoundException
+					throws CMSItemNotFoundException
 	{
 		if (!loginError)
 		{

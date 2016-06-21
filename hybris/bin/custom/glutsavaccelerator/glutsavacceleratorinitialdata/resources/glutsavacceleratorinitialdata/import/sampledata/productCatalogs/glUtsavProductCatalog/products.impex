@@ -1,0 +1,194 @@
+# ImpEx for Importing Products
+
+# Macros / Replacement Parameter definitions
+$productCatalog=glUtsavProductCatalog
+$productCatalogName=GL Utsav Product Catalog
+
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
+$supercategories=supercategories(code, $catalogVersion)
+$baseProduct=baseProduct(code,$catalogVersion)
+$approved=approvalstatus(code)[default='approved']
+
+# Insert Products
+INSERT_UPDATE Product;code[unique=true];$supercategories;manufacturerName;manufacturerAID;unit(code);ean;variantType(code);$catalogVersion;$approved
+;BT1000001;934,Clothings;Blue Tomato,caps;;;1022436212;;;;
+;J1000001;GemstoneJewellery, DiamondJewellery, MetalJewellery, Necklace;J1000001;;;1000000001;;
+
+#for DJ
+INSERT_UPDATE Product;code[unique=true];$supercategories;manufacturerName;manufacturerAID;unit(code);ean;variantType(code);$catalogVersion;$approved
+					 #;DJ100001;DJs;;;;;;
+					 #;MU100001;Musicbands;;;;;;
+					 #;BA100001;Banquethall;;;;;;
+					 #;CA100001;Caterer;;;;;;
+					 #;TR100001;Travel&Transportation;;;;;;
+					 ;WE100001;WeddingCards;;;;;;
+					 ;BG100001;Bags;;;;;;
+					 ;SH100001;Shoes;;;;;;
+					 ;AC100001;Accessories;;;;;;
+					 ;BE100001;Beauty&Grooming;;;;;;
+					 ;SG100001;Sunglasses;;;;;;
+					 #;HT100001;Hotel;;;;;;
+					 #;GR100001;Grooming
+					 
+# For Photography
+					;PT100001;Photography;;;;;;
+					 ;PT100002;Photography;;;;;;
+					 ;PT100003;Photography;;;;;;
+					 ;PT100004;Photography;;;;;;
+					 ;PT100005;Photography;;;;;;
+					 ;PT100006;Photography;;;;;;
+					 ;PT100007;Photography;;;;;;
+					 ;PT100008;Photography;;;;;;
+					 ;PT100009;Photography;;;;;;
+					 ;PT100010;Photography;;;;;;
+					 ;PT100011;Photography;;;;;;
+					 ;PT100012;Photography;;;;;;
+					 ;PT100013;Photography;;;;;;
+					 ;PT100014;Photography;;;;;;
+					 ;PT100015;Photography;;;;;;
+					 ;SPT100001;StillPhotography;;;;;;
+					 ;SPT100002;StillPhotography;;;;;;
+					 ;SPT100003;StillPhotography;;;;;;
+					 ;SPT100004;StillPhotography;;;;;;
+					 ;SPT100005;StillPhotography;;;;;;
+					 ;SPT100006;StillPhotography;;;;;;
+					 ;SPT100007;StillPhotography;;;;;;
+					 ;SPT100008;StillPhotography;;;;;;
+					 ;SPT100009;StillPhotography;;;;;;
+					 ;SPT100010;StillPhotography;;;;;;
+					 ;SPT100011;StillPhotography;;;;;;
+					 ;SPT100012;StillPhotography;;;;;;
+					 ;SPT100013;StillPhotography;;;;;;
+					 ;SPT100014;StillPhotography;;;;;;
+					 ;SPT100015;StillPhotography;;;;;;
+					 ;MPT100001;MotionPhotography;;;;;;
+					 ;MPT100002;MotionPhotography;;;;;;
+					 ;MPT100003;MotionPhotography;;;;;;
+					 ;MPT100004;MotionPhotography;;;;;;
+					 ;MPT100005;MotionPhotography;;;;;;
+					 ;MPT100006;MotionPhotography;;;;;;
+					 ;MPT100007;MotionPhotography;;;;;;
+					 ;MPT100008;MotionPhotography;;;;;;
+					 ;MPT100009;MotionPhotography;;;;;;
+					 ;MPT100010;MotionPhotography;;;;;;
+					 ;MPT100011;MotionPhotography;;;;;;
+					 ;MPT100012;MotionPhotography;;;;;;
+					 ;MPT100013;MotionPhotography;;;;;;
+					 ;MPT100014;MotionPhotography;;;;;;
+					 ;MPT100015;MotionPhotography;;;;;;
+					 
+#for Hotel and Grooming
+					;HT100001;Hotel;;;;;;
+					 ;HT100002;Hotel;;;;;;
+					 ;HT100003;Hotel;;;;;;
+					 ;HT100004;Hotel;;;;;;
+					 ;HT100005;Hotel;;;;;;
+					 ;HT100006;Hotel;;;;;;
+					 ;HT100007;Hotel;;;;;;
+					 ;HT100008;Hotel;;;;;;
+					 ;HT100009;Hotel;;;;;;
+					 ;HT1000010;Hotel;;;;;;
+					 ;HT1000011;Hotel;;;;;;
+					 ;HT1000012;Hotel;;;;;;
+					 ;HT1000013;Hotel;;;;;;
+					 ;HT1000014;Hotel;;;;;;
+					 ;HT1000015;Hotel;;;;;;
+					 ;GR100001;Grooming;;;;;;
+					 ;GR100002;Grooming;;;;;;
+					 ;GR100003;Grooming;;;;;;
+					 ;GR100004;Grooming;;;;;;
+					 ;GR100005;Grooming;;;;;;
+					 ;GR100006;Grooming;;;;;;
+					 ;GR100007;Grooming;;;;;;
+					 ;GR100008;Grooming;;;;;;
+					 ;GR100009;Grooming;;;;;;
+					 ;GR1000010;Grooming;;;;;;
+					 ;GR1000011;Grooming;;;;;;
+					 ;GR1000012;Grooming;;;;;;
+					 ;GR1000013;Grooming;;;;;;
+					 ;GR1000014;Grooming;;;;;;
+					 ;GR1000015;Grooming;;;;;;
+					 
+# for	Travel&Transportation				 
+					 
+					 ;TR100001;Travel&Transportation;;;;;;
+					 ;TR100002;Travel&Transportation;;;;;;
+					 ;TR100003;Travel&Transportation;;;;;;
+					 ;TR100004;Travel&Transportation;;;;;;
+					 ;TR100005;Travel&Transportation;;;;;;
+					 ;TR100006;Travel&Transportation;;;;;;
+					 ;TR100007;Travel&Transportation;;;;;;
+					 ;TR100008;Travel&Transportation;;;;;;
+					 ;TR100009;Travel&Transportation;;;;;;
+					 ;TR1000010;Travel&Transportation;;;;;;
+					 ;TR1000011;Travel&Transportation;;;;;;
+					 ;TR1000012;Travel&Transportation;;;;;;
+					 ;TR1000013;Travel&Transportation;;;;;;
+					 ;TR1000014;Travel&Transportation;;;;;;
+					 ;TR1000015;Travel&Transportation;;;;;;
+# for	DJS						 
+					 ;DJ100001;DJs;;;;;;
+					 ;DJ100002;DJs;;;;;;
+					 ;DJ100003;DJs;;;;;;
+					 ;DJ100004;DJs;;;;;;
+					 ;DJ100005;DJs;;;;;;
+					 ;DJ100006;DJs;;;;;;
+					 ;DJ100007;DJs;;;;;;
+					 ;DJ100008;DJs;;;;;;
+					 ;DJ100009;DJs;;;;;;
+					 ;DJ100010;DJs;;;;;;
+					 ;DJ100011;DJs;;;;;;
+					 ;DJ100012;DJs;;;;;;
+					 ;DJ100013;DJs;;;;;;
+					 ;DJ100014;DJs;;;;;;
+					 ;DJ100015;DJs;;;;;;
+#for Musicbands					 
+					 ;MU100001;Musicbands;;;;;;
+					 ;MU100002;Musicbands;;;;;;
+					 ;MU100003;Musicbands;;;;;;
+					 ;MU100004;Musicbands;;;;;;
+					 ;MU100005;Musicbands;;;;;;
+					 ;MU100006;Musicbands;;;;;;
+					 ;MU100007;Musicbands;;;;;;
+					 ;MU100008;Musicbands;;;;;;
+					 ;MU100009;Musicbands;;;;;;
+					 ;MU100010;Musicbands;;;;;;
+					 ;MU100011;Musicbands;;;;;;
+					 ;MU100012;Musicbands;;;;;;
+					 ;MU100013;Musicbands;;;;;;
+					 ;MU100014;Musicbands;;;;;;
+					 ;MU100015;Musicbands;;;;;;		
+#for bandquethall & Caterer
+					 ;BA100001;Banquethall;;;;;;
+					 ;BA100002;Banquethall;;;;;;
+					 ;BA100003;Banquethall;;;;;;
+					 ;BA100004;Banquethall;;;;;;
+					 ;BA100005;Banquethall;;;;;;
+					 ;BA100006;Banquethall;;;;;;
+					 ;BA100007;Banquethall;;;;;;
+					 ;BA100008;Banquethall;;;;;;
+					 ;BA100009;Banquethall;;;;;;
+					 ;BA1000010;Banquethall;;;;;;
+					 ;BA1000011;Banquethall;;;;;;
+					 ;BA1000012;Banquethall;;;;;;
+					 ;BA1000013;Banquethall;;;;;;
+					 ;BA1000014;Banquethall;;;;;;
+					 ;BA1000015;Banquethall;;;;;;
+					 ;CA100001;Caterer;;;;;;
+					 ;CA100002;Caterer;;;;;;
+					 ;CA100003;Caterer;;;;;; 
+					 ;CA100004;Caterer;;;;;;
+                     ;CA100005;Caterer;;;;;;			
+	                 ;CA100006;Caterer;;;;;;
+					 ;CA100007;Caterer;;;;;;
+					 ;CA100008;Caterer;;;;;; 
+					 ;CA100009;Caterer;;;;;;
+                     ;CA1000010;Caterer;;;;;;	
+	                 ;CA1000011;Caterer;;;;;;
+					 ;CA1000012;Caterer;;;;;;
+					 ;CA1000013;Caterer;;;;;; 
+					 ;CA1000014;Caterer;;;;;;
+                     ;CA1000015;Caterer;;;;;;							 
+					 
+
+INSERT_UPDATE ServiceProduct;code[unique=true];$supercategories;manufacturerName;manufacturerAID;unit(code);ean;variantType(code);$catalogVersion;$approved

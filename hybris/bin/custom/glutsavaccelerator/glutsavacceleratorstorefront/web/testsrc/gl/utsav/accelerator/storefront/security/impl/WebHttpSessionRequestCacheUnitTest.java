@@ -16,7 +16,6 @@ package gl.utsav.accelerator.storefront.security.impl;
 import static org.junit.Assert.assertEquals;
 
 import de.hybris.bootstrap.annotations.UnitTest;
-import de.hybris.platform.acceleratorstorefrontcommons.constants.WebConstants;
 import de.hybris.platform.servicelayer.session.SessionService;
 
 import javax.servlet.http.HttpServletRequest;
@@ -34,6 +33,8 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.savedrequest.DefaultSavedRequest;
+
+import gl.utsav.accelerator.storefront.constants.WebConstants;
 
 
 @UnitTest

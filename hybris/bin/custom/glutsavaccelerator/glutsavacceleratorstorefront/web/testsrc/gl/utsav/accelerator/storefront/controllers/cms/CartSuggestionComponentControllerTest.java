@@ -20,7 +20,6 @@ import static org.mockito.Mockito.when;
 import de.hybris.bootstrap.annotations.UnitTest;
 import de.hybris.platform.acceleratorcms.model.components.CartSuggestionComponentModel;
 import de.hybris.platform.acceleratorcms.model.components.SimpleSuggestionComponentModel;
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.AbstractPageController;
 import de.hybris.platform.catalog.enums.ProductReferenceTypeEnum;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.cms2.servicelayer.services.impl.DefaultCMSComponentService;
@@ -29,6 +28,7 @@ import de.hybris.platform.commercefacades.order.data.OrderEntryData;
 import de.hybris.platform.commercefacades.order.impl.DefaultCartFacade;
 import de.hybris.platform.commercefacades.product.data.ProductData;
 import gl.utsav.accelerator.facades.suggestion.SimpleSuggestionFacade;
+import gl.utsav.accelerator.storefront.commonabstract.controllers.pages.AbstractPageController;
 import gl.utsav.accelerator.storefront.controllers.ControllerConstants;
 
 import java.util.ArrayList;

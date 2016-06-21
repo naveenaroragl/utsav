@@ -1,6 +1,16 @@
 <%@ tag body-content="empty" trimDirectiveWhitespaces="true" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<script src="${themeResourcePath}/js/vendors/jquery-1.11.3.min.js"></script>
+	<script src="${themeResourcePath}/js/vendors/bootstrap.min.js"></script>
+	<script src="${themeResourcePath}/js/vendors/bootstrap-select.min.js"></script>
+	<script src="${themeResourcePath}/js/custom.js"></script>
+<!-- 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular-route.min.js"></script> 
+	
+	<%-- <script src="${themeResourcePath}/js/app.js"></script>
+	<script src="${themeResourcePath}/js/routes.js"></script> --%>
+
 <%-- j query 1.11.2 --%>
 <script type="text/javascript" src="${commonResourcePath}/js/jquery-1.11.2.min.js"></script>
 
@@ -28,15 +38,17 @@
 <script type="text/javascript" src="${commonResourcePath}/js/jquery.ui.stars-3.0.1.min.js"></script>
 <script type="text/javascript" src="${commonResourcePath}/js/jquery.form-3.09.js"></script>
 <%-- BeautyTips  --%>
-<script type="text/javascript" src="${commonResourcePath}/js/jquery.bgiframe-2.1.2.min.js"></script>
-<!--[if IE]><script type="text/javascript" src="${commonResourcePath}/js/excanvas-r3.compiled.js"></script>-->
+<script type="text/javascript" src="${commonResourcePath}/js/jquery.bgiframe-2.1.2.min.js"></script>-->
+<!--[if IE]><script type="text/javascript" src="${commonResourcePath}/js/excanvas-r3.compiled.js"></script>
 <script type="text/javascript" src="${commonResourcePath}/js/jquery.bt-0.9.5-rc1.min.js"></script>
 <%-- PasswordStrength  --%>
-<script type="text/javascript" src="${commonResourcePath}/js/jquery.pstrength.custom-1.2.0.js"></script>
+<script type="text/javascript" src="${commonResourcePath}/js/jquery.pstrength.custom-1.2.0.js"></script>-->
 
 <%-- Custom ACC JS --%>
 <script type="text/javascript" src="${commonResourcePath}/js/acc.common.js"></script>
-<script type="text/javascript" src="${commonResourcePath}/js/acc.userlocation.js"></script>
+<script type="text/javascript" src="${commonResourcePath}/js/acc.login.js"></script>
+
+<%-- <script type="text/javascript" src="${commonResourcePath}/js/acc.userlocation.js"></script>
 <script type="text/javascript" src="${commonResourcePath}/js/acc.track.js"></script>
 <script type="text/javascript" src="${commonResourcePath}/js/acc.cms.js"></script>
 <script type="text/javascript" src="${commonResourcePath}/js/acc.product.js"></script>
@@ -74,17 +86,18 @@
 <script type="text/javascript" src="${commonResourcePath}/js/acc.forgotpassword.js"></script>
 
 
-<%-- accessible-tabs  --%>
+accessible-tabs 
 <script type="text/javascript" src="${commonResourcePath}/js/jquery.accessible-tabs-1.9.7.min.js"></script>
 <script type="text/javascript" src="${commonResourcePath}/js/acc.productDetail.js"></script>
 <script type="text/javascript" src="${commonResourcePath}/js/acc.producttabs.js"></script>
 
 
-<%-- Multi-D --%>
+Multi-D
 <script type="text/javascript" src="${commonResourcePath}/js/jquery.currencies.min.js"></script>
 <script type="text/javascript" src="${commonResourcePath}/js/acc.productorderform.js"></script>
-<%-- Future Link --%>
+Future Link
 <script type="text/javascript" src="${commonResourcePath}/js/acc.futurelink.js"></script>
+ --%>
 
 <%-- Cms Action JavaScript files --%>
 <c:forEach items="${cmsActionsJsFiles}" var="actionJsFile">
@@ -96,5 +109,5 @@
     <script type="text/javascript" src="${addOnJavaScript}"></script>
 </c:forEach>
 
-<%-- Fix for Webkit Browsers (Needs to be loaded last)  --%>
-<script type="text/javascript" src="${commonResourcePath}/js/acc.skiplinks.js"></script>
+<%-- Fix for Webkit Browsers (Needs to be loaded last)  
+<script type="text/javascript" src="${commonResourcePath}/js/acc.skiplinks.js"></script>--%>

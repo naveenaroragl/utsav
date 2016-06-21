@@ -14,12 +14,13 @@
 package gl.utsav.accelerator.storefront.controllers.misc;
 
 import de.hybris.platform.acceleratorcms.model.components.MiniCartComponentModel;
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.AbstractController;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.cms2.servicelayer.services.CMSComponentService;
 import de.hybris.platform.commercefacades.order.CartFacade;
 import de.hybris.platform.commercefacades.order.data.CartData;
 import de.hybris.platform.commercefacades.product.data.PriceData;
+
+import gl.utsav.accelerator.storefront.commonabstract.controllers.AbstractController;
 import gl.utsav.accelerator.storefront.controllers.ControllerConstants;
 
 import java.util.Collections;

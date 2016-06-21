@@ -19,13 +19,14 @@ import static org.mockito.Mockito.verify;
 import de.hybris.bootstrap.annotations.UnitTest;
 import de.hybris.platform.acceleratorcms.model.components.ProductReferencesComponentModel;
 import de.hybris.platform.acceleratorservices.data.RequestContextData;
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.AbstractPageController;
 import de.hybris.platform.catalog.enums.ProductReferenceTypeEnum;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.cms2.servicelayer.services.impl.DefaultCMSComponentService;
 import de.hybris.platform.commercefacades.product.ProductFacade;
 import de.hybris.platform.commercefacades.product.data.ProductReferenceData;
 import de.hybris.platform.core.model.product.ProductModel;
+
+import gl.utsav.accelerator.storefront.commonabstract.controllers.pages.AbstractPageController;
 import gl.utsav.accelerator.storefront.controllers.ControllerConstants;
 
 import java.util.Arrays;

@@ -15,8 +15,9 @@ package gl.utsav.accelerator.storefront.filters;
 
 import de.hybris.platform.acceleratorfacades.urlencoder.UrlEncoderFacade;
 import de.hybris.platform.acceleratorfacades.urlencoder.data.UrlEncoderData;
-import de.hybris.platform.acceleratorstorefrontcommons.constants.WebConstants;
 import de.hybris.platform.servicelayer.session.SessionService;
+
+import gl.utsav.accelerator.storefront.constants.WebConstants;
 import gl.utsav.accelerator.storefront.web.wrappers.UrlEncodeHttpRequestWrapper;
 
 import java.io.IOException;

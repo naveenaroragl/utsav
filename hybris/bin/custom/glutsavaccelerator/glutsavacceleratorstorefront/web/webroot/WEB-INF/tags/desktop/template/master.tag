@@ -12,6 +12,9 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="htmlmeta" uri="http://hybris.com/tld/htmlmeta" %>
+<%@ taglib prefix="footer" tagdir="/WEB-INF/tags/desktop/common/footer"%>
+<%@ taglib prefix="header" tagdir="/WEB-INF/tags/desktop/common/header"%>
+<%@ taglib prefix="user" tagdir="/WEB-INF/tags/desktop/user" %>
 
 
 
@@ -40,25 +43,108 @@
 	<jsp:invoke fragment="pageCss"/>
 	<analytics:analytics/>
 	
-</head>
-
-<body class="${pageBodyCssClasses} ${cmsPageRequestContextData.liveEdit ? ' yCmsLiveEdit' : ''} language-${currentLanguage.isocode}">
-
-	<%-- Inject the page body here --%>
-	<jsp:doBody/>
-
-	<form name="accessiblityForm">
-		<input type="hidden" id="accesibility_refreshScreenReaderBufferField" name="accesibility_refreshScreenReaderBufferField" value=""/>
-	</form>
-	<div id="ariaStatusMsg" class="skip" role="status" aria-relevant="text" aria-live="polite"></div>
-
-	<%-- Load JavaScript required by the site --%>
+	<%-- Load JavaScript required by the0 site --%>
 	<template:javaScript/>
 	
 	<%-- Inject any additional JavaScript required by the page --%>
 	<jsp:invoke fragment="pageScripts"/>
+	
+	
+	<title>Ecart</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+</head>
 
-	<addonScripts:addonScripts/>
+<body ng-app="MainApp" class="${pageBodyCssClasses} ${cmsPageRequestContextData.liveEdit ? ' yCmsLiveEdit' : ''} language-${currentLanguage.isocode}">
+<div id="fb-root"></div>
+	<%-- Inject the page body here --%>
+	
+	
+	<div class="container">
+	
+
+          <div ng-view></div>
+          <jsp:doBody/>
+		           
+    </div>
+
+<c:url value="/j_spring_security_check" var="loginActionUrl" />
+<user:login actionNameKey="login.login" action="${loginActionUrl}"/>
+
+
+
+
+<!-- verticals-popup -->
+<div class="modal fade verticals-popup" id="verticalsPopup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-dialog-verticals-popup" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<h2>Please choose the products and services </h2>
+      </div>
+		  <form method="post" id="vericals-form">
+			  <div class="modal-body">
+				<div class="main-checkboxes-cntr">
+					<div class="chkbox-label-cntr">
+						<input id="catering" data="catering" type="checkbox" />
+						<label for="catering" class="icon-food">Catering</label>
+					</div>
+
+					<div class="chkbox-label-cntr">
+						<input id="hospitality" data="hospitality" type="checkbox" />
+						<label for="hospitality" class="icon-commerical-building">Hospitality</label>
+					</div>
+
+					<div class="chkbox-label-cntr">
+						<input id="fashion" data="fashion" type="checkbox" />
+						<label for="fashion" class="icon-women">Fashion</label>
+					</div>
+
+					<div class="chkbox-label-cntr">
+						<input id="music"  data="music" type="checkbox" />
+						<label for="music" class="icon-music">Music</label>
+					</div>
+
+					<div class="chkbox-label-cntr">
+						<input id="grooming" data="grooming" type="checkbox" />
+						<label for="grooming" class="icon-beauty">Grooming</label>
+					</div>
+
+					<div class="chkbox-label-cntr">
+						<input id="gifts"  data="gifts" type="checkbox" />
+						<label for="gifts" class="icon-gift">Gifts</label>
+					</div>
+
+					<div class="chkbox-label-cntr">
+						<input id="photography"  data="photography" type="checkbox" />
+						<label for="photography" class="icon-camera">Photography</label>
+					</div>
+
+					<div class="chkbox-label-cntr">
+						<input id="travel" data="travel" type="checkbox" />
+						<label for="travel" class="icon-flight">Travel</label>
+					</div>
+
+					<div class="chkbox-label-cntr">
+						<input id="jewellery" data="jewellery" type="checkbox" />
+						<label for="jewellery" class="icon-luxury">Jewellery</label>
+					</div>
+
+					<div class="chkbox-label-cntr">
+						<input id="customs" data="customs" type="checkbox" />
+						<label for="customs" class="icon-nature-3">Customs</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-footer">
+					<a href="#/Products" class="btn btn-block btn-continue btn-continue-vericals-home"> Continue</a>
+				
+			</div>
+		</form>
+	</div>
+	</div>
+</div><!-- end of verticals-popup -->
+		
 
 </body>
 

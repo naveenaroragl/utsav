@@ -20,37 +20,38 @@
 <c:set value="${not empty product.potentialPromotions}" var="hasPromotion"/>
 
 <ycommerce:testId code="product_wholeProduct">
-	<div class="productGridItem ${hasPromotion ? 'productGridItemPromotion' : ''}">
+	<div class="col-xs-12 col-md-4 col-sm-6 package ${hasPromotion ? 'productGridItemPromotion' : ''}">
 		<a href="${productUrl}" title="${product.name}" class="productMainLink">
-			<div class="thumb">
+			<div class="img-text-cntr thumb" data-toggle="modal" data-target="#quickViewPopup">
 				<product:productPrimaryImage product="${product}" format="product"/>
 				<c:if test="${not empty product.potentialPromotions and not empty product.potentialPromotions[0].productBanner}">
 					<img class="promo" src="${product.potentialPromotions[0].productBanner.url}" alt="${product.potentialPromotions[0].description}" title="${product.potentialPromotions[0].description}"/>
 				</c:if>
+				 <span>${product.name}</span>
 			</div>
 
-			<div class="priceContainer">
+			<%-- <div class="priceContainer">
 				<c:set var="buttonType">submit</c:set>
 				<ycommerce:testId code="product_productPrice">
 					<span class="price"><format:price priceData="${product.price}"/></span>
 				</ycommerce:testId>
-			</div>
+			</div> --%>
 
 
-			<div class="details">
+			<%-- <div class="details">
 				<ycommerce:testId code="product_productName">${product.name}</ycommerce:testId>
-			</div>
+			</div> --%>
 
-			<c:choose>
+			<%-- <c:choose>
 				<c:when test="${product.stock.stockLevelStatus.code eq 'outOfStock' }">
 					<c:set var="buttonType">button</c:set>
 					<spring:theme code="text.addToCart.outOfStock" var="addToCartText"/>
 					<span class='listProductLowStock listProductOutOfStock mlist-stock'>${addToCartText}</span>
 				</c:when>
-			</c:choose>
+			</c:choose> --%>
 		</a>
 
-		<div class="cart clearfix">
+		<%-- <div class="cart clearfix">
 			<c:if test="${not empty product.averageRating}">
 				<product:productStars rating="${product.averageRating}"/>
 			</c:if>
@@ -61,7 +62,7 @@
 			<div id="actions-container-for-${component.uid}" class="listAddPickupContainer clearfix">
 				<action:actions element="div" parentComponent="${component}"/>
 			</div>
-		</div>
+		</div> --%>
 
 	</div>
 </ycommerce:testId>

@@ -13,21 +13,6 @@
  */
 package gl.utsav.accelerator.storefront.controllers.pages;
 
-import de.hybris.platform.acceleratorstorefrontcommons.annotations.RequireHardLogIn;
-import de.hybris.platform.acceleratorstorefrontcommons.breadcrumb.Breadcrumb;
-import de.hybris.platform.acceleratorstorefrontcommons.breadcrumb.ResourceBreadcrumbBuilder;
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.ThirdPartyConstants;
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.AbstractSearchPageController;
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.util.GlobalMessages;
-import de.hybris.platform.acceleratorstorefrontcommons.forms.AddressForm;
-import de.hybris.platform.acceleratorstorefrontcommons.forms.UpdateEmailForm;
-import de.hybris.platform.acceleratorstorefrontcommons.forms.UpdatePasswordForm;
-import de.hybris.platform.acceleratorstorefrontcommons.forms.UpdateProfileForm;
-import de.hybris.platform.acceleratorstorefrontcommons.forms.validation.AddressValidator;
-import de.hybris.platform.acceleratorstorefrontcommons.forms.validation.EmailValidator;
-import de.hybris.platform.acceleratorstorefrontcommons.forms.validation.PasswordValidator;
-import de.hybris.platform.acceleratorstorefrontcommons.forms.validation.ProfileValidator;
-import de.hybris.platform.acceleratorstorefrontcommons.forms.verification.AddressVerificationResultHandler;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.commercefacades.address.AddressVerificationFacade;
 import de.hybris.platform.commercefacades.address.data.AddressVerificationResult;
@@ -52,7 +37,23 @@ import de.hybris.platform.commerceservices.search.pagedata.SearchPageData;
 import de.hybris.platform.commerceservices.util.ResponsiveUtils;
 import de.hybris.platform.servicelayer.exceptions.UnknownIdentifierException;
 import de.hybris.platform.util.Config;
+
+import gl.utsav.accelerator.storefront.annotations.RequireHardLogIn;
+import gl.utsav.accelerator.storefront.breadcrumb.Breadcrumb;
+import gl.utsav.accelerator.storefront.breadcrumb.ResourceBreadcrumbBuilder;
+import gl.utsav.accelerator.storefront.commonabstract.controllers.ThirdPartyConstants;
+import gl.utsav.accelerator.storefront.commonabstract.controllers.pages.AbstractSearchPageController;
+import gl.utsav.accelerator.storefront.commonabstract.controllers.util.GlobalMessages;
 import gl.utsav.accelerator.storefront.controllers.ControllerConstants;
+import gl.utsav.accelerator.storefront.forms.AddressForm;
+import gl.utsav.accelerator.storefront.forms.UpdateEmailForm;
+import gl.utsav.accelerator.storefront.forms.UpdatePasswordForm;
+import gl.utsav.accelerator.storefront.forms.UpdateProfileForm;
+import gl.utsav.accelerator.storefront.forms.validation.AddressValidator;
+import gl.utsav.accelerator.storefront.forms.validation.EmailValidator;
+import gl.utsav.accelerator.storefront.forms.validation.PasswordValidator;
+import gl.utsav.accelerator.storefront.forms.validation.ProfileValidator;
+import gl.utsav.accelerator.storefront.forms.verification.AddressVerificationResultHandler;
 
 import java.util.Collection;
 import java.util.HashMap;

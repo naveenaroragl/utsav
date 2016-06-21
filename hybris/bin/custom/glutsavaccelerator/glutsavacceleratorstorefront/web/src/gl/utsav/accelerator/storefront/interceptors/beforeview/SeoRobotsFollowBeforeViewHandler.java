@@ -14,7 +14,8 @@
 package gl.utsav.accelerator.storefront.interceptors.beforeview;
 
 import de.hybris.platform.acceleratorservices.storefront.data.MetaElementData;
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.ThirdPartyConstants;
+
+import gl.utsav.accelerator.storefront.commonabstract.controllers.ThirdPartyConstants;
 import gl.utsav.accelerator.storefront.interceptors.BeforeViewHandler;
 
 import java.util.List;
