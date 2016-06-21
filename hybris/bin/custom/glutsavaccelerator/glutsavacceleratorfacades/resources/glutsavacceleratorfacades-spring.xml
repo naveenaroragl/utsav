@@ -187,5 +187,15 @@
 	<alias alias="glCategoryFacade" name="defaultGLCategoryFacade"/>
 	<bean id="defaultGLCategoryFacade" class="gl.utsav.accelerator.facades.category.impl.DefaultGLCategoryFacade" >
 	</bean>
+	
+	<alias name="defaultGLCustomerPopulator" alias="customerPopulator"/>
+	<bean id="defaultGLCustomerPopulator"
+			class="gl.utsav.accelerator.facades.populators.GLCustomerPopulator" parent="defaultCustomerPopulator">
+	</bean>
+	
+	<alias name="defaultGLCustomerReversePopulator" alias="customerReversePopulator"/>
+	<bean id="defaultGLCustomerReversePopulator"
+			class="gl.utsav.accelerator.facades.populators.GLCustomerReversePopulator" parent="defaultCustomerReversePopulator">
+	</bean>
 
 </beans>

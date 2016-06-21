@@ -30,6 +30,7 @@
 					<div class="form-header">
 						<i class="icon-user"></i>
 					</div>
+					<input id="ifRegistered" value="${registered}" type="hidden" />
 					<form:form id="login-form" method="post" class="form-signin" role="form" action="${action}" commandName="loginForm" name="login-form">
 							<div class="form_field_error">	</div>
 						<div class="input-group">
@@ -85,6 +86,7 @@
 						<formElement:formInputBox idKey="register.firstName" labelKey="register.firstName" path="firstName" inputCSS="text" mandatory="true"/>
 						<formElement:formInputBox idKey="register.lastName" labelKey="register.lastName" path="lastName" inputCSS="text" mandatory="true"/>
 						<formElement:formInputBox idKey="register.email" labelKey="register.email" path="email" inputCSS="text" mandatory="true"/>
+						<formElement:formInputBox idKey="register.mobileNumber" labelKey="register.mobileNumber" path="mobileNumber" inputCSS="text" mandatory="true"/>
 						<formElement:formPasswordBox idKey="password" labelKey="register.pwd" path="pwd" inputCSS="text password strength" mandatory="true"/>
 						<formElement:formPasswordBox idKey="register.checkPwd" labelKey="register.checkPwd" path="checkPwd" inputCSS="text password" mandatory="true"/>
 						
@@ -119,6 +121,44 @@
 	</div>
 </div>
 <!-- end of Login Modal -->
+
+<!-- Phone Registration Modal -->
+<div class="modal fade" id="myModalPhone" tabindex="-1" role="dialog"
+	aria-labelledby="myModalLabel">
+	<div class="modal-dialog modal-dialog-login" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+
+				<!-- Login Part -->
+				<div class="login-form popup-form-cntr">
+					<div class="form-header">
+						<i class="icon-user"></i>
+					</div>
+					<form id="phone-form" method="post" class="form-signin" role="form" action="${action}" name="phone-form">
+							<div class="form_field_error">	</div>
+						<div class="input-group">
+							<span id="basic-addon1" class="input-group-addon icon-user"></span>
+							<div class="form-control">
+								Phone no
+								<input id="phone" labelKey="phone" inputCSS="text" mandatory="true" />
+							</div>
+						</div>
+						<button class="btn btn-block bt-login" type="button" onclick="ACC.login.updatePhone()">
+							<i class="modal-icons icon-login"></i>Update
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end of Phone Registration Modal -->
 
 
 					
