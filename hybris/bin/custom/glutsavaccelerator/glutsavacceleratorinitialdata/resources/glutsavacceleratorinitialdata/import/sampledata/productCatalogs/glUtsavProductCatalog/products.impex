@@ -12,7 +12,7 @@ $approved=approvalstatus(code)[default='approved']
 # Insert Products
 INSERT_UPDATE Product;code[unique=true];$supercategories;manufacturerName;manufacturerAID;unit(code);ean;variantType(code);$catalogVersion;$approved
 ;BT1000001;934,Clothings;Blue Tomato,caps;;;1022436212;;;;
-;J1000001;GemstoneJewellery, DiamondJewellery, MetalJewellery, Necklace;J1000001;;;1000000001;;
+;J1000001;Necklace, GemstoneJewellery, DiamondJewellery, MetalJewellery;J1000001;;;1000000001;;
 
 #for DJ
 INSERT_UPDATE Product;code[unique=true];$supercategories;manufacturerName;manufacturerAID;unit(code);ean;variantType(code);$catalogVersion;$approved
