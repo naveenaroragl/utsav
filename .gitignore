@@ -34,8 +34,6 @@ classes
 gensrc
 hybris/config/solr/
 hybris/config/licence/installedSaplicenses.properties
-.project
-hybris/.project
 *platformhome.properties
 *corehmc.jar
 *-webtestclasses.xml
