@@ -21,4 +21,11 @@
 		<property name="name" type="String"/>
 	</bean>
 	
+	<bean class="gl.utsav.accelerator.facades.packages.data.PackageData">
+		<property name="code" type="String"/>
+		<property name="name" type="String"/>
+		<property name="gallery" type="java.util.List&lt;de.hybris.platform.commercefacades.product.data.ImageData>" />
+		<property name="eventType" type="String"/>
+	</bean>
+	
 </beans>

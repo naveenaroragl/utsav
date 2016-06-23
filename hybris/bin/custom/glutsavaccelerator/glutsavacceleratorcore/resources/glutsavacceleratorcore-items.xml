@@ -45,6 +45,16 @@
 			<value code="TRADITINAL"/>
 		</enumtype>
 	</enumtypes>
+	
+	<relations>
+        <relation code="OfferedServices" generate="true" localized="false" autocreate="true">
+			<deployment table="OfferedServices" typecode="12001" />
+			<sourceElement qualifier="offeredServicesList" type="Category"
+				cardinality="many" />
+			<targetElement qualifier="packages" type="Package"
+				cardinality="many" />
+		</relation>
+	</relations>
 
 	<itemtypes>
 
@@ -163,6 +173,61 @@
 					</attribute>
 					<attribute qualifier="numberOfCategories" type="java.lang.Integer">
 						<description>Number of Categories</description>
+						<persistence type="property"/>
+					</attribute>
+				</attributes>
+			</itemtype>
+	     </typegroup>
+	     <!-- Item definition for Category Grid Component -->
+
+        <!-- Item definition for Package -->
+	    <typegroup name="PackagesForHomePage">
+			<itemtype code="Package" autocreate="true" generate="true"
+			          jaloclass="gl.utsav.accelerator.core.jalo.Package">
+			    <deployment table="Package" typecode="10222" />
+				<attributes>
+				    <attribute qualifier="code" type="localized:java.lang.String">
+						<description>Code</description>
+						<persistence type="property"/>
+					</attribute>
+				    <attribute qualifier="name" type="localized:java.lang.String">
+						<description>Name</description>
+						<persistence type="property"/>
+					</attribute>
+					<attribute qualifier="eventType" type="EventTypeEnum">
+						<description>Event Type</description>
+						<persistence type="property"/>
+					</attribute>
+					<attribute qualifier="productImageURL" type="localized:java.lang.String">
+						<description>Product Image URL</description>
+						<persistence type="property"/>
+					</attribute>
+					<attribute qualifier="thumbnailImageURL" type="localized:java.lang.String">
+						<description>Thumbnail Image URL</description>
+						<persistence type="property"/>
+					</attribute>
+					<attribute qualifier="gallery" type="MediaContainerList">
+						<description>Gallery</description>
+						<persistence type="property"/>
+					</attribute>
+				</attributes>
+			</itemtype>
+	     </typegroup>
+	     <!-- Item definition ends -->
+	     
+	     <!-- Item definition for Category Grid Component -->
+	     <typegroup name="PackageComponentForHomePage">
+			<itemtype code="PackageGridComponent" extends="SimpleCMSComponent"
+			          autocreate="true" generate="true"
+			          jaloclass="gl.utsav.accelerator.core.jalo.PackageGridComponent">
+				<description>Component for the display of Packages on the Home Page.</description>
+				<attributes>
+					<attribute qualifier="PackagesItemsList" type="Package">
+						<description>List of Packages</description>
+						<persistence type="property"/>
+					</attribute>
+					<attribute qualifier="numberOfPackages" type="java.lang.Integer">
+						<description>Number of Packages</description>
 						<persistence type="property"/>
 					</attribute>
 				</attributes>
