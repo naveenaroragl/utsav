@@ -161,3 +161,27 @@ a{
 	box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
 }
 
+.logo{
+		display: inline;
+	float: left;
+}
+.header-nav-bar{
+	padding: 18px 18px;
+
+
+}
+span.nav-element{
+	margin: 0px 10px;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    font-size: 16px;
+    padding: 8px 5px;
+}
+.text-right{
+	text-align: right;
+}
+.text-left{
+	text-align: left;
+}
+.text-center{
+	text-align: center;
+}

@@ -138,17 +138,18 @@ public class VendorRegistrationServiceImpl implements VendorRegistrationService
 		um.setUid(data.getEmail());
 		um.setSessionLanguage(commonI18NService.getCurrentLanguage());
 		um.setSessionCurrency(commonI18NService.getCurrentCurrency());
-		final PasswordEncoderFactory passwordEncoderFactory = Registry.getApplicationContext().getBean(
-				"core.passwordEncoderFactory", PasswordEncoderFactory.class);
+		final PasswordEncoderFactory passwordEncoderFactory = Registry.getApplicationContext()
+				.getBean("core.passwordEncoderFactory", PasswordEncoderFactory.class);
 		final PasswordEncoder deprecatedEncoder = passwordEncoderFactory.getEncoder("md5");
 		if (vendor.getCompany() != null)
 		{
 			final Set set = new HashSet();
 			set.add(vendor.getCompany());
+			set.add(userService.getUserGroupForUID("vendorGroup"));
 			um.setGroups(set);
 			um.setCompany(vendor.getCompany());
 		}
-
+		um.setPasswordEncoding("md5");
 		modelService.save(um);
 		userService.setPassword(data.getEmail(), deprecatedEncoder.encode(data.getEmail(), data.getPassword()));
 		return um;
@@ -180,21 +181,22 @@ public class VendorRegistrationServiceImpl implements VendorRegistrationService
 	public boolean validateAndCreateSession(final String userName, final String password, final HttpServletRequest request)
 			throws JaloSecurityException
 	{
-		final PasswordEncoderFactory passwordEncoderFactory = Registry.getApplicationContext().getBean(
-				"core.passwordEncoderFactory", PasswordEncoderFactory.class);
-		final PasswordEncoder deprecatedEncoder = passwordEncoderFactory.getEncoder("md5");
+		final PasswordEncoderFactory passwordEncoderFactory = Registry.getApplicationContext()
+				.getBean("core.passwordEncoderFactory", PasswordEncoderFactory.class);
 		UserModel userModel = null;
-		//userService.setPassword(userName, password, "md5");
 		try
 		{
 			userModel = userService.getUserForUID(userName);
+			if (!userModel.getAllGroups().contains(userService.getUserGroupForUID("vendorGroup")))
+			{
+				return false;
+			}
 		}
 		catch (final Exception e)
 		{
-			//No user found
-			//TODO log the no user found message
 			return false;
 		}
+		final PasswordEncoder deprecatedEncoder = passwordEncoderFactory.getEncoder(userModel.getPasswordEncoding());
 		final String p2 = deprecatedEncoder.encode(userName, password);
 		System.out.println("----------------------" + userModel.getEncodedPassword());
 		System.out.println("----------------------" + p2);

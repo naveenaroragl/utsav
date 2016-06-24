@@ -1,4 +1,4 @@
-           <%@ tag body-content="empty" trimDirectiveWhitespaces="true" %>
+<%@ tag body-content="empty" trimDirectiveWhitespaces="true" %>
 <%@ attribute name="hideHeaderLinks" required="false" %>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>

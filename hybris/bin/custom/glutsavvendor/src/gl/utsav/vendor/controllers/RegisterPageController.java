@@ -13,10 +13,16 @@
  */
 package gl.utsav.vendor.controllers;
 
+import de.hybris.platform.category.CategoryService;
+import de.hybris.platform.category.model.CategoryModel;
+import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
+import de.hybris.platform.cms2.model.site.CMSSiteModel;
+import de.hybris.platform.cms2.servicelayer.services.CMSSiteService;
 import de.hybris.platform.commercefacades.user.data.AddressData;
 import de.hybris.platform.jalo.security.JaloSecurityException;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -31,10 +37,12 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import gl.utsav.vendor.dto.VendorRegistrationData;
 import gl.utsav.vendor.enums.GLUVendorType;
 import gl.utsav.vendor.facades.VendorManagementFacade;
+import gl.utsav.vendor.forms.ProductForm;
 import gl.utsav.vendor.validator.VendorValidator;
 
 
@@ -50,6 +58,12 @@ public class RegisterPageController
 
 	@Resource
 	private VendorManagementFacade gluVendorManagementFacade;
+
+	@Resource
+	private CategoryService categoryService;
+
+	@Resource
+	private CMSSiteService cmsSiteService;
 
 
 	@RequestMapping(method = RequestMethod.GET)
@@ -76,9 +90,14 @@ public class RegisterPageController
 
 
 	@RequestMapping(method = RequestMethod.GET, value = "home")
-	public String getHomePage(final Model model)
+	public String getHomePage(final Model model) throws CMSItemNotFoundException
 	{
-		//model.addAttribute("register", new VendorRegistrationData());
+		final CMSSiteModel cmsSite = (cmsSiteService.getSites()).iterator().next();
+		cmsSiteService.setCurrentSiteAndCatalogVersions(cmsSite, true);
+		final Collection<CategoryModel> categories = categoryService.getRootCategoriesForCatalogVersion(cmsSiteService.getCurrentCatalogVersion());
+		final ProductForm productForm = new ProductForm();
+		model.addAttribute("productForm", productForm);
+		model.addAttribute("categories", categories);
 		return "index";
 	}
 
@@ -102,8 +121,8 @@ public class RegisterPageController
 	}
 
 	@RequestMapping(value = "login", method = RequestMethod.POST)
-	public String doLogin(final VendorRegistrationData registrationData, final Model model, final BindingResult result,
-			final HttpServletRequest request) throws JaloSecurityException
+	public String doLogin(final VendorRegistrationData registrationData, final Model model, final RedirectAttributes redirectModel,
+			final BindingResult result, final HttpServletRequest request) throws JaloSecurityException
 	{
 		final String username = registrationData.getUserData().getEmail();
 		final String pwd = registrationData.getUserData().getPassword();
@@ -117,6 +136,8 @@ public class RegisterPageController
 			final boolean isValidUser = gluVendorManagementFacade.validateAndCreateSession(username, pwd, request);
 			if (isValidUser)
 			{
+				final HttpSession session = request.getSession(true);
+				redirectModel.addFlashAttribute("user", session.getAttribute("user"));
 				return "redirect:home";
 			}
 		}
