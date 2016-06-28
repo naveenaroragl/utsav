@@ -198,8 +198,6 @@ public class VendorRegistrationServiceImpl implements VendorRegistrationService
 		}
 		final PasswordEncoder deprecatedEncoder = passwordEncoderFactory.getEncoder(userModel.getPasswordEncoding());
 		final String p2 = deprecatedEncoder.encode(userName, password);
-		System.out.println("----------------------" + userModel.getEncodedPassword());
-		System.out.println("----------------------" + p2);
 		if (p2.equals(userModel.getEncodedPassword()))
 		{
 			/*
@@ -208,8 +206,6 @@ public class VendorRegistrationServiceImpl implements VendorRegistrationService
 			 */
 			final HttpSession session = request.getSession(true);
 			session.setAttribute("user", userModel);
-			System.out.println("Session ID: " + session.getId());
-			System.out.println("User: " + ((UserModel) session.getAttribute("user")).getUid());
 			return true;
 		}
 		return false;

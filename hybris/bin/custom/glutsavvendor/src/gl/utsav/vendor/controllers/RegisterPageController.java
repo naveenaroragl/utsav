@@ -15,11 +15,19 @@ package gl.utsav.vendor.controllers;
 
 import de.hybris.platform.category.CategoryService;
 import de.hybris.platform.category.model.CategoryModel;
+import de.hybris.platform.classification.ClassificationService;
+import de.hybris.platform.classification.ClassificationSystemService;
+import de.hybris.platform.classification.features.FeatureList;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.cms2.model.site.CMSSiteModel;
 import de.hybris.platform.cms2.servicelayer.services.CMSSiteService;
+import de.hybris.platform.commercefacades.product.ProductFacade;
+import de.hybris.platform.commercefacades.product.data.ProductData;
 import de.hybris.platform.commercefacades.user.data.AddressData;
+import de.hybris.platform.commerceservices.product.CommerceProductService;
+import de.hybris.platform.core.model.product.ProductModel;
 import de.hybris.platform.jalo.security.JaloSecurityException;
+import de.hybris.platform.product.ProductService;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -37,6 +45,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import gl.utsav.vendor.dto.VendorRegistrationData;
@@ -63,8 +72,24 @@ public class RegisterPageController
 	private CategoryService categoryService;
 
 	@Resource
+	private ClassificationService classificationService;
+
+	@Resource
+	private CommerceProductService commerceProductService;
+
+	@Resource
+	private ProductService productService;
+
+	@Resource
+	private ProductFacade productFacade;
+
+	@Resource
+	private ClassificationSystemService classificationSystemService;
+
+	@Resource
 	private CMSSiteService cmsSiteService;
 
+	private ProductModel dummy;
 
 	@RequestMapping(method = RequestMethod.GET)
 	public String getLandingPage(final Model model)
@@ -84,7 +109,7 @@ public class RegisterPageController
 		}
 
 		model.addAttribute("register", new VendorRegistrationData());
-		return "redirect:home";
+		return "redirect:fetchFeatures";
 	}
 
 
@@ -94,7 +119,8 @@ public class RegisterPageController
 	{
 		final CMSSiteModel cmsSite = (cmsSiteService.getSites()).iterator().next();
 		cmsSiteService.setCurrentSiteAndCatalogVersions(cmsSite, true);
-		final Collection<CategoryModel> categories = categoryService.getRootCategoriesForCatalogVersion(cmsSiteService.getCurrentCatalogVersion());
+		final Collection<CategoryModel> categories = categoryService
+				.getRootCategoriesForCatalogVersion(cmsSiteService.getCurrentCatalogVersion());
 		final ProductForm productForm = new ProductForm();
 		model.addAttribute("productForm", productForm);
 		model.addAttribute("categories", categories);
@@ -144,4 +170,41 @@ public class RegisterPageController
 		model.addAttribute("register", new VendorRegistrationData());
 		return "register";
 	}
+
+	@RequestMapping(value = "fetchFeatures", method = RequestMethod.GET)
+	public String createProductForm(String category, final Model model)
+	{
+		category = "Necklace";
+		final List<ProductModel> products = productService.getProductsForCategory(categoryService.getCategoryForCode(category));
+		products.forEach(product -> {
+			System.out.println(product);
+			if (product.getCode().contains("J100"))
+			{
+				dummy = product;
+			}
+		});
+
+
+		final FeatureList features = classificationService.getFeatures(dummy);
+		model.addAttribute("features", features.getClassificationClasses());
+		model.addAttribute("productData", new ProductData());
+		return "createProduct";
+	}
+
+
+	@RequestMapping(value = "createProduct", method = RequestMethod.POST)
+	public String createProduct(final ProductForm productForm, final Model model)
+	{
+
+		return "confirm";
+	}
+
+	@RequestMapping(value = "fetchSubCategories", method = RequestMethod.POST)
+	@ResponseBody
+	public String fetchSubCategories(final String category, final Model model)
+	{
+
+		return "subcategory";
+	}
+
 }
