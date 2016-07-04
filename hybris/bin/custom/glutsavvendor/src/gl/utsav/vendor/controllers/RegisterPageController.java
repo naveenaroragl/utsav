@@ -31,7 +31,9 @@ import de.hybris.platform.product.ProductService;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -48,6 +50,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import gl.utsav.vendor.dto.ItemDetailData;
 import gl.utsav.vendor.dto.VendorRegistrationData;
 import gl.utsav.vendor.enums.GLUVendorType;
 import gl.utsav.vendor.facades.VendorManagementFacade;
@@ -115,8 +118,9 @@ public class RegisterPageController
 
 
 	@RequestMapping(method = RequestMethod.GET, value = "home")
-	public String getHomePage(final Model model) throws CMSItemNotFoundException
+	public String getHomePage(final Model model, final HttpServletRequest request) throws CMSItemNotFoundException
 	{
+
 		final CMSSiteModel cmsSite = (cmsSiteService.getSites()).iterator().next();
 		cmsSiteService.setCurrentSiteAndCatalogVersions(cmsSite, true);
 		final Collection<CategoryModel> categories = categoryService
@@ -124,7 +128,7 @@ public class RegisterPageController
 		final ProductForm productForm = new ProductForm();
 		model.addAttribute("productForm", productForm);
 		model.addAttribute("categories", categories);
-		return "index";
+		return "categoryRegistration";
 	}
 
 	@ModelAttribute("gluVendorTypes")
@@ -201,10 +205,35 @@ public class RegisterPageController
 
 	@RequestMapping(value = "fetchSubCategories", method = RequestMethod.POST)
 	@ResponseBody
-	public String fetchSubCategories(final String category, final Model model)
+	public Map<String, String> fetchSubCategories(final String categoryName, final Model model)
+	{
+		final CategoryModel category = categoryService.getCategoryForCode(categoryName);
+		final Map<String, String> subcategoryList = new HashMap<String, String>();
+		final Collection<CategoryModel> subcategories = category.getAllSubcategories();
+		if (!subcategories.isEmpty())
+		{
+			subcategories.forEach(subCategory -> {
+				subcategoryList.put(subCategory.getCode(), subCategory.getName());
+			});
+		}
+		return subcategoryList;
+	}
+
+	@RequestMapping(value = "renderCategoryListingPage", method = RequestMethod.POST)
+	public String categoryListing(final Model model)
 	{
 
-		return "subcategory";
+		model.addAttribute("itemDetailData", new ItemDetailData());
+		return "category";
+	}
+
+	@RequestMapping(value = "CategoryListing", method = RequestMethod.POST)
+	public String getcategoryListing(@ModelAttribute("itemDetailData") final ItemDetailData itemDetailData, final Model model,
+			final HttpServletRequest request, final BindingResult result)
+	{
+
+		model.addAttribute("itemDetailData", new ItemDetailData());
+		return "category";
 	}
 
 }
