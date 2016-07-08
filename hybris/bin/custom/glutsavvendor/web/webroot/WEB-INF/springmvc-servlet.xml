@@ -8,17 +8,15 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans.xsd
            http://www.springframework.org/schema/aop
            http://www.springframework.org/schema/aop/spring-aop.xsd
            http://www.springframework.org/schema/context
-           http://www.springframework.org/schema/context/spring-context.xsd">
-
-           
-           
-	<context:component-scan base-package="gl.utsav.vendor"/>           
-
+           http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 
 
@@ -61,8 +59,9 @@
 		id="profiledMethods" expression="bean(de.hybris.platform.jalo.user.Customer) 
 		&amp;&amp; !execution(* getPK(..))" /> <aop:pointcut id="profiledMethods" 
 		expression="execution(* *(..))" /> -->
-	<context:annotation-config />
-	<context:component-scan base-package="gl.utsav.vendor.controllers"></context:component-scan>
+	<!-- <context:annotation-config /> -->
+	<context:component-scan base-package="gl.utsav.vendor.controllers" />
+	<mvc:annotation-driven />
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="viewClass"
@@ -71,13 +70,9 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 
-	<bean id="messageSource"
-		class="org.springframework.context.support.ResourceBundleMessageSource">
-		<property name="basenames">
-			<list>
-				<value>labels/labels_en</value>
-			</list>
-		</property>
-	</bean>
+<mvc:interceptors>
+	<bean class="gl.utsav.vendor.interceptor.AuthenticationInterceptor" />
+</mvc:interceptors>
+	<import resource="glutsavvendor-web-spring.xml" />
 
 </beans>
